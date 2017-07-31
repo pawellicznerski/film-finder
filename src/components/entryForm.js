@@ -216,44 +216,6 @@ handleOnFocusEmail=(e)=>{
 }
 
 //function which handles all input changes in the form
-handleInputChange =(e)=>{
-  // e.preventDefault();
-  const target = e.target;
-  const value = target.type === 'checkbox' ? target.checked : target.value;//potrzebne w razie dolączenia checkbox-a
-  const name = target.name;
-  const nameWarning = `empty${name}FieldWarning`;
-
-  this.setState({
-     [name]: value,
-     [nameWarning]:'',
-     isBlocking: true,
-   });
-   this.loopForMainWarning();
-} //end of handleInputChange
-
-changeSuggestion=(e)=>{
-  this.setState({
-    emptyyourExperienceFieldWarning: "",
-    renderMainWarning:false,
-  });
-  this.loopForMainWarning();
-   if(e.target.id === 'input-1') {
-    this.setState({
-      yourExperience: 0,
-      maxKm:stringsRenderingSuggestions.suggestedValues[0][0],
-    });
-  } else if(e.target.id === 'input-2') {
-    this.setState({
-      yourExperience: 1,
-      maxKm:stringsRenderingSuggestions.suggestedValues[1][0],
-    });
-  } else{
-    this.setState({
-      yourExperience: 2,
-      maxKm:stringsRenderingSuggestions.suggestedValues[2][0],
-    });
-  }
-}
 
 
 //handles btn which return to the home page
@@ -314,6 +276,29 @@ showNumberOfWeeks=(e)=>{
   }
 }// end of showNumberOfWeeks
 
+handleInputChange =(e)=>{
+  // e.preventDefault();
+  const target = e.target;
+  const value = target.type === 'checkbox' ? target.checked : target.value;//potrzebne w razie dolączenia checkbox-a
+  const name = target.name;
+  const nameWarning = `empty${name}FieldWarning`;
+
+  this.setState({
+     [name]: value,
+     [nameWarning]:'',
+     isBlocking: true,
+   });
+   this.loopForMainWarning();
+} //end of handleInputChange
+
+
+
+
+
+
+
+
+
 
 render(){
     return (
@@ -335,7 +320,7 @@ render(){
                   name="login"
                 />
               </label>
-              <p className={this.state.emptyloginFieldWarning?"single-down-error-FIF-active":"single-down-error-FIF-nonactive"}>{this.state.emptyloginFieldWarning}</p>
+              <p className={this.state.emptyloginFieldWarning?"error-active":"error-nonactive"}>{this.state.emptyloginFieldWarning}</p>
             </div>
               <button id="render-plan-btn" type="submit">Pobierz dane</button>
           </form>
