@@ -1,55 +1,125 @@
+.container{
+  background-color: rgba(100,100,100,1)
+}
 
-.homeCNT {
-  background-image: url("./images/mainBackground3.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  weight: 100vw;
- }
- .leftSection{
-   display: flex;
-   justify-content: flex-end;
-   width: 25vw;
-   border: 1px solid white;
+.navCNT{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:10vh;
+  // background-color: rgba(250,250,250,1);
+  background-color: rgba(8,8,8,1);
+}
 
-   .navCNT{
-     background-color: rgba(240, 10, 10, 0.8);
-     width: 8vw;
-     height: 100vh;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     .menu-logo{
-    //    background-color: rgba(10, 10, 10, 0.6);
-    //    color: white;
-    //    border-radius: 50%;
-    //    height: 15vw;
-      //  width: 15vw;
-    //    display: flex;
-    //    align-items: center;
-    //    justify-content: center;
-    color: white;
-    text-transform: uppercase;
-    font-size: 30px;
-    font-weight: bold;
-     }
-   }
- }
- .rightSection{
-   width: 100%;
-   border: 1px solid blue;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   .mainInfoText{
-     border: 1px solid orange;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     height: 60%;
-     width: 70%;
-     color: white;
-     background-color: rgba(10, 10, 10, 0.4);
-   }
- }
+.mainSectionCNT{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:75vh;
+  background-color: rgba(8,8,8,1);
+  // background-image: url("./images/logoFullsvg.svg");
+  // background-position: center;
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  .logo-CNT{
+    border: 1px solid pink;
+    height:75vh;
+    width:98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logoWords-CNT{
+      border: 1px solid blue;
+      display: flex;
+      flex-direction: column;
+      // justify-content: flex-end;
+      align-items: flex-end;
+      // height:22vh;
+      width:48vw;
+      .firstLogo-word{
+        background-position: center;
+        border: 1px solid white;
+        background-image: url("./images/logoOnlyFirma.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height:22vh;
+        width:20vw;
+      }
+      .secondLogo-word{
+        background-position: center;
+        border: 1px solid green;
+        background-image: url("./images/logoOnlyPod.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height:18vh;
+        width:14vw;
+      }
+    }
+    .magnifyingGlass-CNT{
+      border: 1px solid orange;
+      height:75vh;
+      width:49vw;
+      display: flex;
+      align-items: center;
+      // animation: movingGlass 5s ease;
+      animation: movingGlass 3s ease;
+      .magnifyingGlass{
+        background-position: center;
+        border: 1px solid red;
+        background-image: url("./images/magnifyingGlass.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height:75vh;
+        width:43vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        animation: shrinkingGlass 5s ease;
+        .magnifyingGlass-text{
+          background-position: center;
+          background-image: url("./images/logoCurvedText.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          border: 1px solid yellow;
+          height:0.1vh;
+          width:0.1vw;
+        }
+      }
+    }
+    @keyframes movingGlass{
+        0%{justify-content: flex-end;}
+        100%{justify-content: flex-start;}
+    }
+    @keyframes shrinkingGlass{
+        // 0%{justify-content: flex-end;}
+    }
+  }
+}
+
+
+//sprite
+
+// .magnifyingGlass{
+//   background-image: url("./images/WORK.svg");
+//   // background-size: contain;
+//   // background-repeat: no-repeat;
+//   height:66px;
+//   width:100px;
+//   animation: walk-ease 0.5s steps(8) infinite;
+//   }
+// @keyframes walk-ease {
+//     from {
+//       background-position:0px;
+//     }
+//     to {
+//       background-position:1600px;
+//     }
+// }
+
+.footerCNT{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:15vh;
+  background-color: rgba(200,200,200,1);
+}
