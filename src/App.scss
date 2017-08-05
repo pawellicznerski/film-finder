@@ -1,9 +1,8 @@
-@import "./scss/partials/home";
-@import "./scss/partials/mainInfoStyle";
+//partial where the general style for the whole document is described
+@import "./scss/partials/mainContainerStyle";
+//Three main style partials sections of the document
+@import "./scss/partials/navStyle";
+@import "./scss/partials/mainSectionStyle";
+@import "./scss/partials/footerStyle";
+//grid
 @import "./scss/grid/grid";
-
-*{
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}

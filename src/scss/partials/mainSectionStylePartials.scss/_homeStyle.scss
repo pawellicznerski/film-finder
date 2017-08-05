@@ -1,0 +1,13 @@
+@import "./homeStylePartials/firstLogoWordStyle";
+@import "./homeStylePartials/secondLogoWordStyle";
+@import "./homeStylePartials/magnifyingGlassStyle";
+
+.logo-CNT{
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:75vh;
+  background-color: rgba(8,8,8,1);
+}

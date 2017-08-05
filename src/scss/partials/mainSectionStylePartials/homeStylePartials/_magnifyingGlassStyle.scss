@@ -1,0 +1,105 @@
+.magnifyingGlass-CNT{
+  border: 1px solid orange;
+  height:30vh;
+  width:100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  // animation: movingGlass 5s ease;
+  .magnifyingGlass{
+    color: white;
+    border-radius: 50%;
+    border:18px solid white;
+    margin: -8px 0 0 13px;
+    background-position: center;
+    background-image: url("./images/magnifyingGlass.svg");
+    background-size: 0px 0px;
+    background-repeat: no-repeat;
+    height:200px;
+    width:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:40vh;
+    left:78vw;
+    animation: movingMagnifyingGlass 2s 1.2s ease-out forwards;
+    .magnifyingGlass-stick{
+      background-color: white;
+      left:98px;
+      top:79px;
+      height:15px;
+      width:63px;
+      transform: skew(-40deg,43deg);
+      position: relative;
+      animation: shrinkingMagnifyingGlass 2s 1.2s ease-out forwards;
+    }
+  }
+}
+
+@keyframes movingMagnifyingGlass{
+  0%{
+    top:40vh;
+    left:78vw;
+    background-position: right;
+  }
+  18%{
+    top:-8vh;
+    left:0vw;
+  }
+  25%{
+    background-size: 0px 0px;
+  }
+  26%{
+    top:0vh;
+    left:-14vw;
+    background-position: right;
+    background-size: 27px 27px;
+
+  }
+  60%{
+    background-position: center;
+    border:18px solid white;
+    background-size: 27px 27px;
+    top:0vh;
+    left:0vw;
+    height:200px;
+    width:200px;
+  }
+  79%{
+    border:12px solid white;
+    background-size: 220px 220px;
+    top:4vh;
+    left:0vw;
+    height:150px;
+    width:150px;
+  }
+  100%{
+    border:13px solid white;
+    background-size: 150px 150px;
+    top:0vh;
+    left:0vw;
+    height:180px;
+    width:180px;
+  }
+}
+@keyframes shrinkingMagnifyingGlass{
+  45%{
+    left:98px;
+    top:79px;
+    height:15px;
+    width:63px;
+  }
+  79%{
+    left:64px;
+    top:69px;
+    height:11px;
+    width:37px;
+  }
+  100%{
+    left:86px;
+    top:75px;
+    height:13px;
+    width:49px;
+  }
+}
