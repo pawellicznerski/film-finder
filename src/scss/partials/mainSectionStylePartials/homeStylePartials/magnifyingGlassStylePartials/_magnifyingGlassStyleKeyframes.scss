@@ -1,0 +1,151 @@
+@import "../../../../modules/mediaQueryMixins";
+
+@mixin movingMagnifyingGlass {
+  @keyframes movingMagnifyingGlass{
+    0%{
+      top:40vh;
+      left:78vw;
+      background-position: right;
+    }
+    25%{
+      background-size: 0px 0px;
+    }
+    26%{
+      top:0vh;
+      left:-14vw;
+      background-position: right;
+      background-size: 27px 27px;
+
+    }
+    60%{
+      background-position: center;
+      border:18px solid white;
+      background-size: 27px 27px;
+      top:0vh;
+      left:0vw;
+      height:200px;
+      width:200px;
+    }
+    79%{
+      border:12px solid white;
+      background-size: 220px 220px;
+      top:4vh;
+      left:0vw;
+      height:150px;
+      width:150px;
+    }
+    100%{
+      border:13px solid white;
+      background-size: 150px 150px;
+      top:0vh;
+      left:0vw;
+      height:180px;
+      width:180px;
+
+    }
+  }
+}
+
+
+@mixin movingMagnifyingGlassTablet {
+  @include tablet{
+    @keyframes movingMagnifyingGlass{
+      0%{
+        border:19px solid white;
+        height:280px;
+        width:280px;
+        top:40vh;
+        left:78vw;
+        background-position: right;
+      }
+      25%{
+        background-size: 0px 0px;
+      }
+      26%{
+        top:0vh;
+        left:-14vw;
+        background-position: right;
+        background-size: 27px 27px;
+
+      }
+      60%{
+        background-position: center;
+        border:19px solid white;
+        background-size: 27px 27px;
+        top:0vh;
+        left:0vw;
+        height:280px;
+        width:280px;
+      }
+      79%{
+        border:17px solid white;
+        background-size: 220px 220px;
+        top:4vh;
+        left:0vw;
+          // left:98px;
+          // top:79px;
+          height:210px;
+          width:210px;
+      }
+      100%{
+        border:19px solid white;
+        background-size: 190px 190px;
+        top:2vh;
+        left:0vw;
+          height:230px;
+          width:230px;
+      }
+    }
+  };
+}
+
+
+@mixin movingMagnifyingGlassLaptop {
+  @include laptop{
+    @keyframes movingMagnifyingGlass{
+      0%{
+        border:19px solid white;
+        height:280px;
+        width:280px;
+        top:40vh;
+        left:78vw;
+        background-position: right;
+      }
+      25%{
+        background-size: 0px 0px;
+      }
+      26%{
+        top:0vh;
+        left:-14vw;
+        background-position: right;
+        background-size: 27px 27px;
+
+      }
+      60%{
+        background-position: center;
+        border:19px solid white;
+        background-size: 27px 27px;
+        top:0vh;
+        left:0vw;
+        height:280px;
+        width:280px;
+      }
+      79%{
+        border:17px solid white;
+        background-size: 250px 250px;
+        top:4vh;
+        left:0vw;
+        height:250px;
+        width:250px;
+      }
+      100%{
+        border:19px solid white;
+        background-size: 260px 260px;
+        top:0vh;
+        left:0vw;
+          height:310px;
+          width:310px;
+      }
+    }
+  };
+}

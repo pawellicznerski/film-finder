@@ -13,26 +13,40 @@
   height: 10vh;
   background-color: #080808; }
 
+.mainSectionCNT {
+  width: 100vw;
+  height: 75vh; }
+
 .firstLogo-word {
   background-position: center;
-  border: 1px solid white;
   background-image: url("./images/logoOnlyFirma.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 70px;
-  width: 40vw; }
+  width: 100vw; }
+  @media (min-width: 768px) {
+    .firstLogo-word {
+      height: 90px; } }
+  @media (min-width: 1200px) {
+    .firstLogo-word {
+      height: 120px; } }
 
 .secondLogo-CNT .secondLogo-word {
   position: relative;
   background-position: center;
   left: -70vw;
-  border: 1px solid green;
   background-image: url("./images/logoOnlyPod.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 70px;
-  width: 40vw;
+  width: 100vw;
   animation: moveSecondWord 1s 0.6s ease forwards; }
+  @media (min-width: 768px) {
+    .secondLogo-CNT .secondLogo-word {
+      height: 80px; } }
+  @media (min-width: 1200px) {
+    .secondLogo-CNT .secondLogo-word {
+      height: 100px; } }
 
 @keyframes moveSecondWord {
   0% {
@@ -42,49 +56,11 @@
   100% {
     left: 0vw; } }
 
-.magnifyingGlass-CNT {
-  border: 1px solid orange;
-  height: 30vh;
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center; }
-  .magnifyingGlass-CNT .magnifyingGlass {
-    color: white;
-    border-radius: 50%;
-    border: 18px solid white;
-    margin: -8px 0 0 13px;
-    background-position: center;
-    background-image: url("./images/magnifyingGlass.svg");
-    background-size: 0px 0px;
-    background-repeat: no-repeat;
-    height: 200px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 40vh;
-    left: 78vw;
-    animation: movingMagnifyingGlass 2s 1.2s ease-out forwards; }
-    .magnifyingGlass-CNT .magnifyingGlass .magnifyingGlass-stick {
-      background-color: white;
-      left: 98px;
-      top: 79px;
-      height: 15px;
-      width: 63px;
-      transform: skew(-40deg, 43deg);
-      position: relative;
-      animation: shrinkingMagnifyingGlass 2s 1.2s ease-out forwards; }
-
 @keyframes movingMagnifyingGlass {
   0% {
     top: 40vh;
     left: 78vw;
     background-position: right; }
-  18% {
-    top: -8vh;
-    left: 0vw; }
   25% {
     background-size: 0px 0px; }
   26% {
@@ -115,22 +91,126 @@
     height: 180px;
     width: 180px; } }
 
-@keyframes shrinkingMagnifyingGlass {
-  45% {
-    left: 98px;
-    top: 79px;
-    height: 15px;
-    width: 63px; }
-  79% {
-    left: 64px;
-    top: 69px;
-    height: 11px;
-    width: 37px; }
-  100% {
-    left: 86px;
-    top: 75px;
-    height: 13px;
-    width: 49px; } }
+@media (min-width: 768px) {
+  @keyframes movingMagnifyingGlass {
+    0% {
+      border: 19px solid white;
+      height: 280px;
+      width: 280px;
+      top: 40vh;
+      left: 78vw;
+      background-position: right; }
+    25% {
+      background-size: 0px 0px; }
+    26% {
+      top: 0vh;
+      left: -14vw;
+      background-position: right;
+      background-size: 27px 27px; }
+    60% {
+      background-position: center;
+      border: 19px solid white;
+      background-size: 27px 27px;
+      top: 0vh;
+      left: 0vw;
+      height: 280px;
+      width: 280px; }
+    79% {
+      border: 17px solid white;
+      background-size: 220px 220px;
+      top: 4vh;
+      left: 0vw;
+      height: 210px;
+      width: 210px; }
+    100% {
+      border: 19px solid white;
+      background-size: 190px 190px;
+      top: 2vh;
+      left: 0vw;
+      height: 230px;
+      width: 230px; } } }
+
+@media (min-width: 1200px) {
+  @keyframes movingMagnifyingGlass {
+    0% {
+      border: 19px solid white;
+      height: 280px;
+      width: 280px;
+      top: 40vh;
+      left: 78vw;
+      background-position: right; }
+    25% {
+      background-size: 0px 0px; }
+    26% {
+      top: 0vh;
+      left: -14vw;
+      background-position: right;
+      background-size: 27px 27px; }
+    60% {
+      background-position: center;
+      border: 19px solid white;
+      background-size: 27px 27px;
+      top: 0vh;
+      left: 0vw;
+      height: 280px;
+      width: 280px; }
+    79% {
+      border: 17px solid white;
+      background-size: 250px 250px;
+      top: 4vh;
+      left: 0vw;
+      height: 250px;
+      width: 250px; }
+    100% {
+      border: 19px solid white;
+      background-size: 260px 260px;
+      top: 0vh;
+      left: 0vw;
+      height: 310px;
+      width: 310px; } } }
+
+.magnifyingGlass-CNT {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 12vh; }
+  .magnifyingGlass-CNT .magnifyingGlass {
+    color: white;
+    border-radius: 50%;
+    border: 18px solid white;
+    margin: -8px 0 0 13px;
+    background-position: center;
+    background-image: url("./images/magnifyingGlass.svg");
+    background-size: 0px 0px;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    top: 40vh;
+    left: 78vw;
+    animation: movingMagnifyingGlass 1.8s 1.2s ease-out forwards; }
+    .magnifyingGlass-CNT .magnifyingGlass .magnifyingGlass-stick {
+      background-color: white;
+      left: 36px;
+      height: 15px;
+      width: 46px;
+      transform: skew(-40deg, 43deg);
+      position: relative; }
+      @media (min-width: 768px) {
+        .magnifyingGlass-CNT .magnifyingGlass .magnifyingGlass-stick {
+          left: 40px;
+          height: 16px;
+          width: 54px; } }
+      @media (min-width: 1200px) {
+        .magnifyingGlass-CNT .magnifyingGlass .magnifyingGlass-stick {
+          left: 45px;
+          height: 19px;
+          width: 65px; } }
 
 .mainSectionCNT {
   width: 100vw;
