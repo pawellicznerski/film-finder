@@ -1,4 +1,5 @@
-@import "../../../../modules/mediaQueryMixins";
+@import "./../../../../../_finder-app__base/mediaQueryMixins";
+
 
 @mixin movingMagnifyingGlass {
   @keyframes movingMagnifyingGlass{

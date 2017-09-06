@@ -1,4 +1,4 @@
-@import "../../../modules/mediaQueryMixins";
+@import "./../../../../_finder-app__base/mediaQueryMixins";
 @import "./magnifyingGlassStylePartials/_magnifyingGlassStyleKeyframes";
 
 @include movingMagnifyingGlass;
@@ -20,7 +20,7 @@
     border:23px solid white;
     margin: -4px 0 0 13px;
     background-position: center;
-    background-image:url("./components/finder-app/__finder-app__logo/images/magnifyingGlass.svg")
+    background-image:url("./components/finder-app/__finder-app__logo/images/magnifyingGlass.svg");
     background-size: 0px 0px;
     background-repeat: no-repeat;
     height:220px;
