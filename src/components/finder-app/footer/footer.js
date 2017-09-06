@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { BrowserRouter as Router,Route,NavLink, Switch } from 'react-router-dom';
 
-class Footer extends Component {
+export class Footer extends Component {
   render() {
     return (
       <footer>
@@ -10,5 +10,3 @@ class Footer extends Component {
     );
   }
 }
-
-export default Footer;

@@ -6,7 +6,6 @@ class PrimaryContent extends Component {
     return (
       <section className="primary-content">
         <div className="primary-content__container">
-          {children.props}
         </div>
       </section>
     );
