@@ -59,7 +59,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="173.85712"
+     inkscape:cx="36.35712"
      inkscape:cy="36.586733"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -78,7 +78,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -89,24 +89,24 @@
      transform="translate(0,-260.48752)">
     <g
        aria-label="pod"
-       transform="matrix(0.96625956,0,0,0.96625956,-1023.4965,-652.48653)"
-       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:0.99606299;stroke:none"
+       transform="matrix(0.89475055,0,0,0.89475055,-945.70489,-583.58292)"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:0.99606299;stroke:#ffffff;stroke-opacity:1;stroke-width:2.41946856;stroke-miterlimit:4;stroke-dasharray:none"
        id="flowRoot4836">
       <path
          d="m 1059.5206,980.66542 -1.2,1.28 c 1.16,0.04 5.6,0.12 6.8,0.12 0.32,0 0.88,0 1.88,-0.04 l 1.24,-1 -4.48,-0.24 1.92,-8.52 c 0.8,0.16 1.24,0.2 1.92,0.2 1.76,0 2.72,-0.36 4.32,-1.64 2.04,-1.56 2.8,-2.28 3.32,-3 1.4,-2.04 2.68,-6.32 2.68,-8.92 0,-1.92 -0.84,-3.2 -2.16,-3.2 -0.96,0 -2.32,0.6 -3.96,1.8 l -3.28,2.36 c 0.12,-0.44 0.2,-0.88 0.28,-1.12 0.36,-1.52 0.56,-2.36 0.56,-2.52 0,-0.24 -0.28,-0.52 -0.56,-0.52 -0.4,0 -3.64,1.72 -6.6,3.48 l -0.24,1.04 c 0.52,-0.2 1,-0.4 1.16,-0.48 1.16,-0.52 1.4,-0.6 1.72,-0.6 0.48,0 0.76,0.4 0.76,1.12 0,1.44 -2.4,11.84 -4.64,20.32 z m 6.84,-11.16 c 0.56,-2.68 1.08,-4.88 1.48,-6.6 0.04,-0.2 0.16,-0.72 0.32,-1.44 3.32,-2.4 4.52,-3.08 5.56,-3.08 0.8,0 1.32,0.88 1.32,2.2 0,1.8 -0.56,4.04 -1.56,6.24 -1.08,2.36 -2.44,3.56 -4.08,3.56 -1,0 -2.08,-0.32 -3.04,-0.88 z"
          id="path6786"
          inkscape:connector-curvature="0"
-         style="fill:#ffffff" />
+         style="fill:#ffffff;stroke:#ffffff;stroke-opacity:1;stroke-width:2.41946856;stroke-miterlimit:4;stroke-dasharray:none" />
       <path
          d="m 1090.5788,955.70542 c -1.6,0 -4.16,1.16 -6.52,2.92 -2.56,1.92 -4.36,6.08 -4.36,10.04 0,2.44 1.36,4 3.48,4 1.12,0 2.24,-0.4 4.08,-1.36 2,-1.12 3.32,-2.12 4.04,-3.08 1.6,-2.16 2.88,-6.08 2.88,-8.84 0,-2.16 -1.48,-3.68 -3.6,-3.68 z m -2.08,1.88 c 1.6,0 2.6,1.56 2.6,3.96 0,1.68 -0.56,3.76 -1.56,5.72 -1.12,2.28 -2.56,3.52 -4.08,3.52 -1.64,0 -2.68,-1.48 -2.68,-3.76 0,-4.64 2.92,-9.44 5.72,-9.44 z"
          id="path6788"
          inkscape:connector-curvature="0"
-         style="fill:#ffffff" />
+         style="fill:#ffffff;stroke:#ffffff;stroke-opacity:1;stroke-width:2.41946856;stroke-miterlimit:4;stroke-dasharray:none" />
       <path
          d="m 1112.1144,966.90542 c -0.52,0.32 -0.92,0.6 -1.12,0.72 -2.2,1.52 -3.32,2.16 -3.68,2.16 -0.32,0 -0.56,-0.44 -0.56,-1.04 0,-1.32 3.36,-15.8 4.2,-18.28 0.88,-2.4 1.76,-3.32 3.2,-3.32 0.52,0 0.92,0.08 1.84,0.32 l 1.4,-2.24 c -0.6,-0.12 -0.92,-0.16 -1.28,-0.16 -0.96,0 -1.48,0.16 -2.4,0.68 -1,0.56 -2.36,1.6 -3.48,2.64 -1.96,1.88 -2.08,2.16 -3.12,6.28 -0.04,0.16 -0.16,0.68 -0.32,1.28 -0.72,-0.16 -1.32,-0.24 -1.64,-0.24 -1.24,0 -4.68,2.16 -6.28,3.92 -1.36,1.56 -3.16,7.2 -3.16,9.96 0,1.52 0.8,3.08 1.52,3.08 0.76,0 2.52,-1.08 6.72,-4.12 -0.2,1 -0.32,2.16 -0.32,2.88 0,0.8 0.32,1.24 0.88,1.24 0.64,0 4.12,-2.12 7.44,-4.52 z m -7.84,0.16 c -3.4,2.4 -4.28,2.92 -4.84,2.92 -0.56,0 -0.84,-0.6 -0.84,-1.76 0,-1.32 0.24,-2.84 0.72,-4.6 1.16,-4.04 2.72,-6.04 4.76,-6.04 0.72,0 1.24,0.28 2.08,1.08 z"
          id="path6790"
          inkscape:connector-curvature="0"
-         style="fill:#ffffff" />
+         style="fill:#ffffff;stroke:#ffffff;stroke-opacity:1;stroke-width:2.41946856;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
   </g>
 </svg>

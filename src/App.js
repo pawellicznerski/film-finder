@@ -33,14 +33,16 @@ class App extends Component {
                   </Switch>
                 </div>
               </section>
+              <nav>
+                <ul className="footerCNT"  style={{ listStyleType: "none"}}>
+                  <NavLink to="/formularz" style={{ textDecoration: 'none'}} ><li className="allfooterBTNs footerBTNfirst"><p>Znajdź firmę</p></li></NavLink>
+                  <NavLink to="/krsInfo" style={{ textDecoration: 'none'}} ><li className="allfooterBTNs footerBTN2"><p>Co to jest KRS?</p></li></NavLink>
+                  <NavLink to="/nipInfo" style={{ textDecoration: 'none'}} ><li className="allfooterBTNs footerBTN3"><p>Co to jest NIP?</p></li></NavLink>
+                  <NavLink to="/regonInfo" style={{ textDecoration: 'none'}} ><li className="allfooterBTNs footerBTN4"><p>Co to jest REGON?</p></li></NavLink>
+                </ul>
+              </nav>
               <footer>
-                <div className="footerCNT">
-                  <NavLink to="/formularz" style={{ textDecoration: 'none'}} ><div className="allfooterBTNs footerBTN-1"><p>Idź do formularza</p></div></NavLink>
-                  <NavLink to="/krsInfo" style={{ textDecoration: 'none'}} ><div className="allfooterBTNs footerBTN-2"><p>Co to jest KRS?</p></div></NavLink>
-                  <NavLink to="/nipInfo" style={{ textDecoration: 'none'}} ><div className="allfooterBTNs footerBTN-3"><p>Co to jest NIP?</p></div></NavLink>
-                  <NavLink to="/regonInfo" style={{ textDecoration: 'none'}} ><div className="allfooterBTNs footerBTN-4"><p>Co to jest REGON?</p></div></NavLink>
-                </div>
-                <div style={{x:0, y:0,width:"50px", height:"50px", backgroundColor:"red"}}></div>
+                &copy; Paweł Licznerski
               </footer>
           </div>
         </div>

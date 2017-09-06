@@ -1,0 +1,81 @@
+//importing modifier of styles for the section header
+@import '_interests_modifiers/_interests__section-name/interests__section-name.scss';
+//importing colors from main variables
+@import "./../../_cv-page__base/cv-page__base__variables.scss";
+//media query
+@import "./../../_cv-page__base/media-query-mixins.scss";
+
+
+.interests{
+  background-color: rgba(140,140,140,1);
+  width:100vw;
+  display: flex;
+  @include laptop{
+    width:50%;
+  };
+  .interests__content{
+    width: 100%;
+    margin-bottom: 10px;
+    // border: 1px solid red;
+    @include laptop{
+      width: 450px;
+      margin: 0;
+    };
+    .interests__cirles{
+      width: 100%;
+      height: 240px;
+      // border: 1px solid blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // @include laptop{
+      //   margin-bottom: 0px;
+      // };
+      &_item{
+        text-transform: capitalize;
+        color: $color__details_grey_light;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &_item_dark-main{
+        //----------------------------this is a variable used to scale the interests chart
+        $biggestCircleSize: 160px;
+        //--------------------------------------------------------------------------------
+        font-size: $biggestCircleSize*0.157;
+        width: $biggestCircleSize;
+        height: $biggestCircleSize;
+        background-color: $color__details_green_lighness-2;
+        position: relative;
+        &_lightest{
+          font-size: $biggestCircleSize*0.11;
+          left: -$biggestCircleSize*0.59;
+          top:$biggestCircleSize*0.35;
+          width: $biggestCircleSize*0.7;
+          height: $biggestCircleSize*0.7;
+          background-color: $color__details_green_lighness-5;
+          position: absolute;
+        }
+        &_light{
+          font-size: $biggestCircleSize*0.11;
+          left: -$biggestCircleSize*0.37;
+          top:-$biggestCircleSize*0.1;
+          width: $biggestCircleSize*0.6;
+          height: $biggestCircleSize*0.6;
+          background-color: $color__details_green_lighness-4;
+          position: absolute;
+        }
+        &_darkest{
+          font-size: $biggestCircleSize*0.11;
+          right: -$biggestCircleSize*0.37;
+          top:$biggestCircleSize*0.55;
+          width: $biggestCircleSize*0.6;
+          height: $biggestCircleSize*0.6;
+          background-color: $color__details_green_lighness-1;
+          position: absolute;
+        }
+      }
+    }
+  }
+}

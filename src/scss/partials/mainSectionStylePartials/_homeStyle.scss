@@ -1,15 +1,8 @@
+//it is a component with the animated logo which consists of three parts
+
+//first part - "FIRMA" word
 @import "./homeStylePartials/firstLogoWordStyle";
+//second part - "pod" word
 @import "./homeStylePartials/secondLogoWordStyle";
+//third part - animated magnifyingGlass
 @import "./homeStylePartials/magnifyingGlassStyle";
-
-
-
-.mainSectionCNT{
-  width:100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height:75vh;
-  background-color: rgba(8,8,8,1);
-}

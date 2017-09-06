@@ -10,14 +10,14 @@
     background-image: url("./images/logoOnlyPod.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    height:70px;
+    height:55px;
     width:100vw;
-    animation: moveSecondWord 1s 0.6s ease forwards;
+    animation: moveSecondWord 0.8s 0.5s ease forwards;
     @include tablet{
-      height:80px;
+      height:60px;
     };
     @include laptop{
-      height:100px;
+      height:70px;
     };
   }
   @keyframes moveSecondWord{

@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "css-loader": "^0.28.4",
     "node-sass-chokidar": "0.0.3",
+    "postcss-loader": "^2.0.6",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-pdf": "^1.6.1"

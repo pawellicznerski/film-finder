@@ -13,23 +13,20 @@
   height: 10vh;
   background-color: #080808; }
 
-.mainSectionCNT {
-  width: 100vw;
-  height: 75vh; }
-
 .firstLogo-word {
   background-position: center;
   background-image: url("./images/logoOnlyFirma.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 70px;
+  height: 60px;
   width: 100vw; }
   @media (min-width: 768px) {
     .firstLogo-word {
-      height: 90px; } }
+      height: 75px; } }
   @media (min-width: 1200px) {
     .firstLogo-word {
-      height: 120px; } }
+      margin-top: -8vh;
+      height: 90px; } }
 
 .secondLogo-CNT .secondLogo-word {
   position: relative;
@@ -38,15 +35,15 @@
   background-image: url("./images/logoOnlyPod.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 70px;
+  height: 55px;
   width: 100vw;
-  animation: moveSecondWord 1s 0.6s ease forwards; }
+  animation: moveSecondWord 0.8s 0.5s ease forwards; }
   @media (min-width: 768px) {
     .secondLogo-CNT .secondLogo-word {
-      height: 80px; } }
+      height: 60px; } }
   @media (min-width: 1200px) {
     .secondLogo-CNT .secondLogo-word {
-      height: 100px; } }
+      height: 70px; } }
 
 @keyframes moveSecondWord {
   0% {
@@ -58,64 +55,64 @@
 
 @keyframes movingMagnifyingGlass {
   0% {
-    top: 40vh;
-    left: 78vw;
+    top: 8vh;
+    left: 18vw;
     background-position: right; }
-  25% {
+  20% {
     background-size: 0px 0px; }
-  26% {
+  21% {
     top: 0vh;
     left: -14vw;
     background-position: right;
     background-size: 27px 27px; }
-  60% {
+  45% {
     background-position: center;
-    border: 18px solid white;
+    border: 23px solid white;
     background-size: 27px 27px;
     top: 0vh;
     left: 0vw;
-    height: 200px;
-    width: 200px; }
-  79% {
-    border: 12px solid white;
+    height: 220px;
+    width: 220px; }
+  73% {
+    border: 16px solid white;
     background-size: 220px 220px;
     top: 4vh;
     left: 0vw;
-    height: 150px;
-    width: 150px; }
+    height: 130px;
+    width: 130px; }
   100% {
-    border: 13px solid white;
-    background-size: 150px 150px;
+    border: 20px solid white;
+    background-size: 180px 180px;
     top: 0vh;
     left: 0vw;
-    height: 180px;
-    width: 180px; } }
+    height: 210px;
+    width: 210px; } }
 
 @media (min-width: 768px) {
   @keyframes movingMagnifyingGlass {
     0% {
-      border: 19px solid white;
-      height: 280px;
-      width: 280px;
-      top: 40vh;
-      left: 78vw;
+      border: 25px solid white;
+      height: 265px;
+      width: 265px;
+      top: 8vh;
+      left: 18vw;
       background-position: right; }
-    25% {
+    20% {
       background-size: 0px 0px; }
-    26% {
+    21% {
       top: 0vh;
       left: -14vw;
       background-position: right;
       background-size: 27px 27px; }
-    60% {
+    45% {
       background-position: center;
-      border: 19px solid white;
+      border: 25px solid white;
       background-size: 27px 27px;
       top: 0vh;
       left: 0vw;
-      height: 280px;
-      width: 280px; }
-    79% {
+      height: 265px;
+      width: 265px; }
+    73% {
       border: 17px solid white;
       background-size: 220px 220px;
       top: 4vh;
@@ -123,51 +120,46 @@
       height: 210px;
       width: 210px; }
     100% {
-      border: 19px solid white;
-      background-size: 190px 190px;
-      top: 2vh;
+      border: 25px solid white;
+      background-size: 215px 215px;
+      top: 0vh;
       left: 0vw;
-      height: 230px;
-      width: 230px; } } }
+      height: 270px;
+      width: 270px; } } }
 
 @media (min-width: 1200px) {
   @keyframes movingMagnifyingGlass {
     0% {
-      border: 19px solid white;
-      height: 280px;
-      width: 280px;
-      top: 40vh;
-      left: 78vw;
-      background-position: right; }
-    25% {
-      background-size: 0px 0px; }
-    26% {
+      border: 32px solid white;
+      height: 380px;
+      width: 380px;
       top: 0vh;
-      left: -14vw;
-      background-position: right;
-      background-size: 27px 27px; }
-    60% {
+      left: 0vw;
+      background-position: right; }
+    29% {
+      background-size: 0px 0px; }
+    30% {
       background-position: center;
-      border: 19px solid white;
+      border: 32px solid white;
       background-size: 27px 27px;
       top: 0vh;
       left: 0vw;
-      height: 280px;
-      width: 280px; }
-    79% {
+      height: 380px;
+      width: 380px; }
+    67% {
       border: 17px solid white;
-      background-size: 250px 250px;
+      background-size: 370px 370px;
       top: 4vh;
       left: 0vw;
       height: 250px;
       width: 250px; }
     100% {
-      border: 19px solid white;
-      background-size: 260px 260px;
+      border: 33px solid white;
+      background-size: 320px 320px;
       top: 0vh;
       left: 0vw;
-      height: 310px;
-      width: 310px; } } }
+      height: 370px;
+      width: 370px; } } }
 
 .magnifyingGlass-CNT {
   height: 30vh;
@@ -179,38 +171,53 @@
   .magnifyingGlass-CNT .magnifyingGlass {
     color: white;
     border-radius: 50%;
-    border: 18px solid white;
-    margin: -8px 0 0 13px;
+    border: 23px solid white;
+    margin: -4px 0 0 13px;
     background-position: center;
     background-image: url("./images/magnifyingGlass.svg");
     background-size: 0px 0px;
     background-repeat: no-repeat;
-    height: 200px;
-    width: 200px;
+    height: 220px;
+    width: 220px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
-    top: 40vh;
-    left: 78vw;
-    animation: movingMagnifyingGlass 1.8s 1.2s ease-out forwards; }
+    top: 8vh;
+    left: 18vw;
+    animation: movingMagnifyingGlass 1.4s 1.0s ease-out forwards; }
+    @media (min-width: 768px) {
+      .magnifyingGlass-CNT .magnifyingGlass {
+        border: 25px solid white;
+        height: 265px;
+        width: 265px;
+        top: 8vh;
+        left: 18vw; } }
+    @media (min-width: 1200px) {
+      .magnifyingGlass-CNT .magnifyingGlass {
+        border: 32px solid white;
+        height: 380px;
+        width: 380px;
+        top: 0vh;
+        left: 0vw; } }
     .magnifyingGlass-CNT .magnifyingGlass .magnifyingGlass-stick {
       background-color: white;
-      left: 36px;
-      height: 15px;
-      width: 46px;
-      transform: skew(-40deg, 43deg);
+      left: 51px;
+      height: 18px;
+      width: 50px;
+      transform: skew(-35deg, 37deg);
       position: relative; }
       @media (min-width: 768px) {
         .magnifyingGlass-CNT .magnifyingGlass .magnifyingGlass-stick {
-          left: 40px;
-          height: 16px;
-          width: 54px; } }
+          left: 55px;
+          height: 21px;
+          width: 62px; } }
       @media (min-width: 1200px) {
         .magnifyingGlass-CNT .magnifyingGlass .magnifyingGlass-stick {
-          left: 45px;
-          height: 19px;
-          width: 65px; } }
+          left: 58px;
+          transform: skew(-40deg, 41deg);
+          height: 30px;
+          width: 80px; } }
 
 .mainSectionCNT {
   width: 100vw;
@@ -226,7 +233,20 @@
   justify-content: center;
   align-items: center;
   height: 15vh;
-  background-color: #c8c8c8; }
+  background-color: black;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Saira Extra Condensed', sans-serif; }
+  .footerCNT .allfooterBTNs {
+    margin-left: 5px;
+    padding-left: 5px;
+    justify-content: center;
+    text-align: center;
+    width: 23vw;
+    color: #fafafa;
+    background-color: #131313; }
+  .footerCNT .footerBTNfirst {
+    background-color: #c19f13; }
 
 .container {
   width: 100vw;

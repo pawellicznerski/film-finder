@@ -1,0 +1,29 @@
+//media query
+@import "./../../../../_cv-page__base/media-query-mixins.scss";
+
+.competence__section-name{
+  margin: 0 0 30px 10px;
+  background-color: rgba(10,10,10,0);
+  @include tablet{
+    margin: 50px 0 20px 7px;
+  };
+
+    &__icon_competence{
+      margin: 8px 0 0 0;
+      height: 22px;
+      width: 22px;
+      @include tablet{
+        margin: 4px 0 0 6px;
+        height: 33px;
+        width: 33px;
+      };
+      background-image: url("./components/cv-page/main/competence/_competence_modifiers/_competence__section-name/competence__section-name__icon_competence.svg");
+    }
+    &__text_competence{
+     font-size: 26px;
+     @include tablet{
+       font-size: 29px;
+       font-weight: bold;
+     };
+    }
+}

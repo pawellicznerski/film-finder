@@ -1,0 +1,16 @@
+//includes styles for every inner block in main
+@import "./competence/competence.scss" ;
+@import "./education/education.scss" ;
+@import "./experience/experience.scss" ;
+@import "./interests/interests.scss" ;
+
+@import "./__section-name/_main__section-name.scss" ;
+
+.main__last-section_laptop-wrapper{
+  @include laptop{
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  };
+}

@@ -6,3 +6,13 @@
 @import "./mainSectionStylePartials/mainInfoStyle";
 //style for form in main section
 @import "./mainSectionStylePartials/formStyle";
+//this is a container class in main section. It describes overall style for every element which will be presented in the main section
+.mainSectionCNT{
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:75vh;
+  background-color: rgba(8,8,8,1);
+}

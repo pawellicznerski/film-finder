@@ -1,0 +1,155 @@
+//importing modifier of styles for the section header
+@import '_experience_modifiers/_experience__section-name/experience__section-name.scss';
+//importing colors from main variables
+@import "./../../_cv-page__base/cv-page__base__variables.scss";
+//media query
+@import "./../../_cv-page__base/media-query-mixins.scss";
+
+
+.experience{
+  background-color: rgba(140,140,140,1);
+  width:100vw;
+  display: flex;
+  flex-wrap: wrap;
+  @include laptop{
+    width:900px;
+    // border: 1px solid blue;
+  };
+  &__section{
+    margin: 10px 0;
+    width: 50%;
+    &_left{
+      @include laptop{
+        width:450px;
+        margin: 0;
+      };
+    }
+    &_right{
+      border-left: 3px solid black;
+      @include laptop{
+        width:450px;
+        margin: 0;
+      };
+    }
+  }
+  &__section__el{
+    margin: 40px 0 40px 10px;
+    width:90%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color__details_grey_light;
+    border: 1px solid $color__details_grey_light;
+    border-radius: 14px;
+    @include laptop{
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 40px 0 40px 17px;
+    };
+    &__text_title{
+      margin: 3px;
+      background-color: inherit;
+      order: 1;
+      width: 50%;
+      word-wrap: break-word;
+      color: black;
+      // border: 1px solid green;
+      @include laptop{
+        font-size: 20px;
+        width: 70%;
+
+      };
+    }
+    &__text_main{
+      margin: 3px;
+      background-color: inherit;
+      order: 3;
+      word-wrap: break-word;
+      color: $color__details_grey_dark;
+      // border: 1px solid blue;
+      @include laptop{
+        width: 70%;
+        margin-top: -54px;
+      };
+    }
+    &__text_date{
+      margin: 3px;
+      background-color: inherit;
+      order: 2;
+      width: 40%;
+      word-wrap: break-word;
+      border-left: 2px solid $color__details_grey_dark;
+      // border: 1px solid red;
+      @include laptop{
+        align-self: flex-end;
+        width: 25%;
+        height: 90%;
+        margin-top: -18px;
+        vertical-align: middle;
+        text-align: center;
+      };
+      &_month{
+        background-color: inherit;
+        margin-left: 6px;
+        color: $color__details_grey_dark;
+        @include laptop{
+
+        };
+      }
+      &_year{
+        background-color: inherit;
+        margin-left: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        color: $color__primary;
+        @include laptop{
+          font-size: 38px;
+          font-weight: normal;
+          margin-top: -5px;
+          color: $color__details_green_lighness-4;
+        };
+      }
+    }
+  }
+}
+
+.experience__section__el__text_arrow{
+  &::before{
+    width: 14px;
+    height: 28px;
+    position: absolute;
+    content: "";
+    // background-color: red;
+    background-image: url("./components/cv-page/main/experience/_experience_images/experience_images_arrow.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include laptop{
+      width: 22px;
+      height: 44px;
+    };
+  }
+}
+.experience__section__el__text_arrow_left{
+  &::before{
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+  right:-10px;
+  top:20px;
+  @include laptop{
+    right:-23px;
+    top:20px;
+    };
+  }
+}
+.experience__section__el__text_arrow_right{
+  &::before{
+  left:-9px;
+  top:20px;
+  @include laptop{
+    left:-17px;
+    top:20px;
+  };
+  }
+}

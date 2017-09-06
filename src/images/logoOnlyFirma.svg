@@ -58,9 +58,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70000002"
-     inkscape:cx="263.49834"
-     inkscape:cy="-48.627101"
+     inkscape:zoom="1.979899"
+     inkscape:cx="140.8233"
+     inkscape:cy="25.572487"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -78,7 +78,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -89,34 +89,34 @@
      transform="translate(0,-277.42084)">
     <g
        aria-label="FIRMA"
-       transform="matrix(0.1710178,0,0,0.27897369,-162.02636,167.50536)"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:96px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+       transform="matrix(0.15378753,0,0,0.25086673,-142.12406,179.68751)"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:96px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#fffdff;stroke-width:3.9333559;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="flowRoot4828">
       <path
          d="m 967.00595,433.5146 h 30.624 v -12 h -30.624 v -15.84 h 34.75205 v -12 h -49.15205 v 69.984 h 14.4 z"
          id="path6775"
          inkscape:connector-curvature="0"
-         style="fill:#ffffff" />
+         style="fill:#ffffff;stroke:#fffdff;stroke-width:3.9333559;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
          d="m 1024.6375,393.6746 h -14.4 v 69.984 h 14.4 z"
          id="path6777"
          inkscape:connector-curvature="0"
-         style="fill:#ffffff" />
+         style="fill:#ffffff;stroke:#fffdff;stroke-width:3.9333559;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
          d="m 1052.8945,435.9146 h 16.512 c 6.24,0 8.928,2.496 8.928,8.352 0,0.576 0,1.536 -0.096,2.784 -0.096,1.824 -0.096,3.552 -0.096,4.608 0,6.528 0.384,8.64 2.208,12 h 15.456 v -2.592 c -2.208,-1.248 -3.072,-2.688 -3.072,-5.76 -0.384,-20.64 -0.768,-21.6 -9.696,-25.44 7.872,-3.072 11.808,-8.736 11.808,-17.28 0,-5.568 -1.92,-10.656 -5.28,-14.112 -3.168,-3.264 -7.584,-4.8 -13.536,-4.8 h -37.536 v 69.984 h 14.4 z m 0,-12 v -18.24 h 17.376 c 4.128,0 5.856,0.384 7.584,1.824 1.728,1.44 2.592,3.84 2.592,7.104 0,3.36 -0.96,6.048 -2.592,7.488 -1.536,1.344 -3.456,1.824 -7.584,1.824 z"
          id="path6779"
          inkscape:connector-curvature="0"
-         style="fill:#ffffff" />
+         style="fill:#ffffff;stroke:#fffdff;stroke-width:3.9333559;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
          d="m 1120.9255,409.1306 12.576,54.528 h 14.4 l 12.384,-54.528 v 54.528 h 14.4 v -69.984 h -21.696 l -12.288,55.68 -12.672,-55.68 h -21.504 v 69.984 h 14.4 z"
          id="path6781"
          inkscape:connector-curvature="0"
-         style="fill:#ffffff" />
+         style="fill:#ffffff;stroke:#fffdff;stroke-width:3.9333559;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
          d="m 1228.348,449.5466 4.608,14.112 h 14.784 l -24.192,-69.984 h -15.936 l -24.864,69.984 h 14.688 l 4.704,-14.112 z m -3.936,-12 h -18.24 l 9.12,-27.36 z"
          id="path6783"
          inkscape:connector-curvature="0"
-         style="fill:#ffffff" />
+         style="fill:#ffffff;stroke:#fffdff;stroke-width:3.9333559;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
   </g>
 </svg>

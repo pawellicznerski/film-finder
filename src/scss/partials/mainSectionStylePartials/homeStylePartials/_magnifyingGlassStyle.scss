@@ -14,49 +14,58 @@
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 12vh;
-  @include tablet{
-
-  };
   .magnifyingGlass{
     color: white;
     border-radius: 50%;
-    border:18px solid white;
-    margin: -8px 0 0 13px;
+    border:23px solid white;
+    margin: -4px 0 0 13px;
     background-position: center;
     background-image: url("./images/magnifyingGlass.svg");
     background-size: 0px 0px;
     background-repeat: no-repeat;
-    height:200px;
-    width:200px;
+    height:220px;
+    width:220px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;;
     position: relative;
-    top:40vh;
-    left:78vw;
+    top:8vh;
+    left:18vw;
     @include tablet{
+      border:25px solid white;
+      height:265px;
+      width:265px;
+      top:8vh;
+      left:18vw;
     };
-    animation: movingMagnifyingGlass 1.8s 1.2s ease-out forwards;
+    @include laptop{
+      border:32px solid white;
+      height:380px;
+      width:380px;
+      top:0vh;
+      left:0vw;
+    };
+    animation: movingMagnifyingGlass 1.4s 1.0s ease-out forwards;
     .magnifyingGlass-stick{
       background-color: white;
-      left:36px;
+      left:51px;
       // top:79px;
-      height:15px;
-      width:46px;
-      transform: skew(-40deg,43deg);
+      height:18px;
+      width:50px;
+      transform: skew(-35deg,37deg);
       position: relative;
       // animation: shrinkingMagnifyingGlass 1.8s 1.2s ease-out forwards;
       @include tablet{
-        left:40px;
+        left:55px;
         // top:79px;
-        height:16px;
-        width:54px;
+        height:21px;
+        width:62px;
       };
       @include laptop{
-        left:45px;
-        // top:79px;
-        height:19px;
-        width:65px;
+        left:58px;
+        transform: skew(-40deg,41deg);
+        height:30px;
+        width:80px;
       };
 
     }
