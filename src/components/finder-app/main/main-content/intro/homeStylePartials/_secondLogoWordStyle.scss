@@ -1,13 +1,13 @@
 @import "../../../modules/mediaQueryMixins";
 
 
-.secondLogo-CNT{
-  .secondLogo-word{
+.intro__second-word-container{
+  .intro__second-word{
     position: relative;
     background-position: center;
     left:-70vw;
     // border: 1px solid green;
-    background-image: url("./images/logoOnlyPod.svg");
+    background-image:url("./components/finder-app/__finder-app__logo/images/logoOnlyPod.svg")
     background-size: contain;
     background-repeat: no-repeat;
     height:55px;
