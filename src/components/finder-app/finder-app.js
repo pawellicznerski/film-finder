@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router,Route,NavLink, Switch } from 'react-router-dom';
 
-import { PrimaryContent }  from './main/main-content/main-content.js';
+// import { PrimaryContent }  from './main/main-content/main-content.js';
 
 import { Intro}  from './main/main-content/intro/intro.js';
 import { Form }  from './main/main-content/form/form.js';

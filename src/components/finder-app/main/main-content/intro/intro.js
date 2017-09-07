@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { MainContent } from './../main-content';
+
 
 export class Intro extends Component {
   componentDidMount(){

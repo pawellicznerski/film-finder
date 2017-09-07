@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router,Route,NavLink, Switch } from 'react-router-dom';
+import { Main } from './../main';
 
-class PrimaryContent extends Component {
+export class MainContent extends Component {
   render() {
     return (
-      <section className="primary-content">
-        <div className="primary-content__container">
+      <Main>
+        <div className="main-content">
+          {this.props.children}
         </div>
-      </section>
+      </Main>
     );
   }
 }
-
-export default PrimaryContent;

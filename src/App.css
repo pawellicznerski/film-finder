@@ -35,6 +35,9 @@
         width: 18px;
         transform: skew(-35deg, 37deg); }
 
+.definition {
+  color: pink; }
+
 @keyframes movingMagnifyingGlass {
   0% {
     top: 8vh;
