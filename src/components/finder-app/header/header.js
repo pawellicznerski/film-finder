@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router,Route,NavLink, Switch } from 'react-router-dom';
 
-class Header extends Component {
+
+
+export class Header extends Component {
   render() {
     return (
-      <nav>
-        <div className="navCNT">
-          <NavLink to="/" style={{ textDecoration: 'none'}} ><div className="menu-logo"><p>menu</p></div></NavLink>
-        </div>
-      </nav>
+      <div  className="logo logo-header">
+          <div className="logo__first-word logo-header__first-word">
+          </div>
+          <div className="logo__second-word-container logo-header__second-word-container">
+            <div className="logo__second-word logo-header__second-word">
+            </div>
+          </div>
+          <div className="logo__magnifyingGlass-container logo-header__magnifyingGlass-container">
+            <div className="logo__magnifyingGlass logo-header__magnifyingGlass  ">
+              <div className="logo__magnifyingGlass__stick logo-header__magnifyingGlass__stick ">
+              </div>
+            </div>
+          </div>
+      </div>
     );
   }
 }
-
-export default Header;

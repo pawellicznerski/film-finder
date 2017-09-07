@@ -1,0 +1,60 @@
+@import "./../_finder-app__base/mediaQueryMixins";
+
+.logo{
+  &__first-word{
+    background-position: center;
+    background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyFirma.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    // height:60px;
+    // width:100vw;
+  }//first-word
+  &__second-word-container{
+    .logo__second-word{
+      position: relative;
+      background-position: center;
+      // left:-70vw;
+      // border: 1px solid green;
+      background-image:url("./components/finder-app/__finder-app__logo/images/logoOnlyPod.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      // height:55px;
+      // width:100vw;
+    }
+  }//second-word-container
+  &__magnifyingGlass-container{
+    // border: 1px solid orange;
+    // height:30vh;
+    // width:100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    // margin-bottom: 12vh;
+    .logo__magnifyingGlass{
+      // color: white;
+      border-radius: 50%;
+      // border:23px solid white;
+      // margin: -4px 0 0 13px;
+      background-position: center;
+      background-image:url("./components/finder-app/__finder-app__logo/images/magnifyingGlass.svg");
+      // background-size: 0px 0px;
+      background-repeat: no-repeat;
+      // height:220px;
+      // width:220px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;;
+      position: relative;
+      // top:8vh;
+      // left:18vw;
+      &__stick{
+        background-color: white;
+        // left:51px;
+        // height:18px;
+        // width:50px;
+        // transform: skew(-35deg,37deg);
+        position: relative;
+      }
+    }
+  }
+}

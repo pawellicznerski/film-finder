@@ -1,7 +1,38 @@
-.navCNT{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:10vh;
-  background-color: rgba(8,8,8,1);
+.logo-header{
+  border: 1px solid pink;
+  width: 100px;
+  &__first-word{
+    height:30px;
+    width:50px;
+  }//first-word
+  &__second-word-container{
+    .logo-header__second-word{
+      // left:-70vw;
+      border: 1px solid green;
+      height:10px;
+      width:15px;
+    }
+  }//second-word-container
+  &__magnifyingGlass-container{
+    border: 1px solid orange;
+    // height:30vh;
+    // width:100%;
+    // margin-bottom: 12vh;
+    .logo-header__magnifyingGlass{
+      color: white;
+      border:5px solid white;
+      margin: -4px 0 0 13px;
+      height:50px;
+      width:50px;
+      background-size: cover;
+      // top:8vh;
+      // left:18vw;
+      &__stick{
+        left:11px;
+        height:6px;
+        width:10px;
+        transform: skew(-35deg,37deg);
+      }
+    }
+  }
 }

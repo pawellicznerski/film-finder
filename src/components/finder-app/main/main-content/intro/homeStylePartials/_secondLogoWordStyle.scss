@@ -4,9 +4,9 @@
 .intro__second-word-container{
   .intro__second-word{
     position: relative;
-    background-position: center;
-    left:-70vw;
-    // border: 1px solid green;
+    background-position: -70vw 0;
+    // left:-70vw;
+    border: 1px solid green;
     background-image:url("./components/finder-app/__finder-app__logo/images/logoOnlyPod.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -21,8 +21,11 @@
     };
   }
   @keyframes moveSecondWord{
-      0%{left:-70vw;}
-      65%{left:10vw;}
-      100%{left:0vw;}
+      // 0%{left:-70vw;}
+      // 65%{left:10vw;}
+      // 100%{left:0vw;}
+      0%{background-position: -70vw 0;}
+      65%{background-position: 10vw 0;}
+      100%{background-position: 0 0;}
   }
 }
