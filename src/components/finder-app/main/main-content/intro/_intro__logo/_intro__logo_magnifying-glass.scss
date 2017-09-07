@@ -5,8 +5,7 @@
 @include movingMagnifyingGlassTablet;
 @include movingMagnifyingGlassLaptop;
 
-
-.intro__magnifyingGlass-container{
+.intro-logo__magnifying-glass-container{
   // border: 1px solid orange;
   height:30vh;
   width:100%;
@@ -14,7 +13,7 @@
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 12vh;
-  .intro__magnifyingGlass{
+  .intro-logo__magnifying-glass{
     color: white;
     border-radius: 50%;
     border:23px solid white;

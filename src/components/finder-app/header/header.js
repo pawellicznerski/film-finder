@@ -4,22 +4,33 @@ import { BrowserRouter as Router,Route,NavLink, Switch } from 'react-router-dom'
 
 
 export class Header extends Component {
+
+  returnToMenu=(e)=>{
+    e.preventDefault();
+    this.props.history.push('/');
+  }//end of returnToMenu
+
   render() {
     return (
-      <div  className="logo logo-header">
-          <div className="logo__first-word logo-header__first-word">
-          </div>
-          <div className="logo__second-word-container logo-header__second-word-container">
-            <div className="logo__second-word logo-header__second-word">
+      <header className="header">
+        <div  className="logo header__logo" onClick={this.returnToMenu}>
+            <div className="logo__words header__logo__words">
+              <div className="logo__words_first header__logo__words_first"></div>
+              <div className="logo__words_second header__logo__words_second"></div>
             </div>
-          </div>
-          <div className="logo__magnifyingGlass-container logo-header__magnifyingGlass-container">
-            <div className="logo__magnifyingGlass logo-header__magnifyingGlass  ">
-              <div className="logo__magnifyingGlass__stick logo-header__magnifyingGlass__stick ">
+            <div className="logo__magnifying-glass-container header__logo__magnifying-glass-container">
+              <div className="logo__magnifying-glass header__logo__magnifying-glass">
+                <div className="logo__magnifying-glass__stick header__logo__magnifying-glass__stick ">
+                </div>
               </div>
             </div>
-          </div>
-      </div>
+        </div>
+      </header>
     );
   }
 }
+// <nav>
+//   <div className="navCNT">
+//     <NavLink to="/" style={{ textDecoration: 'none'}} ><div className="menu-logo"><p>menu</p></div></NavLink>
+//   </div>
+// </nav>

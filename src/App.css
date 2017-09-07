@@ -1,27 +1,44 @@
-.logo-header {
-  border: 1px solid pink;
-  width: 100px; }
-  .logo-header__first-word {
-    height: 30px;
-    width: 50px; }
-  .logo-header__second-word-container .logo-header__second-word {
-    border: 1px solid green;
-    height: 10px;
-    width: 15px; }
-  .logo-header__magnifyingGlass-container {
-    border: 1px solid orange; }
-    .logo-header__magnifyingGlass-container .logo-header__magnifyingGlass {
-      color: white;
-      border: 5px solid white;
-      margin: -4px 0 0 13px;
-      height: 50px;
-      width: 50px;
-      background-size: cover; }
-      .logo-header__magnifyingGlass-container .logo-header__magnifyingGlass__stick {
-        left: 11px;
-        height: 6px;
-        width: 10px;
-        transform: skew(-35deg, 37deg); }
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  background-color: black; }
+  .header__logo {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid pink;
+    min-height: 80px;
+    width: 250px; }
+    .header__logo__words {
+      display: flex;
+      margin-top: -4px;
+      align-items: flex-end;
+      flex-direction: column;
+      width: 60px; }
+      .header__logo__words_first {
+        height: 40px;
+        width: 60px; }
+      .header__logo__words_second {
+        margin-top: -10px;
+        border: 1px solid green;
+        height: 26px;
+        width: 31px; }
+    .header__logo__magnifying-glass-container {
+      border: 1px solid orange; }
+      .header__logo__magnifying-glass-container .header__logo__magnifying-glass {
+        border: 8px solid white;
+        height: 78px;
+        width: 78px;
+        background-size: 70px 70px; }
+        .header__logo__magnifying-glass-container .header__logo__magnifying-glass__stick {
+          background-color: black;
+          left: 16px;
+          height: 8px;
+          width: 18px;
+          transform: skew(-35deg, 37deg); }
 
 @keyframes movingMagnifyingGlass {
   0% {
@@ -131,14 +148,14 @@
       height: 370px;
       width: 370px; } } }
 
-.intro__magnifyingGlass-container {
+.intro-logo__magnifying-glass-container {
   height: 30vh;
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 12vh; }
-  .intro__magnifyingGlass-container .intro__magnifyingGlass {
+  .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass {
     color: white;
     border-radius: 50%;
     border: 23px solid white;
@@ -157,20 +174,20 @@
     left: 18vw;
     animation: movingMagnifyingGlass 1.4s 1.0s ease-out forwards; }
     @media (min-width: 768px) {
-      .intro__magnifyingGlass-container .intro__magnifyingGlass {
+      .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass {
         border: 25px solid white;
         height: 265px;
         width: 265px;
         top: 8vh;
         left: 18vw; } }
     @media (min-width: 1200px) {
-      .intro__magnifyingGlass-container .intro__magnifyingGlass {
+      .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass {
         border: 32px solid white;
         height: 380px;
         width: 380px;
         top: 0vh;
         left: 0vw; } }
-    .intro__magnifyingGlass-container .intro__magnifyingGlass__stick {
+    .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass__stick {
       background-color: white;
       left: 51px;
       height: 18px;
@@ -178,18 +195,18 @@
       transform: skew(-35deg, 37deg);
       position: relative; }
       @media (min-width: 768px) {
-        .intro__magnifyingGlass-container .intro__magnifyingGlass__stick {
+        .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass__stick {
           left: 55px;
           height: 21px;
           width: 62px; } }
       @media (min-width: 1200px) {
-        .intro__magnifyingGlass-container .intro__magnifyingGlass__stick {
+        .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass__stick {
           left: 58px;
           transform: skew(-40deg, 41deg);
           height: 30px;
           width: 80px; } }
 
-.intro__words_first {
+.intro-logo__words_first {
   background-position: center;
   background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyFirma.svg");
   background-size: contain;
@@ -197,14 +214,14 @@
   height: 60px;
   width: 100vw; }
   @media (min-width: 768px) {
-    .intro__words_first {
+    .intro-logo__words_first {
       height: 75px; } }
   @media (min-width: 1200px) {
-    .intro__words_first {
+    .intro-logo__words_first {
       margin-top: -8vh;
       height: 90px; } }
 
-.intro__words_second {
+.intro-logo__words_second {
   position: relative;
   background-position: -70vw 0;
   background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyPod.svg");
@@ -214,10 +231,10 @@
   width: 100vw;
   animation: moveSecondWord 0.8s 0.5s ease forwards; }
   @media (min-width: 768px) {
-    .intro__words_second {
+    .intro-logo__words_second {
       height: 60px; } }
   @media (min-width: 1200px) {
-    .intro__words_second {
+    .intro-logo__words_second {
       height: 70px; } }
 
 @keyframes moveSecondWord {
@@ -248,24 +265,24 @@
   .footerCNT .footerBTNfirst {
     background-color: #c19f13; }
 
-.logo__first-word {
+.logo__words_first {
   background-position: center;
   background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyFirma.svg");
   background-size: contain;
   background-repeat: no-repeat; }
 
-.logo__second-word-container .logo__second-word {
+.logo__words_second {
   position: relative;
   background-position: center;
   background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyPod.svg");
   background-size: contain;
   background-repeat: no-repeat; }
 
-.logo__magnifyingGlass-container {
+.logo__magnifying-glass-container {
   display: flex;
   align-items: flex-start;
   justify-content: center; }
-  .logo__magnifyingGlass-container .logo__magnifyingGlass {
+  .logo__magnifying-glass-container .logo__magnifying-glass {
     border-radius: 50%;
     background-position: center;
     background-image: url("./components/finder-app/__finder-app__logo/images/magnifyingGlass.svg");
@@ -274,7 +291,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     position: relative; }
-    .logo__magnifyingGlass-container .logo__magnifyingGlass__stick {
+    .logo__magnifying-glass-container .logo__magnifying-glass__stick {
       background-color: white;
       position: relative; }
 

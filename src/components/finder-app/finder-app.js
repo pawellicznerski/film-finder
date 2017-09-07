@@ -20,12 +20,7 @@ export class FinderApp extends Component {
     return (
       <Router history={history}>
           <div className="finder-app">
-              <Header/>
-              <nav>
-                <div className="navCNT">
-                  <NavLink to="/" style={{ textDecoration: 'none'}} ><div className="menu-logo"><p>menu</p></div></NavLink>
-                </div>
-              </nav>
+              <Header history={history}/>
               <section>
                 <div className="main">
                   <Switch>
