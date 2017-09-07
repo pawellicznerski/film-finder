@@ -23,19 +23,17 @@ export class FinderApp extends Component {
     }
   }
   toggleHeaderLogo(value){
-    this.setState({
-      displayHeaderLogo:value,
-    })
+    this.setState({toggleShowLogo:value,})
   }
   render() {
     return (
       <Router history={history}>
           <div className="finder-app">
-              <Header toggleShowLogo={this.state.toggleShowLogo?null:style={{display: 'none'}} }/>
+              {location.pathname==="/"?<header className="header"></header>:<Header/> }
               <section>
                 <div className="main">
                   <Switch>
-                    <Route exact path="/" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo}/>
+                    <Route exact path="/" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo.bind(this)}/>
                     <Route exact path="/form" component={Form}/>
                     <Route exact path="/krsInfo" component={KrsInfo}/>
                     <Route exact path="/nipInfo" component={NipInfo}/>

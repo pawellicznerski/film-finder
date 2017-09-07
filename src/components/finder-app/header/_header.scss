@@ -6,16 +6,12 @@
   background-color: black;
   min-height: 85px;
   &__logo{
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     // border: 1px solid pink;
     min-height: 85px;
     width: 250px;
-    &_hidden{
-      display: none;
-    }
     &__words{
       display: flex;
       margin-top: -4px;

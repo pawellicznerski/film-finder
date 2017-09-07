@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
 
 export class Intro extends Component {
-  // constructor(props){
-  //   super(props);
-  //   this.state={
-  //     display:true,
-  //   }
-  // }
-  // componentWillUnmount(){
-  //   this.setState({
-  //     display:true,
-  //   })
-  //   this.props.route.toggleHeaderLogo(true);
-  // }
+  componentDidMount(){
+      this.props.route.toggleHeaderLogo(false);
+  }
   render() {
     return (
       <div  className="logo intro-logo">

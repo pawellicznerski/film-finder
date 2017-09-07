@@ -4,21 +4,10 @@ import { Intro}  from './../main/main-content/intro/intro.js';
 
 
 export class Header extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      display:this.props.displayHeaderLogo,
-    }
-  }
-  handleHideLogo(){
-    this.setState({display:false})
-  }
-
   render() {
     return (
       <header className="header">
-        <NavLink to="/" style={{ textDecoration: 'none'}} onClick={this.handleHideLogo} >
-          <div  className={this.state.display?"logo header__logo":"logo header__logo header__logo_hidden"}>
+          <div  className="logo header__logo">
             <div className="logo__words header__logo__words">
               <div className="logo__words_first header__logo__words_first"></div>
               <div className="logo__words_second header__logo__words_second"></div>
@@ -30,7 +19,6 @@ export class Header extends Component {
               </div>
             </div>
           </div>
-        </NavLink>
       </header>
     );
   }

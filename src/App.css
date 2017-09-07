@@ -5,14 +5,11 @@
   background-color: black;
   min-height: 85px; }
   .header__logo {
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 85px;
     width: 250px; }
-    .header__logo_hidden {
-      display: none; }
     .header__logo__words {
       display: flex;
       margin-top: -4px;
