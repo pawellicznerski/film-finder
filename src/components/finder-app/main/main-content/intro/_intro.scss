@@ -1,11 +1,5 @@
-//it is a component with the animated logo which consists of three parts
-
-//first part - "FIRMA" word
-@import "./homeStylePartials/firstLogoWordStyle";
-//second part - "pod" word
-@import "./homeStylePartials/secondLogoWordStyle";
-//third part - animated magnifyingGlass
-@import "./homeStylePartials/magnifyingGlassStyle";
+@import "./_intro__logo/_intro__logo_magnifying-glass";
+@import "./_intro__logo/_intro__logo_words";
 
 .intro{
   // min-height: 330px;

@@ -23,46 +23,6 @@
         width: 10px;
         transform: skew(-35deg, 37deg); }
 
-.intro__first-word {
-  background-position: center;
-  background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyFirma.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 60px;
-  width: 100vw; }
-  @media (min-width: 768px) {
-    .intro__first-word {
-      height: 75px; } }
-  @media (min-width: 1200px) {
-    .intro__first-word {
-      margin-top: -8vh;
-      height: 90px; } }
-
-.intro__second-word-container .intro__second-word {
-  position: relative;
-  background-position: -70vw 0;
-  border: 1px solid green;
-  background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyPod.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 55px;
-  width: 100vw;
-  animation: moveSecondWord 0.8s 0.5s ease forwards; }
-  @media (min-width: 768px) {
-    .intro__second-word-container .intro__second-word {
-      height: 60px; } }
-  @media (min-width: 1200px) {
-    .intro__second-word-container .intro__second-word {
-      height: 70px; } }
-
-@keyframes moveSecondWord {
-  0% {
-    background-position: -70vw 0; }
-  65% {
-    background-position: 10vw 0; }
-  100% {
-    background-position: 0 0; } }
-
 @keyframes movingMagnifyingGlass {
   0% {
     top: 8vh;
@@ -228,6 +188,45 @@
           transform: skew(-40deg, 41deg);
           height: 30px;
           width: 80px; } }
+
+.intro__words_first {
+  background-position: center;
+  background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyFirma.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 100vw; }
+  @media (min-width: 768px) {
+    .intro__words_first {
+      height: 75px; } }
+  @media (min-width: 1200px) {
+    .intro__words_first {
+      margin-top: -8vh;
+      height: 90px; } }
+
+.intro__words_second {
+  position: relative;
+  background-position: -70vw 0;
+  background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyPod.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 55px;
+  width: 100vw;
+  animation: moveSecondWord 0.8s 0.5s ease forwards; }
+  @media (min-width: 768px) {
+    .intro__words_second {
+      height: 60px; } }
+  @media (min-width: 1200px) {
+    .intro__words_second {
+      height: 70px; } }
+
+@keyframes moveSecondWord {
+  0% {
+    background-position: -120vw 0; }
+  65% {
+    background-position: 60vw 0; }
+  100% {
+    background-position: 46vw 0; } }
 
 .footerCNT {
   display: flex;
