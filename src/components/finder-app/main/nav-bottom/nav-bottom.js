@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router,Route,NavLink, Switch } from 'react-router-dom';
 
-class NavBottom extends Component {
+export class NavBottom extends Component {
   render() {
     return (
       <nav className="nav-bottom">
@@ -15,5 +15,3 @@ class NavBottom extends Component {
     );
   }
 }
-
-export default NavBottom;

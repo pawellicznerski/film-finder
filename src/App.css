@@ -2,16 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
-  background-color: black; }
+  background-color: black;
+  min-height: 85px; }
   .header__logo {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid pink;
-    min-height: 80px;
+    min-height: 85px;
     width: 250px; }
+    .header__logo_hidden {
+      display: none; }
     .header__logo__words {
       display: flex;
       margin-top: -4px;
@@ -23,22 +24,19 @@
         width: 60px; }
       .header__logo__words_second {
         margin-top: -10px;
-        border: 1px solid green;
         height: 26px;
         width: 31px; }
-    .header__logo__magnifying-glass-container {
-      border: 1px solid orange; }
-      .header__logo__magnifying-glass-container .header__logo__magnifying-glass {
-        border: 8px solid white;
-        height: 78px;
-        width: 78px;
-        background-size: 70px 70px; }
-        .header__logo__magnifying-glass-container .header__logo__magnifying-glass__stick {
-          background-color: black;
-          left: 16px;
-          height: 8px;
-          width: 18px;
-          transform: skew(-35deg, 37deg); }
+    .header__logo__magnifying-glass-container .header__logo__magnifying-glass {
+      border: 8px solid white;
+      height: 78px;
+      width: 78px;
+      background-size: 70px 70px; }
+      .header__logo__magnifying-glass-container .header__logo__magnifying-glass__stick {
+        background-color: black;
+        left: 16px;
+        height: 8px;
+        width: 18px;
+        transform: skew(-35deg, 37deg); }
 
 @keyframes movingMagnifyingGlass {
   0% {

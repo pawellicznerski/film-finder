@@ -9,23 +9,34 @@ import { NipInfo }  from './main/main-content/definitions/__definitions__nip-inf
 import { KrsInfo }  from './main/main-content/definitions/__definitions__krs-info/definitions__krs-info.js';
 import { RegonInfo }  from './main/main-content/definitions/__definitions__regon-info/definitions__regon-info.js';
 import { NoMatch }  from './main/main-content/no-match/no-match.js';
-// import { NavBottom }  from './main/nav-bottom/nav-bottom.js';
+import { NavBottom }  from './main/nav-bottom/nav-bottom.js';
 
 import { Footer }  from './footer/footer.js';
 
 import { Header }  from './header/header.js';
 
 export class FinderApp extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      toggleShowLogo:false,
+    }
+  }
+  toggleHeaderLogo(value){
+    this.setState({
+      displayHeaderLogo:value,
+    })
+  }
   render() {
     return (
       <Router history={history}>
           <div className="finder-app">
-              <Header history={history}/>
+              <Header toggleShowLogo={this.state.toggleShowLogo?null:style={{display: 'none'}} }/>
               <section>
                 <div className="main">
                   <Switch>
-                    <Route exact path="/" component={Intro}/>
-                    <Route exact path="/formularz" component={Form}/>
+                    <Route exact path="/" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo}/>
+                    <Route exact path="/form" component={Form}/>
                     <Route exact path="/krsInfo" component={KrsInfo}/>
                     <Route exact path="/nipInfo" component={NipInfo}/>
                     <Route exact path="/regonInfo" component={RegonInfo}/>
@@ -33,14 +44,7 @@ export class FinderApp extends Component {
                   </Switch>
                 </div>
               </section>
-              <nav>
-                <ul className="footerCNT"  style={{ listStyleType: "none"}}>
-                  <NavLink to="/formularz" style={{ textDecoration: 'none'}} ><li className="allfooterBTNs footerBTNfirst"><p>Znajdź firmę</p></li></NavLink>
-                  <NavLink to="/krsInfo" style={{ textDecoration: 'none'}} ><li className="allfooterBTNs footerBTN2"><p>Co to jest KRS?</p></li></NavLink>
-                  <NavLink to="/nipInfo" style={{ textDecoration: 'none'}} ><li className="allfooterBTNs footerBTN3"><p>Co to jest NIP?</p></li></NavLink>
-                  <NavLink to="/regonInfo" style={{ textDecoration: 'none'}} ><li className="allfooterBTNs footerBTN4"><p>Co to jest REGON?</p></li></NavLink>
-                </ul>
-              </nav>
+              <NavBottom/>
               <Footer/>
           </div>
       </Router>
