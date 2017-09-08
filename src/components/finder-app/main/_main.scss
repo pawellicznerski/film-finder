@@ -5,7 +5,4 @@
 .main{
   height:80vh;
   min-height: 470px;
-  @include laptop{
-    height:75vh;
-  };
 }

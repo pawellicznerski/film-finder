@@ -11,13 +11,16 @@
   text-decoration: none;
   font-size: 25px;
   font-family: 'Saira Extra Condensed', sans-serif;
+  // border: 1px solid green;
   @include mobile{
     width: 400px;
     margin: 0 auto;
   };
   @include laptop{
     width: 500px;
-    margin: 0 auto;
+    margin: 4vh auto 0 auto;
+    // margin-top: 5vh;
+    // height:15vh;
   };
   .main__nav-bottom__el{
     justify-content: center;
@@ -28,7 +31,7 @@
       width: 80px;
     };
     @include laptop{
-      width: 140px;
+      width: 90px;
     };
   }
   .main__nav-bottom__el_active{
