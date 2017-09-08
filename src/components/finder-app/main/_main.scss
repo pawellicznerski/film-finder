@@ -1,1 +1,6 @@
 @import "./main-content/main-content";
+@import "./main__nav-bottom/_main__nav-bottom";
+.main{
+  height:82vh;
+  min-height: 470px;
+}

@@ -4,13 +4,14 @@
   align-items: center;
   // border:1px solid red;
   background-color: black;
-  min-height: 85px;
+  height:13vh;
+  min-height: 80px;
   &__logo{
     display: flex;
     justify-content: center;
     align-items: center;
     // border: 1px solid pink;
-    min-height: 85px;
+    // min-height: 85px;
     width: 250px;
     &__words{
       display: flex;

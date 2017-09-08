@@ -9,7 +9,7 @@ import { NipInfo }  from './main/main-content/definitions/__definitions__nip-inf
 import { KrsInfo }  from './main/main-content/definitions/__definitions__krs-info/definitions__krs-info.js';
 import { RegonInfo }  from './main/main-content/definitions/__definitions__regon-info/definitions__regon-info.js';
 import { NoMatch }  from './main/main-content/no-match/no-match.js';
-import { NavBottom }  from './main/nav-bottom/nav-bottom.js';
+import { NavBottom }  from './main/main__nav-bottom/main__nav-bottom.js';
 
 import { Footer }  from './footer/footer.js';
 
@@ -40,9 +40,9 @@ export class FinderApp extends Component {
                     <Route exact path="/regonInfo" component={RegonInfo}/>
                     <Route component={NoMatch}/>
                   </Switch>
+                <NavBottom/>
                 </div>
               </section>
-              <NavBottom/>
               <Footer/>
           </div>
       </Router>

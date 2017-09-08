@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { MainContent } from './../main-content';
+
 
 export const NoMatch = ({ location }) => (
-  <div>
-    <h3>No match for <code>dowjoe;dijw;ejd;iowej</code></h3>
-  </div>
+  <MainContent>
+    <div>
+      <h3>No match for <code>dowjoe;dijw;ejd;iowej</code></h3>
+    </div>
+  </MainContent>
 )

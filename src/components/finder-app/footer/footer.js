@@ -4,8 +4,10 @@ import React, { Component } from 'react';
 export class Footer extends Component {
   render() {
     return (
-      <footer>
-        &copy; Paweł Licznerski
+      <footer className="footer">
+        <p className="footer__copyrights">
+          &copy; Paweł Licznerski
+        </p>
       </footer>
     );
   }

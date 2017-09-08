@@ -1,0 +1,22 @@
+
+.main__nav-bottom__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:15vh;
+  min-height: 85px;
+  width: 100%;
+  background-color: rgba(0,0,0,1);
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  .main__nav-bottom__el{
+    justify-content: center;
+    text-align: center;
+    width: 23vw;
+    color: rgba(250,250,250,1);
+  }
+  .main__nav-bottom__el_active{
+    background-color: rgba(193,159,19,1);
+  }
+}

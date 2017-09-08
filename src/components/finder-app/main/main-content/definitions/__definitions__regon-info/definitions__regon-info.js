@@ -5,15 +5,14 @@ export class RegonInfo extends Component {
   render() {
     return (
       <Definition>
-        <p>
-          REGON (akronim od Rejestr Gospodarki Narodowej) – Krajowy Rejestr Urzędowy Podmiotów Gospodarki Narodowej – rejestr prowadzony przez Prezesa Głównego Urzędu Statystycznego. Pod pojęciem REGON-u rozumiany jest także numer identyfikacyjny REGON, czyli dziewięciocyfrowy numer podmiotu gospodarki narodowej w powyższym rejestrze.
+        <h1>{location.pathname}</h1><br/>
+          <strong>REGON (akronim od Rejestr Gospodarki Narodowej) – Krajowy Rejestr Urzędowy Podmiotów Gospodarki Narodowej</strong> – rejestr prowadzony przez Prezesa Głównego Urzędu Statystycznego. Pod pojęciem REGON-u rozumiany jest także numer identyfikacyjny REGON, czyli dziewięciocyfrowy numer podmiotu gospodarki narodowej w powyższym rejestrze.<br/><br/>
           Rejestr REGON jest bieżąco aktualizowanym zbiorem informacji o podmiotach gospodarki narodowej prowadzonym w systemie informatycznym w postaci centralnej bazy danych oraz terenowych baz danych posadowionych w 16 urzędach statystycznych. CEIDG-2011 Wpisowi do rejestru REGON podlegają następujące podmioty:
           osoby prawne,
           jednostki organizacyjne nie mające osobowości prawnej,
           osoby fizyczne prowadzące działalność gospodarczą, w tym prowadzące indywidualne gospodarstwa rolne,
-          jednostki lokalne ww. podmiotów.
-          Osoby fizyczne mają numer REGON przypisany raz na zawsze, przy pierwszej rejestracji w rejestrze. Jeżeli po zlikwidowaniu działalności podejmą kiedykolwiek nową działalność (taką samą lub inną), ich 9-cyfrowy numer REGON pozostanie niezmieniony. algorytmem numer 000-000-00-00 jest prawidłowy, ale nie ma sensu. Dla ciągu cyfr 123-456-78-90 nie można dobrać cyfry kontrolnej, by wygenerować prawidłowy NIP.
-        </p>
+          jednostki lokalne ww. podmiotów.<br/><br/>
+        Źródło: wikipedia.org/wiki/REGON<br/><br/>
       </Definition>
     );
   }
