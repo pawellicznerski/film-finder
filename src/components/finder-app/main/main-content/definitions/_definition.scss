@@ -1,6 +1,6 @@
 @import "./../../../_finder-app__base/_finder-app__base_media-query-mixins";
 .definition{
-  margin-top: -2px;
+  margin: -2px 0;
   padding: 15px;
   overflow: scroll;
   color:rgba(255,240,170,1);
@@ -10,10 +10,10 @@
   background-color: black;
   @include mobile{
     overflow: auto;
-    padding: 15px 10vw;
+    padding: 15px 25vw;
   };
   @include laptop{
     overflow: auto;
-    padding: 35px 20vw;
+    padding: 35px 35vw;
   };
 }

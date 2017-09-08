@@ -11,8 +11,12 @@
   text-decoration: none;
   font-size: 25px;
   font-family: 'Saira Extra Condensed', sans-serif;
+  @include mobile{
+    width: 400px;
+    margin: 0 auto;
+  };
   @include laptop{
-    width: 60%;
+    width: 500px;
     margin: 0 auto;
   };
   .main__nav-bottom__el{
@@ -20,8 +24,11 @@
     text-align: center;
     width: 23vw;
     color: rgba(250,250,250,1);
+    @include mobile{
+      width: 80px;
+    };
     @include laptop{
-      width: 16vw;
+      width: 140px;
     };
   }
   .main__nav-bottom__el_active{

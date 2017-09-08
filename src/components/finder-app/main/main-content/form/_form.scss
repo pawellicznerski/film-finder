@@ -1,3 +1,5 @@
+@import "./../../../_finder-app__base/_finder-app__base_media-query-mixins";
+
 .main-content{
   width: 100%;
   height: 100%;
@@ -14,6 +16,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    // @include mobile{
+    //   width: 60%;
+    // };
+    // @include laptop{
+    //   width: 40%;
+    // };
     &__form{
       width: 325px;
       &__label{

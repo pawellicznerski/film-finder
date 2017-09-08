@@ -24,7 +24,7 @@ export class Form extends Component {
             <form onSubmit={this.handleSubmit} className="main-content__form-container__form">
               <label className="main-content__form-container__form__label">
                 Wpisz KRS lub NIP lub REGON:
-                <input type="number" name="name"  className="main-content__form-container__form__input" />
+                <input type="text" name="name"  className="main-content__form-container__form__input" />
               </label>
               <input type="submit" value="Szukaj"  className="main-content__form-container__form__button"/>
             </form>

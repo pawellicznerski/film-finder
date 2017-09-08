@@ -36,7 +36,7 @@
         transform: skew(-35deg, 37deg); }
 
 .definition {
-  margin-top: -2px;
+  margin: -2px 0;
   padding: 15px;
   overflow: scroll;
   color: #fff0aa;
@@ -47,11 +47,11 @@
   @media (min-width: 600px) {
     .definition {
       overflow: auto;
-      padding: 15px 10vw; } }
+      padding: 15px 25vw; } }
   @media (min-width: 1200px) {
     .definition {
       overflow: auto;
-      padding: 35px 20vw; } }
+      padding: 35px 35vw; } }
 
 @keyframes movingMagnifyingGlass {
   0% {
@@ -265,18 +265,25 @@
   text-decoration: none;
   font-size: 25px;
   font-family: 'Saira Extra Condensed', sans-serif; }
+  @media (min-width: 600px) {
+    .main__nav-bottom__container {
+      width: 400px;
+      margin: 0 auto; } }
   @media (min-width: 1200px) {
     .main__nav-bottom__container {
-      width: 60%;
+      width: 500px;
       margin: 0 auto; } }
   .main__nav-bottom__container .main__nav-bottom__el {
     justify-content: center;
     text-align: center;
     width: 23vw;
     color: #fafafa; }
+    @media (min-width: 600px) {
+      .main__nav-bottom__container .main__nav-bottom__el {
+        width: 80px; } }
     @media (min-width: 1200px) {
       .main__nav-bottom__container .main__nav-bottom__el {
-        width: 16vw; } }
+        width: 140px; } }
   .main__nav-bottom__container .main__nav-bottom__el_active {
     background-color: #c19f13; }
 
