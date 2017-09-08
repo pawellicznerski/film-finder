@@ -38,7 +38,7 @@
 .definition {
   margin: 15px;
   overflow: scroll;
-  color: pink;
+  color: #fff0aa;
   height: 97%;
   text-align: justify; }
   @media (min-width: 600px) {
@@ -119,40 +119,6 @@
       height: 270px;
       width: 270px; } } }
 
-@media (min-width: 1200px) {
-  @keyframes movingMagnifyingGlass {
-    0% {
-      border: 32px solid white;
-      height: 380px;
-      width: 380px;
-      top: 0vh;
-      left: 0vw;
-      background-position: right; }
-    29% {
-      background-size: 0px 0px; }
-    30% {
-      background-position: center;
-      border: 32px solid white;
-      background-size: 27px 27px;
-      top: 0vh;
-      left: 0vw;
-      height: 380px;
-      width: 380px; }
-    67% {
-      border: 17px solid white;
-      background-size: 370px 370px;
-      top: 4vh;
-      left: 0vw;
-      height: 250px;
-      width: 250px; }
-    100% {
-      border: 33px solid white;
-      background-size: 320px 320px;
-      top: 0vh;
-      left: 0vw;
-      height: 370px;
-      width: 370px; } } }
-
 .intro-logo__magnifying-glass-container {
   height: 30vh;
   width: 100%;
@@ -185,13 +151,6 @@
         width: 265px;
         top: 8vh;
         left: 18vw; } }
-    @media (min-width: 1200px) {
-      .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass {
-        border: 32px solid white;
-        height: 380px;
-        width: 380px;
-        top: 0vh;
-        left: 0vw; } }
     .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass__stick {
       background-color: white;
       left: 51px;
@@ -204,12 +163,6 @@
           left: 55px;
           height: 21px;
           width: 62px; } }
-      @media (min-width: 1200px) {
-        .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass__stick {
-          left: 58px;
-          transform: skew(-40deg, 41deg);
-          height: 30px;
-          width: 80px; } }
 
 .intro-logo__words_first {
   background-position: center;
@@ -221,10 +174,6 @@
   @media (min-width: 768px) {
     .intro-logo__words_first {
       height: 75px; } }
-  @media (min-width: 1200px) {
-    .intro-logo__words_first {
-      margin-top: -8vh;
-      height: 90px; } }
 
 .intro-logo__words_second {
   position: relative;
@@ -238,9 +187,6 @@
   @media (min-width: 768px) {
     .intro-logo__words_second {
       height: 60px; } }
-  @media (min-width: 1200px) {
-    .intro-logo__words_second {
-      height: 70px; } }
 
 @keyframes moveSecondWord {
   0% {

@@ -3,7 +3,7 @@
 
 @include movingMagnifyingGlass;
 @include movingMagnifyingGlassTablet;
-@include movingMagnifyingGlassLaptop;
+// @include movingMagnifyingGlassLaptop;
 
 .intro-logo__magnifying-glass-container{
   // border: 1px solid orange;
@@ -37,13 +37,13 @@
       top:8vh;
       left:18vw;
     };
-    @include laptop{
-      border:32px solid white;
-      height:380px;
-      width:380px;
-      top:0vh;
-      left:0vw;
-    };
+    // @include laptop{
+    //   border:32px solid white;
+    //   height:310px;
+    //   width:310px;
+    //   top:0vh;
+    //   left:0vw;
+    // };
     animation: movingMagnifyingGlass 1.4s 1.0s ease-out forwards;
     &__stick{
       background-color: white;
@@ -60,12 +60,12 @@
         height:21px;
         width:62px;
       };
-      @include laptop{
-        left:58px;
-        transform: skew(-40deg,41deg);
-        height:30px;
-        width:80px;
-      };
+      // @include laptop{
+      //   left:58px;
+      //   transform: skew(-40deg,41deg);
+      //   height:30px;
+      //   width:80px;
+      // };
     }
   }
 }

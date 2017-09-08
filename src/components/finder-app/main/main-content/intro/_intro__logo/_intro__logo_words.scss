@@ -13,10 +13,10 @@
     @include tablet{
       height:75px;
     };
-    @include laptop{
-      margin-top: -8vh;
-      height:90px;
-    };
+    // @include laptop{
+    //   margin-top: -8vh;
+    //   height:90px;
+    // };
   }
 
   &_second{
@@ -32,9 +32,9 @@
     @include tablet{
       height:60px;
     };
-    @include laptop{
-      height:70px;
-    };
+    // @include laptop{
+    //   height:70px;
+    // };
   }
   @keyframes moveSecondWord{
       0%{background-position: -120vw 0;}
