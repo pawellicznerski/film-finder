@@ -1,6 +1,11 @@
 @import "./main-content/main-content";
 @import "./main__nav-bottom/_main__nav-bottom";
+@import "./../_finder-app__base/_finder-app__base_media-query-mixins";
+
 .main{
-  height:82vh;
+  height:80vh;
   min-height: 470px;
+  @include laptop{
+    height:75vh;
+  };
 }

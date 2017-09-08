@@ -1,3 +1,4 @@
+@import "./../../_finder-app__base/_finder-app__base_media-query-mixins";
 
 .main__nav-bottom__container{
   display: flex;
@@ -10,11 +11,18 @@
   text-decoration: none;
   font-size: 25px;
   font-family: 'Saira Extra Condensed', sans-serif;
+  @include laptop{
+    width: 60%;
+    margin: 0 auto;
+  };
   .main__nav-bottom__el{
     justify-content: center;
     text-align: center;
     width: 23vw;
     color: rgba(250,250,250,1);
+    @include laptop{
+      width: 16vw;
+    };
   }
   .main__nav-bottom__el_active{
     background-color: rgba(193,159,19,1);

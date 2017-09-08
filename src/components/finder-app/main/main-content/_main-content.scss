@@ -1,8 +1,10 @@
 @import "./definitions/definition";
 @import "./intro/intro";
 @import "./no-match/no-match";
+@import "./form/form";
 
 .main-content{
   height: 65vh;
   min-height: 380px;
+  width: 100%;
 }
