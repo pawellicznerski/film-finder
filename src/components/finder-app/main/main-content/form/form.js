@@ -36,9 +36,9 @@ export class Form extends Component {
     console.log(this.state.value);
     event.preventDefault();
     const inputValue = this.state.value;
-    const validateInput = this.validateInput(inputValue);
-    if (validateInput) {
-        this.setState({ error: validateInput });
+    const validateInputText = this.validateInputText(inputValue);
+    if (validateInputText) {
+        this.setState({ error: validateInputText });
         return;
     }
     this.setState({
@@ -51,14 +51,19 @@ export class Form extends Component {
     console.log(this.state.value);
 
   }
-  validateInput(inputValue) {
+  validateInputText(inputValue) {
+        const basicNIPFormat =^(\(d{3}-\d{3}-\d{2}-\d{2})|(d{3}-\d{2}-\d{2}-\d{3})$;
+        const basicREGONFormat =^\d{9}$
+        const basicKRSFormat =^(\(d{3}-\d{3}-\d{2}-\d{2})|(d{3}-\d{2}-\d{2}-\d{3})$;
       if (!inputValue) {
-          return 'Please enter a inputValue.';
-      // } else if (_.find(this.props.todos, todo => todo?todo.inputValue === inputValue:null)) {
-      //     return 'Task already exists.';
-      // } else {
-      //     return null;
+          return 'Wpisz NIP, KRS lub REGON';
       }
+      // else if (_.find(this.props.todos, todo => todo?todo.inputValue === inputValue:null)) {
+      //
+      //     return 'Task already exists.';
+      // // } else {
+      // //     return null;
+      // }
   }
   render() {
     return (
