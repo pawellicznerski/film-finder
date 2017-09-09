@@ -19,33 +19,22 @@
     &__form{
       width: 325px;
       &__label{
-        margin-top: 5px;
+        margin: 5px 0 0 20px;
         color: white;
         font-size: 19px;
         font-weight: bold;
-        margin-left: 20px;
       }
       &__input{
         height: 20px;
         border: 0;
         padding-left: 10px;
-        &_wider-input{
-          margin: 5px 0 0 0;
-          width: 290px;
-          &:focus{
-            background-color: white;
-          }
-        }
-        &_shorter-input{
-          margin: 5px 0 0 20px;
-          width: 230px;
+        margin: 0 0 0 20px ;
+        width: 230px;
           &:focus{
             border: 2px solid rgba(0,0,0,1);
             background-color:  rgba(255,255,255,0.5);
           }
         }
-      }
-
       &__button{
         border: 0;
         background-color: black;
@@ -54,6 +43,43 @@
         width: 60px;
         font-weight: bold;
       }
+    }//form
+    &__data{
+      margin: 5px 0 0 20px;
+      width: 325px;
+      color: white;
+      font-size: 19px;
+      font-weight: bold;
+      &__info{
+        overflow: auto;
+        height: 20px;
+        border: 0;
+        padding-left: 10px;
+        margin: 5px 0 0 0;
+        width: 290px;
+        color: black;
+        font-weight: bold;
+        background-color:  rgba(255,255,255,0.5);
+        &::-webkit-scrollbar {
+          height: 5px;
+          } /* this targets the default scrollbar (compulsory) */
+        &::-webkit-scrollbar-track {
+          background-color: rgba(193,159,19,0.8);
+          // background-color: rgba(0,0,0,1);
+          } /* the new scrollbar will have a flat appearance with the set background color */
+        &::-webkit-scrollbar-thumb {
+          // background-color: rgba(193,159,19,0.8);
+          background-color: rgba(0,0,0,1);
+          height: 4px
+          } /* this will style the thumb, ignoring the track */
+        &::-webkit-scrollbar-button {
+          // background-color: rgba(193,159,19,0.8);
+          background-color: rgba(0,0,0,1);
+          } /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+        &::-webkit-scrollbar-corner {
+          background-color: black;
+          }
+      }//info
     }
   }
 }

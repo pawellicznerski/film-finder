@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
 import { MainContent } from './../main-content';
 
+class Input extends Component {
+  render() {
+    return (
+      <div className="main-content__form-container__data">
+        {this.props.name}
+        <div className="main-content__form-container__data__info">
+          {this.props.inputValue}
+        </div>
+      </div>
+    );
+  }
+}
+
 export class Form extends Component {
   constructor(props){
     super(props);
     this.state={
-      name:"",
+      value:"",
+
+      name:"wswswsqwsqw qwsqwosoiqwjs qwospqwposkq qwpokspqowkps",
       street:"",
       streetNo:"",
       postcode:"",
@@ -14,6 +29,9 @@ export class Form extends Component {
   }
   handleSubmit(){
 
+  }
+  handleChange(event) {
+    this.setState({value: event.target.value});
   }
   render() {
     return (
@@ -24,55 +42,22 @@ export class Form extends Component {
             <form onSubmit={this.handleSubmit} className="main-content__form-container__form">
               <label className="main-content__form-container__form__label">
                 Wpisz KRS lub NIP lub REGON:
-                <input type="text" name="name"  className="main-content__form-container__form__input main-content__form-container__form__input_shorter-input" />
+                <input
+                  type="text"
+                  name="name"
+                  className="main-content__form-container__form__input main-content__form-container__form__input_shorter-input"
+                  onChange={this.handleChange.bind(this)}
+                   />
               </label>
               <input type="submit" value="Szukaj"  className="main-content__form-container__form__button"/>
             </form>
 
-              <label className="main-content__form-container__form__label">
-                Nazwa:
-                <input
-                  type="text"
-                  name="name"
-                  value={this.state.name}
-                  className="main-content__form-container__form__input main-content__form-container__form__input_wider-input" />
-              </label>
+            <Input inputValue={this.state.name} name="Nazwa:"></Input>
+            <Input inputValue={this.state.street} name="Nazwa ulicy:"></Input>
+            <Input inputValue={this.state.streetNo} name="Numer ulicy:"></Input>
+            <Input inputValue={this.state.postcode} name="Kod pocztowy:"></Input>
+            <Input inputValue={this.state.city} name="Miasto:"></Input>
 
-              <label className="main-content__form-container__form__label">
-                Nazwa ulicy:
-                <input
-                  type="text"
-                  name="name"
-                  value={this.state.street}
-                  className="main-content__form-container__form__input main-content__form-container__form__input_wider-input" />
-              </label>
-
-              <label className="main-content__form-container__form__label">
-                Numer ulicy:
-                <input
-                  type="text"
-                  name="name"
-                  value={this.state.streetNo}
-                  className="main-content__form-container__form__input main-content__form-container__form__input_wider-input" />
-              </label>
-
-              <label className="main-content__form-container__form__label">
-                Kod pocztowy:
-                <input
-                  type="text"
-                  name="name"
-                  value={this.state.postcode}
-                  className="main-content__form-container__form__input main-content__form-container__form__input_wider-input" />
-              </label>
-
-              <label className="main-content__form-container__form__label">
-                Miasto:
-                <input
-                  type="text"
-                  name="name"
-                  value={this.state.city}
-                  className="main-content__form-container__form__input main-content__form-container__form__input_wider-input" />
-              </label>
           </div>
         </div>
       </MainContent>
