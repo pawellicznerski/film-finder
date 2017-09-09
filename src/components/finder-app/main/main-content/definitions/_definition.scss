@@ -11,10 +11,10 @@
   // border: 1px solid blue;
   @include mobile{
     overflow: auto;
-    padding: -10px 25vw 40px 25vw;
+    padding: 0 25vw 40px 25vw;
   };
   @include laptop{
     overflow: auto;
-    padding: 35px 35vw;
+    padding: 35px 22vw;
   };
 }

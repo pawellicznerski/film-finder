@@ -65,11 +65,11 @@
   @media (min-width: 600px) {
     .definition {
       overflow: auto;
-      padding: -10px 25vw 40px 25vw; } }
+      padding: 0 25vw 40px 25vw; } }
   @media (min-width: 1200px) {
     .definition {
       overflow: auto;
-      padding: 35px 35vw; } }
+      padding: 35px 22vw; } }
 
 @keyframes movingMagnifyingGlass {
   0% {
