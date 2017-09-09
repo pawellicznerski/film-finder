@@ -11,7 +11,7 @@
     height:60px;
     width:100vw;
     @include tablet{
-      height:75px;
+      height:70px;
     };
     // @include laptop{
     //   margin-top: -8vh;
@@ -30,7 +30,7 @@
     width:100vw;
     animation: moveSecondWord 0.8s 0.5s ease forwards;
     @include tablet{
-      height:60px;
+      height:55px;
     };
     // @include laptop{
     //   height:70px;

@@ -29,7 +29,7 @@ export class FinderApp extends Component {
     return (
       <Router history={history}>
           <div className="finder-app">
-              {location.pathname==="/"?<header className="header"></header>:<Header/> }
+              {location.pathname==="/"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header> }
               <section>
                 <div className="main">
                   <Switch>

@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     width: 250px;
+    cursor: pointer;
     @include mobile{
       width: 350px;
     };

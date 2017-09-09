@@ -1,38 +1,43 @@
 @import "./../../_finder-app__base/_finder-app__base_media-query-mixins";
 
-.main__nav-bottom__container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:15vh;
-  min-height: 85px;
-  width: 100%;
-  background-color: rgba(0,0,0,1);
-  text-decoration: none;
-  font-size: 25px;
-  font-family: 'Saira Extra Condensed', sans-serif;
-  // border: 1px solid green;
-  @include mobile{
-    width: 400px;
-    margin: 0 auto;
-  };
-  @include laptop{
-    width: 500px;
-    margin: 4vh auto 0 auto;
-  };
-  .main__nav-bottom__el{
+.main__nav-bottom{
+  // border: 1px solid blue;
+  .main__nav-bottom__container{
+    display: flex;
     justify-content: center;
-    text-align: center;
-    width: 23vw;
-    color: rgba(250,250,250,1);
+    align-items: center;
+    height:15vh;
+    min-height: 65px;
+    width: 100%;
+    background-color: rgba(0,0,0,1);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    padding-top: 30px;
+    // border: 1px solid green;
     @include mobile{
-      width: 80px;
+      width: 400px;
+      margin: 0 auto;
     };
     @include laptop{
-      width: 90px;
+      width: 500px;
+      padding-top: 30px;
+
     };
-  }
-  .main__nav-bottom__el_active{
-    background-color: rgba(193,159,19,1);
+    .main__nav-bottom__el{
+      justify-content: center;
+      text-align: center;
+      width: 23vw;
+      color: rgba(250,250,250,1);
+      @include mobile{
+        width: 80px;
+      };
+      @include laptop{
+        width: 90px;
+      };
+    }
+    .main__nav-bottom__el_active{
+      background-color: rgba(193,159,19,1);
+    }
   }
 }

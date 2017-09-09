@@ -7,6 +7,7 @@ export class Header extends Component {
   render() {
     return (
       <header className="header">
+        <NavLink to={"/"} onClick={this.props.toggleHeaderLogo}>
           <div  className="logo header__logo">
             <div className="logo__words header__logo__words">
               <div className="logo__words_first header__logo__words_first"></div>
@@ -19,6 +20,7 @@ export class Header extends Component {
               </div>
             </div>
           </div>
+        </NavLink>
       </header>
     );
   }
