@@ -12,17 +12,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // border: 1px solid pink;
-    // min-height: 85px;
     width: 250px;
     @include mobile{
       width: 350px;
-      // display: none;
     };
-    // @include mobile2{
-    //   width: 350px;
-    //   display: none;
-    // };
     &__words{
       display: flex;
       margin-top: -4px;
@@ -43,10 +36,6 @@
         @include mobile{
           height:75px;
           width:160px;
-          // margin-top: 0px;
-          // align-items: center;
-          // flex-direction: row;
-          // width: 150px;
         };
       }//first-word
       &_second{
@@ -58,9 +47,6 @@
           margin: 0 10px;
           height:46px;
           width:81px;
-          // align-items: center;
-          // flex-direction: row;
-          // width: 150px;
         };
       }
     }//&__words

@@ -16,12 +16,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    // @include mobile{
-    //   width: 60%;
-    // };
-    // @include laptop{
-    //   width: 40%;
-    // };
     &__form{
       width: 325px;
       &__label{
@@ -32,16 +26,26 @@
         margin-left: 20px;
       }
       &__input{
-        margin: 5px 0 0 20px;
-        width: 230px;
         height: 20px;
         border: 0;
         padding-left: 10px;
         &_wider-input{
-          width: 290px;
           margin: 5px 0 0 0;
+          width: 290px;
+          &:focus{
+            background-color: white;
+          }
+        }
+        &_shorter-input{
+          margin: 5px 0 0 20px;
+          width: 230px;
+          &:focus{
+            border: 2px solid rgba(0,0,0,1);
+            background-color:  rgba(255,255,255,0.5);
+          }
         }
       }
+
       &__button{
         border: 0;
         background-color: black;
