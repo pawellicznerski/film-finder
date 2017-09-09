@@ -54,32 +54,42 @@
         overflow: auto;
         height: 20px;
         border: 0;
-        padding-left: 10px;
+        padding: 2px 0 0 10px;
         margin: 5px 0 0 0;
         width: 290px;
         color: black;
+        font-size: 14px;
         font-weight: bold;
         background-color:  rgba(255,255,255,0.5);
         &::-webkit-scrollbar {
-          height: 5px;
+          // height: 2px;
+          width: 15px;
           } /* this targets the default scrollbar (compulsory) */
         &::-webkit-scrollbar-track {
-          background-color: rgba(193,159,19,0.8);
-          // background-color: rgba(0,0,0,1);
+          background-color: rgba(0,0,0,1);
           } /* the new scrollbar will have a flat appearance with the set background color */
         &::-webkit-scrollbar-thumb {
-          // background-color: rgba(193,159,19,0.8);
-          background-color: rgba(0,0,0,1);
+          background-color: rgba(193,159,19,0.8);
           height: 4px
           } /* this will style the thumb, ignoring the track */
         &::-webkit-scrollbar-button {
-          // background-color: rgba(193,159,19,0.8);
           background-color: rgba(0,0,0,1);
+          height: 20px;
           } /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
         &::-webkit-scrollbar-corner {
           background-color: black;
           }
       }//info
+    }//data
+    &__error{
+      margin-top: 3px;
+      background-color: black;
+      color: white;
+      width: 100%;
+      height: 20px;
+      font-size: 15px;
+      text-align: center;
+      vertical-align: middle;
     }
   }
 }

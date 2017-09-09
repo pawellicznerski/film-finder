@@ -19,19 +19,46 @@ export class Form extends Component {
     super(props);
     this.state={
       value:"",
+      error:"",
 
       name:"wswswsqwsqw qwsqwosoiqwjs qwospqwposkq qwpokspqowkps",
       street:"",
-      streetNo:"",
+      streetNo:"w21w",
       postcode:"",
       city:"",
     }
   }
-  handleSubmit(){
-
+  renderError() {
+      if (!this.state.error) { return null; }
+      return <div className="main-content__form-container__error">{this.state.error}</div>;
+  }
+  handleSubmit(event){
+    console.log(this.state.value);
+    event.preventDefault();
+    const inputValue = this.state.value;
+    const validateInput = this.validateInput(inputValue);
+    if (validateInput) {
+        this.setState({ error: validateInput });
+        return;
+    }
+    this.setState({
+      error: null,
+      value:''
+     });
   }
   handleChange(event) {
     this.setState({value: event.target.value});
+    console.log(this.state.value);
+
+  }
+  validateInput(inputValue) {
+      if (!inputValue) {
+          return 'Please enter a inputValue.';
+      // } else if (_.find(this.props.todos, todo => todo?todo.inputValue === inputValue:null)) {
+      //     return 'Task already exists.';
+      // } else {
+      //     return null;
+      }
   }
   render() {
     return (
@@ -39,7 +66,7 @@ export class Form extends Component {
         <div className="main-content">
           <div className="main-content__form-container">
 
-            <form onSubmit={this.handleSubmit} className="main-content__form-container__form">
+            <form onSubmit={this.handleSubmit.bind(this)} className="main-content__form-container__form">
               <label className="main-content__form-container__form__label">
                 Wpisz KRS lub NIP lub REGON:
                 <input
@@ -51,6 +78,8 @@ export class Form extends Component {
               </label>
               <input type="submit" value="Szukaj"  className="main-content__form-container__form__button"/>
             </form>
+
+            {this.renderError()}
 
             <Input inputValue={this.state.name} name="Nazwa:"></Input>
             <Input inputValue={this.state.street} name="Nazwa ulicy:"></Input>
