@@ -4,9 +4,9 @@ import { MainContent } from './../main-content';
 class Input extends Component {
   render() {
     return (
-      <div className="main-content__form-container__data">
+      <div className="main-content__form-container">
         {this.props.name}
-        <div className="main-content__form-container__data__info">
+        <div className="main-content__form-container__info">
           {this.props.inputValue}
         </div>
       </div>
@@ -19,7 +19,7 @@ export class Form extends Component {
     super(props);
     this.state={
       value:"",
-      selectValue:"",
+      selectValue:"NIP",
       error:"",
 
       name:"wswswsqwsqw qwsqwosoiqwjs qwospqwposkq qwpokspqowkps",
@@ -46,16 +46,26 @@ export class Form extends Component {
       error: null,
       value:''
      });
+     console.log(this.state.selectValue);
+
   }
   handleChange(event) {
-    this.setState({value: event.target.value});
-    console.log(this.state.value);
+    // this.setState({value: event.target.value});
+    // console.log(this.state.value);
+
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
 
   }
   handleCheckingInputFormat(){
     const basicNIPFormat =/(^([A-Z]{2,3})?\d{3}\-?\d{3}\-?\d{2}\-?\d{2}$)|(^([A-Z]{2,3})?\d{3}\-?\d{2}\-?\d{2}\-?\d{3}$)/;
     const basicREGONFormat =/^\d{9}$/;
-    const basicKRSFormat =/^(\(d{3}-\d{3}-\d{2}-\d{2})|(d{3}-\d{2}-\d{2}-\d{3})$/;
+    const basicKRSFormat =/^\d{10}$/;
     if(basicNIPFormat.test(this.state.value)){
       return true;
     } else {
@@ -82,19 +92,20 @@ export class Form extends Component {
           <div className="main-content__form-container">
 
             <form onSubmit={this.handleSubmit.bind(this)} className="main-content__form-container__form">
-              <label>
-                <select value={this.state.selectValue} onChange={this.handleChange}>
+              Wpisz
+              <label className="main-content__form-container__select">
+                <select name="selectValue" value={this.state.selectValue} onChange={this.handleChange.bind(this)}>
                   <option value="NIP">NIP</option>
                   <option value="REGON">REGON</option>
                   <option value="KRS">KRS</option>
                 </select>
               </label>
               <label className="main-content__form-container__form__label">
-                Wpisz KRS lub NIP lub REGON:
+              :
                 <input
                   type="text"
-                  name="name"
-                  className="main-content__form-container__form__input main-content__form-container__form__input_shorter-input"
+                  name="value"
+                  className="main-content__form-container__form__input"
                   onChange={this.handleChange.bind(this)}
                   value={this.state.value}
                    />
