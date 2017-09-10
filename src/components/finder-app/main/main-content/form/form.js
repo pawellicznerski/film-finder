@@ -19,6 +19,7 @@ export class Form extends Component {
     super(props);
     this.state={
       value:"",
+      selectValue:"",
       error:"",
 
       name:"wswswsqwsqw qwsqwosoiqwjs qwospqwposkq qwpokspqowkps",
@@ -33,7 +34,7 @@ export class Form extends Component {
       return <div className="main-content__form-container__error">{this.state.error}</div>;
   }
   handleSubmit(event){
-    console.log(this.state.value);
+    // console.log(this.state.value);
     event.preventDefault();
     const inputValue = this.state.value;
     const validateInputText = this.validateInputText(inputValue);
@@ -51,19 +52,28 @@ export class Form extends Component {
     console.log(this.state.value);
 
   }
+  handleCheckingInputFormat(){
+    const basicNIPFormat =/(^([A-Z]{2,3})?\d{3}\-?\d{3}\-?\d{2}\-?\d{2}$)|(^([A-Z]{2,3})?\d{3}\-?\d{2}\-?\d{2}\-?\d{3}$)/;
+    const basicREGONFormat =/^\d{9}$/;
+    const basicKRSFormat =/^(\(d{3}-\d{3}-\d{2}-\d{2})|(d{3}-\d{2}-\d{2}-\d{3})$/;
+    if(basicNIPFormat.test(this.state.value)){
+      return true;
+    } else {
+      console.log(this.state.value);
+      return false;
+    }
+  }
+
   validateInputText(inputValue) {
-        const basicNIPFormat =^(\(d{3}-\d{3}-\d{2}-\d{2})|(d{3}-\d{2}-\d{2}-\d{3})$;
-        const basicREGONFormat =^\d{9}$
-        const basicKRSFormat =^(\(d{3}-\d{3}-\d{2}-\d{2})|(d{3}-\d{2}-\d{2}-\d{3})$;
+    console.log(inputValue);
       if (!inputValue) {
           return 'Wpisz NIP, KRS lub REGON';
+      } else if (!this.handleCheckingInputFormat()) {
+        console.log(this.handleCheckingInputFormat());
+          return 'Wpisz prawidłowy NIP, KRS lub REGON';
+      } else {
+        console.log(this.handleCheckingInputFormat());
       }
-      // else if (_.find(this.props.todos, todo => todo?todo.inputValue === inputValue:null)) {
-      //
-      //     return 'Task already exists.';
-      // // } else {
-      // //     return null;
-      // }
   }
   render() {
     return (
@@ -72,6 +82,13 @@ export class Form extends Component {
           <div className="main-content__form-container">
 
             <form onSubmit={this.handleSubmit.bind(this)} className="main-content__form-container__form">
+              <label>
+                <select value={this.state.selectValue} onChange={this.handleChange}>
+                  <option value="NIP">NIP</option>
+                  <option value="REGON">REGON</option>
+                  <option value="KRS">KRS</option>
+                </select>
+              </label>
               <label className="main-content__form-container__form__label">
                 Wpisz KRS lub NIP lub REGON:
                 <input
@@ -79,6 +96,7 @@ export class Form extends Component {
                   name="name"
                   className="main-content__form-container__form__input main-content__form-container__form__input_shorter-input"
                   onChange={this.handleChange.bind(this)}
+                  value={this.state.value}
                    />
               </label>
               <input type="submit" value="Szukaj"  className="main-content__form-container__form__button"/>
