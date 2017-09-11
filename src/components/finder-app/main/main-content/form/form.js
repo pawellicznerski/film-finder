@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {CacheProxy} from './cacheProxy';
 import { MainContent } from './../main-content';
 
 class Input extends Component {
@@ -62,14 +63,34 @@ export class Form extends Component {
     });
 
   }
+
+  handleLoadingData = () => {
+      // CacheProxy.get(`http://api/Company?CompanyId=${this.state.value}`).then(data => {
+      //   this.setState({newCity: data})
+      //   console.log(data);
+      //   })
+      // fetch(`http://api/Company?CompanyId=${this.state.value}`).then(resp => resp.json())
+      fetch(`https://api.themoviedb.org/3/discover/movie?api_key=d609d4130667346ea048e134c734468c&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`).then(resp => resp.json())
+        .then(data => {
+          if(data.length!==0){
+            console.log("jest w bazie:",data);
+
+          } else if (data.length===0){
+            console.log("nie ma w bazie");
+          }
+        });
+
+  }
   handleCheckingInputFormat(){
     const basicNIPFormat =/(^([A-Z]{2,3})?\d{3}-?\d{3}-?\d{2}-?\d{2}$)|(^([A-Z]{2,3})?\d{3}-?\d{2}-?\d{2}-?\d{3}$)/;
     const basicREGONFormat =/^\d{9}$/;
     const basicKRSFormat =/^\d{10}$/;
+
     var currentOption='';
-    if(this.state.selectValue==='NIP'){currentOption=basicNIPFormat;}
-    else if(this.state.selectValue==='REGON'){currentOption=basicREGONFormat;}
-    else if(this.state.selectValue==='KRS'){currentOption=basicKRSFormat;};
+    if(this.state.selectValue==='NIP')currentOption=basicNIPFormat;
+    else if(this.state.selectValue==='REGON')currentOption=basicREGONFormat;
+    else if(this.state.selectValue==='KRS')currentOption=basicKRSFormat;
+
     if(currentOption.test(this.state.value)){
       return true;
     } else {
@@ -87,6 +108,7 @@ export class Form extends Component {
           return 'Wpisz prawidłowy NIP, KRS lub REGON';
       } else {
         console.log(this.handleCheckingInputFormat());
+        this.handleLoadingData();
       }
   }
   render() {
