@@ -63,10 +63,14 @@ export class Form extends Component {
 
   }
   handleCheckingInputFormat(){
-    const basicNIPFormat =/(^([A-Z]{2,3})?\d{3}\-?\d{3}\-?\d{2}\-?\d{2}$)|(^([A-Z]{2,3})?\d{3}\-?\d{2}\-?\d{2}\-?\d{3}$)/;
+    const basicNIPFormat =/(^([A-Z]{2,3})?\d{3}-?\d{3}-?\d{2}-?\d{2}$)|(^([A-Z]{2,3})?\d{3}-?\d{2}-?\d{2}-?\d{3}$)/;
     const basicREGONFormat =/^\d{9}$/;
     const basicKRSFormat =/^\d{10}$/;
-    if(basicNIPFormat.test(this.state.value)){
+    var currentOption='';
+    if(this.state.selectValue==='NIP'){currentOption=basicNIPFormat;}
+    else if(this.state.selectValue==='REGON'){currentOption=basicREGONFormat;}
+    else if(this.state.selectValue==='KRS'){currentOption=basicKRSFormat;};
+    if(currentOption.test(this.state.value)){
       return true;
     } else {
       console.log(this.state.value);
