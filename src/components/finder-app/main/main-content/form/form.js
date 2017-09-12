@@ -69,8 +69,25 @@ export class Form extends Component {
       //   this.setState({newCity: data})
       //   console.log(data);
       //   })
-      // fetch(`http://api/Company?CompanyId=${this.state.value}`).then(resp => resp.json())
-      fetch(`https://api.themoviedb.org/3/discover/movie?api_key=d609d4130667346ea048e134c734468c&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`).then(resp => resp.json())
+
+      // tytuł filmu:
+      // `https://api.themoviedb.org/3/search/movie?api_key=d609d4130667346ea048e134c734468c&query=breaking bad`
+
+      // tytył serialu
+      // `https://api.themoviedb.org/3/search/tv?api_key=d609d4130667346ea048e134c734468c&query=breaking bad`
+
+      // obecnie najpopularniejszy
+      // `https://api.themoviedb.org/3/discover/movie?api_key=d609d4130667346ea048e134c734468c&sort_by=popularity.desc`
+// `https://api.themoviedb.org/3/discover/tv?api_key=d609d4130667346ea048e134c734468c&sort_by=vote_average.desc&sort_by=vote_count.desc`
+
+    // druga strona
+    //https://api.themoviedb.org/3/discover/tv?api_key=d609d4130667346ea048e134c734468c&sort_by=vote_count.desc&page=2
+
+     // klucz:
+      // api_key=d609d4130667346ea048e134c734468c
+
+
+      fetch(`https://api.themoviedb.org/3/search/tv?api_key=d609d4130667346ea048e134c734468c&query=breaking bad`).then(resp => resp.json())
         .then(data => {
           if(data.length!==0){
             console.log("jest w bazie:",data);
