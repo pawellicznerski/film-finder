@@ -28,7 +28,7 @@
     background-repeat: no-repeat;
     height:55px;
     width:100vw;
-    animation: moveSecondWord 0.8s 0.5s ease forwards;
+    animation: moveSecondWord 0.8s ease forwards;
     @include tablet{
       height:55px;
     };

@@ -87,7 +87,7 @@ export class Form extends Component {
       // api_key=d609d4130667346ea048e134c734468c
 
 
-      fetch(`https://api.themoviedb.org/3/search/tv?api_key=d609d4130667346ea048e134c734468c&query=breaking bad`).then(resp => resp.json())
+      fetch(`https://api.themoviedb.org/3/search/tv?api_key=d609d4130667346ea048e134c734468c&query=chłopaki`).then(resp => resp.json())
         .then(data => {
           if(data.length!==0){
             console.log("jest w bazie:",data);

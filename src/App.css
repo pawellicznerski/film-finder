@@ -210,7 +210,7 @@
   background-repeat: no-repeat;
   height: 55px;
   width: 100vw;
-  animation: moveSecondWord 0.8s 0.5s ease forwards; }
+  animation: moveSecondWord 0.8s ease forwards; }
   @media (min-width: 768px) {
     .intro-logo__words_second {
       height: 55px; } }
@@ -230,7 +230,7 @@
 .main-content {
   width: 100%;
   height: 100%;
-  background-image: url("./components/finder-app/main/main-content/form/form_background.jpg");
+  background-image: url("./components/finder-app/main/main-content/form/12.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
