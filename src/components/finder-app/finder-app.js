@@ -7,7 +7,7 @@ import { Intro}  from './main/main-content/intro/intro.js';
 import { Form }  from './main/main-content/form/form.js';
 import { FilmSeriesInfo }  from './main/main-content/definitions/__definitions__film-series-info/definitions__film-series-info.js';
 import { FilmInfo }  from './main/main-content/definitions/__definitions__film-info/definitions__film-info.js';
-import { RegonInfo }  from './main/main-content/definitions/__definitions__regon-info/definitions__regon-info.js';
+import { SerialInfo }  from './main/main-content/definitions/__definitions__serial-info/definitions__serial-info.js';
 import { NoMatch }  from './main/main-content/no-match/no-match.js';
 import { NavBottom }  from './main/main__nav-bottom/main__nav-bottom.js';
 
@@ -37,7 +37,7 @@ export class FinderApp extends Component {
                     <Route exact path="/form" component={Form}/>
                     <Route exact path="/filmInfo" component={FilmInfo}/>
                     <Route exact path="/filmSeriesInfo" component={FilmSeriesInfo}/>
-                    <Route exact path="/regonInfo" component={RegonInfo}/>
+                    <Route exact path="/serialInfo" component={SerialInfo}/>
                     <Route component={NoMatch}/>
                   </Switch>
                 <NavBottom/>

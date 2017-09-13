@@ -1,33 +1,36 @@
 import React, { Component } from 'react';
 import {CacheProxy} from './cacheProxy';
 import { MainContent } from './../main-content';
+import _ from "lodash";
 
-class Input extends Component {
-  render() {
-    return (
-      <div className="main-content__form-container">
-        {this.props.name}
-        <div className="main-content__form-container__info">
-          {this.props.inputValue}
-        </div>
-      </div>
-    );
-  }
+ class SearchedList extends React.Component {
+    renderItems() {
+        // const props = _.omit(this.props, 'todos');
+
+        // return _.map(this.props.todos, (todo, index) => todo?<TodosListItem id={todo.id} key={index} {...todo} {...props} />: null);
+    }
+
+    render() {
+        return (
+            <div className="main-content__form-container__searched-list">
+                <ul className="main-content__form-container__searched-list__item">
+                    {this.renderItems()}
+                </ul>
+            </div>
+        );
+    }
 }
+
 
 export class Form extends Component {
   constructor(props){
     super(props);
     this.state={
-      value:"",
-      selectValue:"NIP",
+      selectValue:"film",
       error:"",
 
-      name:"wswswsqwsqw qwsqwosoiqwjs qwospqwposkq qwpokspqowkps",
-      street:"",
-      streetNo:"w21w",
-      postcode:"",
-      city:"",
+      filmTitle:"",
+      selectType:'',
     }
   }
   renderError() {
@@ -37,23 +40,19 @@ export class Form extends Component {
   handleSubmit(event){
     // console.log(this.state.value);
     event.preventDefault();
-    const inputValue = this.state.value;
+    const inputValue = this.state.filmTitle;
     const validateInputText = this.validateInputText(inputValue);
     if (validateInputText) {
         this.setState({ error: validateInputText });
         return;
     }
-    this.setState({
-      error: null,
-      value:''
-     });
+    this.setState({error: null, filmTitle:'' });
      console.log(this.state.selectValue);
 
   }
   handleChange(event) {
     // this.setState({value: event.target.value});
     // console.log(this.state.value);
-
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
@@ -61,7 +60,7 @@ export class Form extends Component {
     this.setState({
       [name]: value
     });
-
+    console.log(this.state.selectType);
   }
 
   handleLoadingData = () => {
@@ -69,6 +68,9 @@ export class Form extends Component {
       //   this.setState({newCity: data})
       //   console.log(data);
       //   })
+
+      const apiKey = "_key=d609d4130667346ea048e134c734468c";
+      const filmFormat =`https://api.themoviedb.org/3/search/${this.state.selectType}?${apiKey}&query=${this.state.filmTitle}`;
 
       // tytuł filmu:
       // `https://api.themoviedb.org/3/search/movie?api_key=d609d4130667346ea048e134c734468c&query=breaking bad`
@@ -99,34 +101,39 @@ export class Form extends Component {
 
   }
   handleCheckingInputFormat(){
-    const basicNIPFormat =/(^([A-Z]{2,3})?\d{3}-?\d{3}-?\d{2}-?\d{2}$)|(^([A-Z]{2,3})?\d{3}-?\d{2}-?\d{2}-?\d{3}$)/;
-    const basicREGONFormat =/^\d{9}$/;
-    const basicKRSFormat =/^\d{10}$/;
+    // const basicfilmFormat =/(^([A-Z]{2,3})?\d{3}-?\d{3}-?\d{2}-?\d{2}$)|(^([A-Z]{2,3})?\d{3}-?\d{2}-?\d{2}-?\d{3}$)/;
+    // const basicTVserialFormat =/^\d{9}$/;
+    // const basiccurrentlyMostPopFilmFormat =/^\d{10}$/;
+    const apiKey = "_key=d609d4130667346ea048e134c734468c";
 
-    var currentOption='';
-    if(this.state.selectValue==='NIP')currentOption=basicNIPFormat;
-    else if(this.state.selectValue==='REGON')currentOption=basicREGONFormat;
-    else if(this.state.selectValue==='KRS')currentOption=basicKRSFormat;
+    const filmFormat =`https://api.themoviedb.org/3/search/movie?${apiKey}&query=${this.state.filmTitle}`;
+    const TVserialFormat =/^\d{9}$/;
+    const currentlyMostPopFilmFormat =/^\d{10}$/;
 
-    if(currentOption.test(this.state.value)){
-      return true;
-    } else {
-      console.log(this.state.value);
-      return false;
-    }
+    // var currentOption='';
+    // if(this.state.selectValue==='film')currentOption=basicfilmFormat;
+    // else if(this.state.selectValue==='TVserial')currentOption=basicTVserialFormat;
+    // else if(this.state.selectValue==='currentlyMostPopFilm')currentOption=basiccurrentlyMostPopFilmFormat;
+    //
+    // if(currentOption.test(this.state.value)){
+    //   return true;
+    // } else {
+    //   console.log(this.state.value);
+    //   return false;
+    // }
   }
 
   validateInputText(inputValue) {
     console.log(inputValue);
-      if (!inputValue) {
-          return 'Wpisz NIP, KRS lub REGON';
-      } else if (!this.handleCheckingInputFormat()) {
-        console.log(this.handleCheckingInputFormat());
-          return 'Wpisz prawidłowy NIP, KRS lub REGON';
-      } else {
-        console.log(this.handleCheckingInputFormat());
-        this.handleLoadingData();
-      }
+      if (!inputValue)
+          return 'Wpisz film, currentlyMostPopFilm lub TVserial';
+      // } else if (!this.handleCheckingInputFormat()) {
+      //   console.log(this.handleCheckingInputFormat());
+      //     return 'Wpisz prawidłowy film, currentlyMostPopFilm lub TVserial';
+      // } else {
+      //   console.log(this.handleCheckingInputFormat());
+      //   this.handleLoadingData();
+      // }
   }
   render() {
     return (
@@ -134,35 +141,60 @@ export class Form extends Component {
         <div className="main-content">
           <div className="main-content__form-container">
 
-            <form onSubmit={this.handleSubmit.bind(this)} className="main-content__form-container__form">
-              Wpisz
+            <form
+              onSubmit={this.handleSubmit.bind(this)}
+              className="main-content__form-container__form">
+              <input
+                type="submit"
+                value="Find"
+                className="main-content__form-container__form__button"/>
+
+              <label for="selectType">
+                <div>
+                  <h5>Film</h5>
+                  <input
+                    type="radio"
+                    name="selectType"
+                    value="movie"
+                    onClick={this.handleChange.bind(this)}
+                    checked={this.state.selectType === 'movie'}/>
+
+                  <h5>TV serial</h5>
+                  <input
+                    type="radio"
+                    name="selectType"
+                    value="tv"
+                    onClick={this.handleChange.bind(this)}
+                    checked={this.state.selectType === 'tv'}/>
+                </div>
+              </label>
+
               <label className="main-content__form-container__select">
-                <select name="selectValue" value={this.state.selectValue} onChange={this.handleChange.bind(this)}>
-                  <option value="NIP">NIP</option>
-                  <option value="REGON">REGON</option>
-                  <option value="KRS">KRS</option>
+                <select
+                  name="selectValue"
+                  value={this.state.selectValue}
+                  onChange={this.handleChange.bind(this)}>
+
+                  <option value="currentlyMostPop">Currently most popular</option>
+                  <option value="AllTimeMostPop">All time most popular</option>
+
                 </select>
               </label>
               <label className="main-content__form-container__form__label">
               :
                 <input
                   type="text"
-                  name="value"
+                  name="filmTitle"
                   className="main-content__form-container__form__input"
                   onChange={this.handleChange.bind(this)}
-                  value={this.state.value}
+                  value={this.state.filmTitle}
                    />
               </label>
-              <input type="submit" value="Szukaj"  className="main-content__form-container__form__button"/>
             </form>
 
             {this.renderError()}
 
-            <Input inputValue={this.state.name} name="Nazwa:"></Input>
-            <Input inputValue={this.state.street} name="Nazwa ulicy:"></Input>
-            <Input inputValue={this.state.streetNo} name="Numer ulicy:"></Input>
-            <Input inputValue={this.state.postcode} name="Kod pocztowy:"></Input>
-            <Input inputValue={this.state.city} name="Miasto:"></Input>
+            <SearchedList/>
 
           </div>
         </div>

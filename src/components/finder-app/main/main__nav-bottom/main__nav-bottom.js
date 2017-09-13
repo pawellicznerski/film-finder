@@ -16,8 +16,8 @@ export class NavBottom extends Component {
             <NavLink exact activeClassName="main__nav-bottom__el_active" to="/filmSeriesInfo" style={{ textDecoration: 'none'}}>
               <li className="main__nav-bottom__el"><p>What is film-series?</p></li>
             </NavLink>
-            <NavLink exact activeClassName="main__nav-bottom__el_active" to="/regonInfo" style={{ textDecoration: 'none'}}>
-              <li className="main__nav-bottom__el"><p>What is TV-series?</p></li>
+            <NavLink exact activeClassName="main__nav-bottom__el_active" to="/serialInfo" style={{ textDecoration: 'none'}}>
+              <li className="main__nav-bottom__el"><p>What is serial?</p></li>
             </NavLink>
           </ul>
         </nav>
