@@ -138,28 +138,32 @@ export class Form extends Component {
                   />
               </div>
 
-              <label className="main-content__form-container__select">
-                <select
-                  name="selectValue"
-                  value={this.state.selectValue}
-                  onChange={this.handleChange.bind(this)}>
+              <label for="select-option" className="main-content__form-container__form__option-text">
+                Choose:</label>
+              <select
+                id="select-option"
+                className="main-content__form-container__form__option"
+                name="selectValue"
+                value={this.state.selectValue}
+                onChange={this.handleChange.bind(this)}>
 
-                  <option value="notSpecified">not specified</option>
-                  <option value="currentlyMostPopular">Currently most popular</option>
-                  <option value="allTimeMostPopular">All time most popular</option>
+                <option value="notSpecified" className="main-content__form-container__form__option__item">not specified</option>
+                <option value="currentlyMostPopular" className="main-content__form-container__form__option__item">Currently most popular</option>
+                <option value="allTimeMostPopular" className="main-content__form-container__form__option__item">All time most popular</option>
+              </select>
 
-                </select>
-              </label>
-              <label className="main-content__form-container__form__label">
-              :
+
+
+              <label className="main-content__form-container__form__text-type">
+                or type film title:</label>
                 <input
                   type="text"
                   name="filmTitle"
-                  className="main-content__form-container__form__input"
+                  className="main-content__form-container__form__text-input"
                   onChange={this.handleChange.bind(this)}
                   value={this.state.filmTitle}
                    />
-              </label>
+
               <input
                 type="submit"
                 value="Find"
