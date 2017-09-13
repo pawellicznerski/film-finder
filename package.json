@@ -11,6 +11,7 @@
     "react-pdf": "^1.6.1"
   },
   "devDependencies": {
+    "lodash": "^4.17.4",
     "node-sass-chokidar": "0.0.3",
     "react-scripts": "0.9.5"
   },

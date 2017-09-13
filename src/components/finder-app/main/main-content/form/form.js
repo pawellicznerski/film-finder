@@ -1,26 +1,8 @@
 import React, { Component } from 'react';
 import {CacheProxy} from './cacheProxy';
 import { MainContent } from './../main-content';
+import { SearchedList } from './__form__searched-list/form__searched-list';
 import _ from "lodash";
-
- class SearchedList extends React.Component {
-    renderItems() {
-        // const props = _.omit(this.props, 'todos');
-
-        // return _.map(this.props.todos, (todo, index) => todo?<TodosListItem id={todo.id} key={index} {...todo} {...props} />: null);
-    }
-
-    render() {
-        return (
-            <div className="main-content__form-container__searched-list">
-                <ul className="main-content__form-container__searched-list__item">
-                    {this.renderItems()}
-                </ul>
-            </div>
-        );
-    }
-}
-
 
 export class Form extends Component {
   constructor(props){
@@ -31,19 +13,20 @@ export class Form extends Component {
 
       filmTitle:"",
       selectType:'movie',
-      typeOfApiSpecuficAction:'',
-      typeOfApiMainAction:'',
+
+      currentListArr:'',
     }
   }
+
   renderError() {
       if (!this.state.error) { return null; }
       return <div className="main-content__form-container__error">{this.state.error}</div>;
   }
+
   handleSubmit(event){
     // console.log(this.state.value);
     event.preventDefault();
-    const inputValue = this.state.filmTitle;
-    const validateInputText = this.validateInputText(inputValue);
+    const validateInputText = this.state.selectValue==="notSpecified"? this.validateInputText():'';
     if (validateInputText) {
         this.setState({ error: validateInputText });
         return;
@@ -51,8 +34,12 @@ export class Form extends Component {
     this.setState({
       error: null,
       filmTitle:'',
-      selectType:{}
+      selectType:'movie',
+      selectValue:"notSpecified",
      });
+     const apiAddress = this.handleApiAddress();
+     this.handleLoadingData(apiAddress);
+
      console.log(this.state.selectValue);
 
   }
@@ -81,7 +68,27 @@ export class Form extends Component {
       fetch(apiAddress).then(resp => resp.json())
         .then(data => {
           if(data.length!==0){
-            console.log("jest w bazie:",data);
+            // const frt = _.find(data.results, todo => todo.original_title);
+            // console.log(data.results[0].original_title);
+            // let {original_title} = data.results[0];
+            // console.log(original_title);
+
+            var listArr=[];
+            for (var i = 0; i < data.results.length; i++) {
+              listArr.push({
+                title: data.results[i].title,
+                release_date: data.results[i].release_date.substring(0, 4),
+                original_language:data.results[i].original_language,
+                vote_average:data.results[i].vote_average,
+                original_title:data.results[i].original_title,
+              })
+            }
+            console.log(listArr);
+            //
+            this.setState({
+              currentListArr:listArr
+            })
+            // console.log("jest w bazie:",data);
 
           } else if (data.length===0){
             console.log("nie ma w bazie");
@@ -100,14 +107,10 @@ export class Form extends Component {
     }
   }
 
-  validateInputText(inputValue) {
-    console.log(inputValue);
-      if (!inputValue){
+  validateInputText() {
+      if (!this.state.filmTitle){
         return 'Wpisz film, currentlyMostPopFilm lub TVserial';
-        this.handleCheckingInputFormat()
       } else{
-        const apiAddress = this.handleApiAddress();
-        this.handleLoadingData(apiAddress);
       }
   }
 
@@ -133,7 +136,7 @@ export class Form extends Component {
                     name="selectType"
                     value="movie"
                     onClick={this.handleChange.bind(this)}
-                    checked={this.state.selectType === 'movie'}/>
+                    />
 
                   <h5>TV serial</h5>
                   <input
@@ -141,7 +144,7 @@ export class Form extends Component {
                     name="selectType"
                     value="tv"
                     onClick={this.handleChange.bind(this)}
-                    checked={this.state.selectType === 'tv'}/>
+                    />
                 </div>
               </label>
 
@@ -151,7 +154,7 @@ export class Form extends Component {
                   value={this.state.selectValue}
                   onChange={this.handleChange.bind(this)}>
 
-                  <option value="notSpecified" selected>not specified</option>
+                  <option value="notSpecified">not specified</option>
                   <option value="currentlyMostPopular">Currently most popular</option>
                   <option value="allTimeMostPopular">All time most popular</option>
 
@@ -168,10 +171,9 @@ export class Form extends Component {
                    />
               </label>
             </form>
-
             {this.renderError()}
 
-            <SearchedList/>
+            <SearchedList currentListArr={this.state.currentListArr}/>
 
           </div>
         </div>

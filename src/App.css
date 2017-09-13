@@ -239,7 +239,7 @@
   .main-content__form-container {
     width: 325px;
     height: 95%;
-    background-color: rgba(10, 10, 10, 0.8);
+    background-color: green;
     display: flex;
     justify-content: center;
     flex-direction: column;
