@@ -26,11 +26,13 @@ export class Form extends Component {
   constructor(props){
     super(props);
     this.state={
-      selectValue:"film",
+      selectValue:"notSpecified",
       error:"",
 
       filmTitle:"",
-      selectType:'',
+      selectType:'movie',
+      typeOfApiSpecuficAction:'',
+      typeOfApiMainAction:'',
     }
   }
   renderError() {
@@ -46,7 +48,11 @@ export class Form extends Component {
         this.setState({ error: validateInputText });
         return;
     }
-    this.setState({error: null, filmTitle:'' });
+    this.setState({
+      error: null,
+      filmTitle:'',
+      selectType:{}
+     });
      console.log(this.state.selectValue);
 
   }
@@ -63,33 +69,16 @@ export class Form extends Component {
     console.log(this.state.selectType);
   }
 
-  handleLoadingData = () => {
+  handleLoadingData(apiAddress){
       // CacheProxy.get(`http://api/Company?CompanyId=${this.state.value}`).then(data => {
       //   this.setState({newCity: data})
       //   console.log(data);
       //   })
 
-      const apiKey = "_key=d609d4130667346ea048e134c734468c";
-      const filmFormat =`https://api.themoviedb.org/3/search/${this.state.selectType}?${apiKey}&query=${this.state.filmTitle}`;
-
-      // tytuł filmu:
-      // `https://api.themoviedb.org/3/search/movie?api_key=d609d4130667346ea048e134c734468c&query=breaking bad`
-
-      // tytył serialu
-      // `https://api.themoviedb.org/3/search/tv?api_key=d609d4130667346ea048e134c734468c&query=breaking bad`
-
-      // obecnie najpopularniejszy
-      // `https://api.themoviedb.org/3/discover/movie?api_key=d609d4130667346ea048e134c734468c&sort_by=popularity.desc`
-// `https://api.themoviedb.org/3/discover/tv?api_key=d609d4130667346ea048e134c734468c&sort_by=vote_average.desc&sort_by=vote_count.desc`
-
     // druga strona
     //https://api.themoviedb.org/3/discover/tv?api_key=d609d4130667346ea048e134c734468c&sort_by=vote_count.desc&page=2
 
-     // klucz:
-      // api_key=d609d4130667346ea048e134c734468c
-
-
-      fetch(`https://api.themoviedb.org/3/search/tv?api_key=d609d4130667346ea048e134c734468c&query=chłopaki`).then(resp => resp.json())
+      fetch(apiAddress).then(resp => resp.json())
         .then(data => {
           if(data.length!==0){
             console.log("jest w bazie:",data);
@@ -100,41 +89,28 @@ export class Form extends Component {
         });
 
   }
-  handleCheckingInputFormat(){
-    // const basicfilmFormat =/(^([A-Z]{2,3})?\d{3}-?\d{3}-?\d{2}-?\d{2}$)|(^([A-Z]{2,3})?\d{3}-?\d{2}-?\d{2}-?\d{3}$)/;
-    // const basicTVserialFormat =/^\d{9}$/;
-    // const basiccurrentlyMostPopFilmFormat =/^\d{10}$/;
-    const apiKey = "_key=d609d4130667346ea048e134c734468c";
-
-    const filmFormat =`https://api.themoviedb.org/3/search/movie?${apiKey}&query=${this.state.filmTitle}`;
-    const TVserialFormat =/^\d{9}$/;
-    const currentlyMostPopFilmFormat =/^\d{10}$/;
-
-    // var currentOption='';
-    // if(this.state.selectValue==='film')currentOption=basicfilmFormat;
-    // else if(this.state.selectValue==='TVserial')currentOption=basicTVserialFormat;
-    // else if(this.state.selectValue==='currentlyMostPopFilm')currentOption=basiccurrentlyMostPopFilmFormat;
-    //
-    // if(currentOption.test(this.state.value)){
-    //   return true;
-    // } else {
-    //   console.log(this.state.value);
-    //   return false;
-    // }
+  handleApiAddress(){
+    var apiKey = "api_key=d609d4130667346ea048e134c734468c";
+    if(this.state.selectValue==="notSpecified"){
+      return `https://api.themoviedb.org/3/search/${this.state.selectType}?${apiKey}&query=${this.state.filmTitle}`;
+    } else if(this.state.selectValue==="currentlyMostPopular"){
+      return `https://api.themoviedb.org/3/discover/${this.state.selectType}?${apiKey}&sort_by=popularity.desc`;
+    } else if(this.state.selectValue==="allTimeMostPopular"){
+      return `https://api.themoviedb.org/3/discover/${this.state.selectType}?${apiKey}&sort_by=vote_count.desc`;
+    }
   }
 
   validateInputText(inputValue) {
     console.log(inputValue);
-      if (!inputValue)
-          return 'Wpisz film, currentlyMostPopFilm lub TVserial';
-      // } else if (!this.handleCheckingInputFormat()) {
-      //   console.log(this.handleCheckingInputFormat());
-      //     return 'Wpisz prawidłowy film, currentlyMostPopFilm lub TVserial';
-      // } else {
-      //   console.log(this.handleCheckingInputFormat());
-      //   this.handleLoadingData();
-      // }
+      if (!inputValue){
+        return 'Wpisz film, currentlyMostPopFilm lub TVserial';
+        this.handleCheckingInputFormat()
+      } else{
+        const apiAddress = this.handleApiAddress();
+        this.handleLoadingData(apiAddress);
+      }
   }
+
   render() {
     return (
       <MainContent>
@@ -149,7 +125,7 @@ export class Form extends Component {
                 value="Find"
                 className="main-content__form-container__form__button"/>
 
-              <label for="selectType">
+              <label>
                 <div>
                   <h5>Film</h5>
                   <input
@@ -175,8 +151,9 @@ export class Form extends Component {
                   value={this.state.selectValue}
                   onChange={this.handleChange.bind(this)}>
 
-                  <option value="currentlyMostPop">Currently most popular</option>
-                  <option value="AllTimeMostPop">All time most popular</option>
+                  <option value="notSpecified" selected>not specified</option>
+                  <option value="currentlyMostPopular">Currently most popular</option>
+                  <option value="allTimeMostPopular">All time most popular</option>
 
                 </select>
               </label>
