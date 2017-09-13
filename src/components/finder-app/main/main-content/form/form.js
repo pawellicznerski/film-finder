@@ -68,11 +68,6 @@ export class Form extends Component {
       fetch(apiAddress).then(resp => resp.json())
         .then(data => {
           if(data.length!==0){
-            // const frt = _.find(data.results, todo => todo.original_title);
-            // console.log(data.results[0].original_title);
-            // let {original_title} = data.results[0];
-            // console.log(original_title);
-
             var listArr=[];
             for (var i = 0; i < data.results.length; i++) {
               listArr.push({
@@ -83,13 +78,9 @@ export class Form extends Component {
                 original_title:data.results[i].original_title,
               })
             }
-            console.log(listArr);
-            //
             this.setState({
               currentListArr:listArr
             })
-            // console.log("jest w bazie:",data);
-
           } else if (data.length===0){
             console.log("nie ma w bazie");
           }
@@ -119,34 +110,33 @@ export class Form extends Component {
       <MainContent>
         <div className="main-content">
           <div className="main-content__form-container">
-
+            <h2 className="main-content__form-container__text">I'm looking a...</h2>
             <form
               onSubmit={this.handleSubmit.bind(this)}
               className="main-content__form-container__form">
-              <input
-                type="submit"
-                value="Find"
-                className="main-content__form-container__form__button"/>
 
-              <label>
-                <div>
-                  <h5>Film</h5>
-                  <input
-                    type="radio"
-                    name="selectType"
-                    value="movie"
-                    onClick={this.handleChange.bind(this)}
-                    />
+              <div className="main-content__form-container__form__select">
+                <label for="radio01" className="main-content__form-container__form__select__text">Film</label>
+                <input
+                  className="main-content__form-container__form__select__input"
+                  checked
+                  id="radio01"
+                  type="radio"
+                  name="selectType"
+                  value="movie"
+                  onChange={this.handleChange.bind(this)}
+                  />
 
-                  <h5>TV serial</h5>
-                  <input
-                    type="radio"
-                    name="selectType"
-                    value="tv"
-                    onClick={this.handleChange.bind(this)}
-                    />
-                </div>
-              </label>
+                <label for="radio02" className="main-content__form-container__form__select__text">TV serial</label>
+                <input
+                  className="main-content__form-container__form__select__input"
+                  id="radio02"
+                  type="radio"
+                  name="selectType"
+                  value="tv"
+                  onChange={this.handleChange.bind(this)}
+                  />
+              </div>
 
               <label className="main-content__form-container__select">
                 <select
@@ -170,13 +160,17 @@ export class Form extends Component {
                   value={this.state.filmTitle}
                    />
               </label>
+              <input
+                type="submit"
+                value="Find"
+                className="main-content__form-container__form__button"/>
             </form>
             {this.renderError()}
 
             <SearchedList currentListArr={this.state.currentListArr}/>
 
-          </div>
-        </div>
+          </div>{/*main-content*/}
+        </div>{/*main-content__form-container*/}
       </MainContent>
     );
   }

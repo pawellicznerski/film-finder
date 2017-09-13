@@ -229,24 +229,42 @@
 
 .main-content {
   width: 100%;
+  min-height: 350px;
   height: 100%;
   background-image: url("./components/finder-app/main/main-content/form/form_images/12.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  color: white; }
   .main-content__form-container {
     width: 325px;
-    height: 95%;
-    background-color: green;
+    min-height: 350px;
+    background-color: rgba(10, 10, 10, 0.8);
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
     font-weight: bold; }
+    .main-content__form-container__text {
+      font-size: 40px;
+      margin: 10px 0;
+      border: 1px solid green; }
     .main-content__form-container__form {
+      border: 1px solid yellow;
       width: 325px;
-      color: white; }
+      color: white;
+      min-height: 100px; }
+      .main-content__form-container__form__select {
+        display: flex;
+        justify-content: center;
+        border: 1px solid red; }
+        .main-content__form-container__form__select__text {
+          margin: 5px;
+          font-size: 20px; }
+        .main-content__form-container__form__select__input {
+          margin: 10px;
+          width: 20px; }
       .main-content__form-container__form__label {
         margin: 5px 0 0 20px;
         color: white;
@@ -306,8 +324,7 @@
       vertical-align: middle; }
 
 .main-content {
-  height: 60vh;
-  min-height: 380px;
+  min-height: 60vh;
   width: 100%; }
 
 .main__nav-bottom .main__nav-bottom__container {
@@ -345,8 +362,7 @@
     background-color: #c19f13; }
 
 .main {
-  height: 80vh;
-  min-height: 470px; }
+  min-height: 80vh; }
 
 .footer {
   height: 5vh;
@@ -394,4 +410,4 @@
 
 .finder-app {
   background-color: black;
-  height: 100vh; }
+  min-height: 100vh; }
