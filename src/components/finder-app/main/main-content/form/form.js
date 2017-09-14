@@ -70,9 +70,10 @@ export class Form extends Component {
           if(data.length!==0){
             var listArr=[];
             for (var i = 0; i < data.results.length; i++) {
+              console.log(data);
               listArr.push({
                 title: data.results[i].title,
-                release_date: data.results[i].release_date.substring(0, 4),
+                release_date: data.results[i].release_date?data.results[i].release_date.substring(0, 4):'-',
                 original_language:data.results[i].original_language,
                 vote_average:data.results[i].vote_average,
                 original_title:data.results[i].original_title,
@@ -139,7 +140,7 @@ export class Form extends Component {
               </div>
 
               <label for="select-option" className="main-content__form-container__form__option-text">
-                Choose:</label>
+                Filter:</label>
               <select
                 id="select-option"
                 className="main-content__form-container__form__option"
@@ -147,7 +148,7 @@ export class Form extends Component {
                 value={this.state.selectValue}
                 onChange={this.handleChange.bind(this)}>
 
-                <option value="notSpecified" className="main-content__form-container__form__option__item">not specified</option>
+                <option value="notSpecified" className="main-content__form-container__form__option__item">no filter</option>
                 <option value="currentlyMostPopular" className="main-content__form-container__form__option__item">Currently most popular</option>
                 <option value="allTimeMostPopular" className="main-content__form-container__form__option__item">All time most popular</option>
               </select>

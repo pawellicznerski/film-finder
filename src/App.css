@@ -239,7 +239,7 @@
   align-items: center;
   color: white; }
   .main-content__form-container {
-    width: 90%;
+    width: 95%;
     min-height: 350px;
     background-color: rgba(10, 10, 10, 0.8);
     display: flex;
@@ -252,12 +252,12 @@
       border: 1px solid green; }
     .main-content__form-container__form {
       border: 1px solid yellow;
-      width: 325px;
+      width: 345px;
       color: white;
       min-height: 100px;
       display: flex;
       justify-content: center;
-      flex-direction: column;
+      flex-wrap: wrap;
       align-items: center; }
       .main-content__form-container__form__select {
         display: flex;
@@ -272,13 +272,14 @@
           margin: 10px;
           width: 20px; }
       .main-content__form-container__form__option-text {
-        width: 10%; }
+        width: 35%;
+        text-align: center; }
       .main-content__form-container__form__option {
         margin: 8px auto;
-        width: 70%;
+        width: 65%;
         height: 30px;
         border: 0;
-        background-color: transparent;
+        background-color: #c19f13;
         color: white;
         font-size: 18px; }
         .main-content__form-container__form__option__item {
@@ -286,12 +287,16 @@
           justify-content: center;
           color: black;
           border: 0; }
+      .main-content__form-container__form__text-type {
+        width: 35%;
+        text-align: center; }
       .main-content__form-container__form__text-input {
-        height: 20px;
+        height: 30px;
         border: 0;
         padding-left: 10px;
-        margin: 0 0 0 20px;
-        width: 230px; }
+        width: 65%;
+        font-size: 19px;
+        background-color: #c19f13; }
         .main-content__form-container__form__text-input:focus {
           border: 2px solid black;
           background-color: rgba(255, 255, 255, 0.5); }
@@ -299,36 +304,11 @@
         border: 0;
         background-color: black;
         color: white;
-        height: 20px;
-        width: 60px;
-        font-weight: bold; }
-    .main-content__form-container__info {
-      overflow: auto;
-      height: 20px;
-      border: 0;
-      padding: 2px 0 0 10px;
-      margin: 5px 0 0 20px;
-      width: 290px;
-      color: black;
-      font-size: 14px;
-      font-weight: bold;
-      background-color: rgba(255, 255, 255, 0.5);
-      /* this targets the default scrollbar (compulsory) */
-      /* the new scrollbar will have a flat appearance with the set background color */
-      /* this will style the thumb, ignoring the track */
-      /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */ }
-      .main-content__form-container__info::-webkit-scrollbar {
-        width: 15px; }
-      .main-content__form-container__info::-webkit-scrollbar-track {
-        background-color: black; }
-      .main-content__form-container__info::-webkit-scrollbar-thumb {
-        background-color: rgba(193, 159, 19, 0.8);
-        height: 4px; }
-      .main-content__form-container__info::-webkit-scrollbar-button {
-        background-color: black;
-        height: 20px; }
-      .main-content__form-container__info::-webkit-scrollbar-corner {
-        background-color: black; }
+        height: 50px;
+        width: 200px;
+        font-weight: bold;
+        font-size: 28px;
+        margin-top: 20px; }
     .main-content__form-container__error {
       margin-top: 3px;
       background-color: black;
