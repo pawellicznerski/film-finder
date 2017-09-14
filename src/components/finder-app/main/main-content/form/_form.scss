@@ -15,7 +15,6 @@
   &__form-container{
     width: 95%;
     min-height: 350px;
-    // background-color: rgba(10,10,10,0.8);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -37,12 +36,14 @@
       background-color: rgba(10,10,10,0.8);
       flex-wrap: wrap;
       align-items: center;
+      @include mobile{
+        width: 550px;
+      };
       //first section with two radio options---------------------
       &__label-select{
         width:33%;
         text-align: center;
         font-size: 20px;
-
       }
       &__select{
         display: flex;

@@ -1,7 +1,6 @@
 @import "./../../_finder-app__base/_finder-app__base_media-query-mixins";
 
 .main__nav-bottom{
-  // border: 1px solid blue;
   .main__nav-bottom__container{
     display: flex;
     justify-content: center;
@@ -13,7 +12,6 @@
     text-decoration: none;
     font-family: 'Saira Extra Condensed', sans-serif;
     padding-top: 30px;
-    // border: 1px solid green;
     @include mobile{
       width: 600px;
       margin: 0 auto;

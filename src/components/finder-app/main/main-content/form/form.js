@@ -35,7 +35,7 @@ export class Form extends Component {
         return;
     }
     if (!this.state.typeIsSelected) {
-        this.setState({ error: "You have to select type" });
+        this.setState({ error: "You have to select a type" });
         return;
     }
     this.setState({
