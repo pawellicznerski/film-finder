@@ -13,6 +13,7 @@ import SearchedListItem from "./__form__searched-list__item/form__searched-list_
     render() {
         return (
           <table className="form__searched-list" style={{display:this.props.currentListArrIsFull?'':'none'}}>
+            <caption className="form__searched-list__caption"> Results:</caption>
             <SearchedListHeader />
               <tbody  className="form__searched-list__body">
                {this.renderItems()}
