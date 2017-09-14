@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {CacheProxy} from './cacheProxy';
 import { MainContent } from './../main-content';
 import { SearchedList } from './__form__searched-list/form__searched-list';
 import _ from "lodash";
@@ -20,14 +19,13 @@ export class Form extends Component {
       currentListArrIsFull:false,
     }
   }
-
+// console.log();
   renderError() {
       if (!this.state.error) { return null; }
       return <div className="main-content__form-container__error">{this.state.error}</div>;
   }
 
   handleSubmit(event){
-    // console.log(this.state.value);
     event.preventDefault();
     const validateInputText = this.state.selectValue==="notSpecified"? this.validateInputText():'';
     if (validateInputText) {
@@ -41,36 +39,26 @@ export class Form extends Component {
     this.setState({
       error: null,
       filmTitle:'',
-      // selectType:'movie',
-      // selectValue:"notSpecified",
+      selectValue:"notSpecified",
      });
      const apiAddress = this.handleApiAddress();
      this.handleLoadingData(apiAddress)
-     console.log(this.state.selectValue);
+    //  console.log(this.state.selectValue);
 
   }
   handleChange(event) {
-    // this.setState({value: event.target.value});
-    // console.log(this.state.value);
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
 
     this.setState({
       [name]: value,
-      // error: this.state.selectType?'':"You have to select type",
     });
   }
 
   handleLoadingData(apiAddress){
-      // CacheProxy.get(`http://api/Company?CompanyId=${this.state.value}`).then(data => {
-      //   this.setState({newCity: data})
-      //   console.log(data);
-      //   })
-
     // druga strona
     //https://api.themoviedb.org/3/discover/tv?api_key=d609d4130667346ea048e134c734468c&sort_by=vote_count.desc&page=2
-
       fetch(apiAddress).then(resp => resp.json())
         .then(data => {
           if (data.length===0||data.total_results===0){
@@ -78,10 +66,10 @@ export class Form extends Component {
               error: "Sorry, there is no such film in our base",
               currentListArrIsFull:false,
              });
-          console.log("nie ma w bazie");
+          // console.log("nie ma w bazie");
           } else if(data.length!==0){
             var listArr=[];
-            console.log(data);
+            // console.log(data);
             for (var i = 0; i < data.results.length; i++) {
               listArr.push({
                 title: this.state.selectType==='movie'?data.results[i].title:data.results[i].name,
@@ -124,7 +112,7 @@ export class Form extends Component {
       typeIsSelected:'true'
     });
   }
-
+for
   render() {
     return (
       <MainContent>
@@ -136,10 +124,9 @@ export class Form extends Component {
               className="main-content__form-container__form">
               <label className="main-content__form-container__form__label-select">Type:</label>
               <div className="main-content__form-container__form__select">
-                <label for="radio01" className="main-content__form-container__form__select__text">Film</label>
+                <label className="main-content__form-container__form__select__text">Film</label>
                 <input
                   className="main-content__form-container__form__select__input"
-                  id="radio01"
                   type="radio"
                   name="selectType"
                   value="movie"
@@ -147,10 +134,9 @@ export class Form extends Component {
                   onFocus={this.handleFocus.bind(this)}
                   />
 
-                <label for="radio02" className="main-content__form-container__form__select__text">TV serial</label>
+                <label className="main-content__form-container__form__select__text">TV serial</label>
                 <input
                   className="main-content__form-container__form__select__input"
-                  id="radio02"
                   type="radio"
                   name="selectType"
                   value="tv"
@@ -159,10 +145,9 @@ export class Form extends Component {
                   />
               </div>
 
-              <label for="select-option" className="main-content__form-container__form__option-text">
+              <label className="main-content__form-container__form__option-text">
                 Filter:</label>
               <select
-                id="select-option"
                 className="main-content__form-container__form__option"
                 name="selectValue"
                 value={this.state.selectValue}

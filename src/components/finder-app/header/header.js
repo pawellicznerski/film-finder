@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router,Route,NavLink, Switch } from 'react-router-dom';
-import { Intro}  from './../main/main-content/intro/intro.js';
+import { NavLink} from 'react-router-dom';
+// import { Intro}  from './../main/main-content/intro/intro.js';
 
 
 export class Header extends Component {

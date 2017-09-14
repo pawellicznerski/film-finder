@@ -271,9 +271,10 @@
   width: 100%;
   min-height: 350px;
   height: 100%;
-  background-image: url("./components/finder-app/main/main-content/form/form_images/12.jpg");
+  background-image: url("./components/finder-app/main/main-content/form/form_images/_form_images_background.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
