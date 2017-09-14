@@ -12,11 +12,9 @@ import SearchedListItem from "./__form__searched-list__item/form__searched-list_
 
     render() {
         return (
-          <table>
+          <table className="form__searched-list">
             <SearchedListHeader/>
-            <tbody>
                {this.renderItems()}
-            </tbody>
           </table>
         );
     }

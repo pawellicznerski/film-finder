@@ -21,7 +21,7 @@
     font-weight: bold;
     //main text at the top of the form-----------------
     &__text{
-      font-size: 40px;
+      font-size: 37px;
       margin: 10px 0;
       border: 1px solid green;
     }
@@ -59,8 +59,8 @@
         text-align: center;
       }
       &__option{
-        margin: 8px auto;
-        width: 65%;
+        margin: 8px 5px 8px auto;
+        width: 62%;
         height: 30px;
         border: 0;
         // background-color: rgba(0,0,0,0);
@@ -84,13 +84,16 @@
       &__text-input{
         height: 30px;
         border: 0;
+        margin: 8px 5px 8px auto;
         padding-left: 10px;
-        width: 65%;
+        width: 62%;
         font-size: 19px;
+        color: rgba(255,255,255,1);
         background-color: rgba(193,159,19,1);
           &:focus{
+            color: rgba(0,0,0,1);
             border: 2px solid rgba(0,0,0,1);
-            background-color:  rgba(255,255,255,0.5);
+            background-color:  rgba(255,255,255,1);
           }
       }
 

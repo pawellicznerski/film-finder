@@ -11,13 +11,13 @@ export class NavBottom extends Component {
               <li className="main__nav-bottom__el">Find your film</li>
             </NavLink>
             <NavLink exact activeClassName="main__nav-bottom__el_active" to="/filmInfo" style={{ textDecoration: 'none'}}>
-              <li className="main__nav-bottom__el"><p>What is film?</p></li>
+              <li className="main__nav-bottom__el"><p>What is a film?</p></li>
             </NavLink>
             <NavLink exact activeClassName="main__nav-bottom__el_active" to="/filmSeriesInfo" style={{ textDecoration: 'none'}}>
-              <li className="main__nav-bottom__el"><p>What is film-series?</p></li>
+              <li className="main__nav-bottom__el"><p>What is a film-series?</p></li>
             </NavLink>
             <NavLink exact activeClassName="main__nav-bottom__el_active" to="/serialInfo" style={{ textDecoration: 'none'}}>
-              <li className="main__nav-bottom__el"><p>What is serial?</p></li>
+              <li className="main__nav-bottom__el"><p>What is a TV serial?</p></li>
             </NavLink>
           </ul>
         </nav>

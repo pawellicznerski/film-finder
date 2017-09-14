@@ -6,7 +6,7 @@ export class FilmInfo extends Component {
     return (
       <Definition>
         <h1>{location.pathname}</h1><br/>
-          <strong>Film, also called a movie, motion picture, theatrical film, or photoplay,</strong> is a series of still images that when shown on a screen create an illusion of motion images (due to the phi phenomenon).This optical illusion causes the audience to perceive continuous motion between separate objects viewed rapidly in succession. The process of filmmaking is both an art and an industry. A film is created by photographing actual scenes with a motion picture camera; by photographing drawings or miniature models using traditional animation techniques; by means of CGI and computer animation; or by a combination of some or all of these techniques and other visual effects.<br/><br/>
+          <strong>Film </strong>tells a fictional or fictionalized story, event or narrative. In this style of film, believable narratives and characters help convince the audience that the unfolding fiction is real. Lighting and camera movement, among other cinematic elements, have become increasingly important in these films. Great detail goes into the screenplays of narratives, as these films rarely deviate from the predetermined behaviours and lines of the classical style of screenplay writing to maintain a sense of realism. Actors must deliver dialogue and action in a believable way, so as to persuade the audience that the film is real life<br/><br/>
         Source: en.wikipedia.org/wiki/Film<br/><br/>
       </Definition>
     );

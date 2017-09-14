@@ -15,6 +15,7 @@ export class Form extends Component {
       selectType:'movie',
 
       currentListArr:'',
+      currentListArrIsFull:false,
     }
   }
 
@@ -34,12 +35,11 @@ export class Form extends Component {
     this.setState({
       error: null,
       filmTitle:'',
-      selectType:'movie',
-      selectValue:"notSpecified",
+      // selectType:'movie',
+      // selectValue:"notSpecified",
      });
      const apiAddress = this.handleApiAddress();
-     this.handleLoadingData(apiAddress);
-
+     this.handleLoadingData(apiAddress)
      console.log(this.state.selectValue);
 
   }
@@ -67,23 +67,29 @@ export class Form extends Component {
 
       fetch(apiAddress).then(resp => resp.json())
         .then(data => {
-          if(data.length!==0){
+          if (data.length===0||data.total_results===0){
+            this.setState({
+              error: "Sorry, there is no such film in our base",
+              currentListArrIsFull:false,
+             });
+          console.log("nie ma w bazie");
+          } else if(data.length!==0){
             var listArr=[];
+            console.log(data);
             for (var i = 0; i < data.results.length; i++) {
-              console.log(data);
               listArr.push({
-                title: data.results[i].title,
-                release_date: data.results[i].release_date?data.results[i].release_date.substring(0, 4):'-',
+                title: this.state.selectType==='movie'?data.results[i].title:data.results[i].name,
+                release_date: this.state.selectType==='movie'?data.results[i].release_date.substring(0, 4):data.results[i].first_air_date.substring(0, 4),
                 original_language:data.results[i].original_language,
                 vote_average:data.results[i].vote_average,
-                original_title:data.results[i].original_title,
+                original_title: this.state.selectType==='movie'?data.results[i].original_title:data.results[i].original_name,
               })
             }
             this.setState({
-              currentListArr:listArr
+              error: "",
+              currentListArr:listArr,
+              currentListArrIsFull:true
             })
-          } else if (data.length===0){
-            console.log("nie ma w bazie");
           }
         });
 
@@ -111,7 +117,7 @@ export class Form extends Component {
       <MainContent>
         <div className="main-content">
           <div className="main-content__form-container">
-            <h2 className="main-content__form-container__text">I'm looking a...</h2>
+            <h2 className="main-content__form-container__text">I'm looking for a...</h2>
             <form
               onSubmit={this.handleSubmit.bind(this)}
               className="main-content__form-container__form">
@@ -120,7 +126,6 @@ export class Form extends Component {
                 <label for="radio01" className="main-content__form-container__form__select__text">Film</label>
                 <input
                   className="main-content__form-container__form__select__input"
-                  checked
                   id="radio01"
                   type="radio"
                   name="selectType"
