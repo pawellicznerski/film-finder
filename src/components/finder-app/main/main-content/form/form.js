@@ -14,6 +14,8 @@ export class Form extends Component {
       filmTitle:"",
       selectType:'movie',
 
+      typeIsSelected:false,
+
       currentListArr:'',
       currentListArrIsFull:false,
     }
@@ -30,6 +32,10 @@ export class Form extends Component {
     const validateInputText = this.state.selectValue==="notSpecified"? this.validateInputText():'';
     if (validateInputText) {
         this.setState({ error: validateInputText });
+        return;
+    }
+    if (!this.state.typeIsSelected) {
+        this.setState({ error: "You have to select type" });
         return;
     }
     this.setState({
@@ -51,9 +57,9 @@ export class Form extends Component {
     const name = target.name;
 
     this.setState({
-      [name]: value
+      [name]: value,
+      // error: this.state.selectType?'':"You have to select type",
     });
-    console.log(this.state.selectType);
   }
 
   handleLoadingData(apiAddress){
@@ -107,9 +113,16 @@ export class Form extends Component {
 
   validateInputText() {
       if (!this.state.filmTitle){
-        return 'Wpisz film, currentlyMostPopFilm lub TVserial';
+        return 'Type in a title or choose one of the filters';
       } else{
       }
+  }
+
+  handleFocus(){
+    this.setState({
+      error: '',
+      typeIsSelected:'true'
+    });
   }
 
   render() {
@@ -121,7 +134,7 @@ export class Form extends Component {
             <form
               onSubmit={this.handleSubmit.bind(this)}
               className="main-content__form-container__form">
-
+              <label className="main-content__form-container__form__label-select">Type:</label>
               <div className="main-content__form-container__form__select">
                 <label for="radio01" className="main-content__form-container__form__select__text">Film</label>
                 <input
@@ -131,6 +144,7 @@ export class Form extends Component {
                   name="selectType"
                   value="movie"
                   onChange={this.handleChange.bind(this)}
+                  onFocus={this.handleFocus.bind(this)}
                   />
 
                 <label for="radio02" className="main-content__form-container__form__select__text">TV serial</label>
@@ -141,6 +155,7 @@ export class Form extends Component {
                   name="selectType"
                   value="tv"
                   onChange={this.handleChange.bind(this)}
+                  onFocus={this.handleFocus.bind(this)}
                   />
               </div>
 
@@ -161,7 +176,7 @@ export class Form extends Component {
 
 
               <label className="main-content__form-container__form__text-type">
-                or type film title:</label>
+                Title:</label>
                 <input
                   type="text"
                   name="filmTitle"
@@ -177,7 +192,7 @@ export class Form extends Component {
             </form>
             {this.renderError()}
 
-            <SearchedList currentListArr={this.state.currentListArr}/>
+            <SearchedList currentListArr={this.state.currentListArr} currentListArrIsFull={this.state.currentListArrIsFull}/>
 
           </div>{/*main-content*/}
         </div>{/*main-content__form-container*/}

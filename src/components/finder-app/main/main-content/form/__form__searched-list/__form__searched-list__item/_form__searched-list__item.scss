@@ -1,7 +1,33 @@
 .form__searched-list__body{
-  &__row{
-    &__el{
 
+  &__row{
+    &_1{
+      background-color: rgba(10,10,10,1.0);
+    }
+    &_2{
+      background-color: rgba(193,159,19,1.0);
+      color:  rgba(10,10,10,1.0);
+    }
+    &__el{
+      font-size: 20px;
+
+      padding: 4px 2px;
+      &_title{
+        min-width: 100px;
+        // font-size: 20px;
+      }
+      &_release{
+
+      }
+      &_lang{
+
+      }
+      &_vote{
+
+      }
+      &_ori-title{
+        display: none;
+      }
     }
   }
 }

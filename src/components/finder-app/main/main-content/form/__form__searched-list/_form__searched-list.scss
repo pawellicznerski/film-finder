@@ -1,3 +1,11 @@
+@import "./form__searched-list__head";
+@import "./__form__searched-list__item/form__searched-list__item";
+
 .form__searched-list{
-  
+  margin: 30px auto;
+  background-color: rgba(10,10,10,0.8);
+  font-family: 'Saira Extra Condensed', sans-serif;
+  &__body{
+
+  }
 }
