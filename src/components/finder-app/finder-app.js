@@ -38,7 +38,22 @@ export class FinderApp extends Component {
                     <Route exact path="/film-finder/serialInfo" component={SerialInfo}/>
                     <Route component={NoMatch}/>
                   </Switch>
-                <NavBottom/>
+                  <nav className="main__nav-bottom">
+                    <ul className="main__nav-bottom__container"  style={{ listStyleType: "none"}}>
+                      <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/form" style={{ textDecoration: 'none'}}>
+                        <li className="main__nav-bottom__el">Find your film</li>
+                      </NavLink>
+                      <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/filmInfo" style={{ textDecoration: 'none'}}>
+                        <li className="main__nav-bottom__el"><p>What is a film?</p></li>
+                      </NavLink>
+                      <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/filmSeriesInfo" style={{ textDecoration: 'none'}}>
+                        <li className="main__nav-bottom__el"><p>What is a film-series?</p></li>
+                      </NavLink>
+                      <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/serialInfo" style={{ textDecoration: 'none'}}>
+                        <li className="main__nav-bottom__el"><p>What is a TV serial?</p></li>
+                      </NavLink>
+                    </ul>
+                  </nav>
                 </div>
               </section>
               <Footer/>
