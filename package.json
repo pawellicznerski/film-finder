@@ -2,7 +2,7 @@
   "name": "training-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pawellicznerski.github.io/film-finder/",
+  "homepage": "https://pawellicznerski.github.io/film-finder",
   "dependencies": {
     "css-loader": "^0.28.4",
     "node-sass-chokidar": "0.0.3",

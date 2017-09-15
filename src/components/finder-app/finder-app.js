@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router,Route, Switch,NavLink } from 'react-router-dom';
+import { BrowserRouter as Router,Route, Switch, NavLink } from 'react-router-dom';
 
 import { Intro}  from './main/main-content/intro/intro.js';
 import { Form }  from './main/main-content/form/form.js';
@@ -27,33 +27,18 @@ export class FinderApp extends Component {
     return (
       <Router history={history}>
           <div className="finder-app">
-              {location.pathname==="/film-finder/"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header> }
+              {location.pathname==="/film-finder"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header> }
               <section>
                 <div className="main">
                   <Switch>
-                    <Route exact path="/film-finder/" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo.bind(this)}/>
+                    <Route exact path="/film-finder" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo.bind(this)}/>
                     <Route exact path="/film-finder/form" component={Form}/>
                     <Route exact path="/film-finder/filmInfo" component={FilmInfo}/>
                     <Route exact path="/film-finder/filmSeriesInfo" component={FilmSeriesInfo}/>
                     <Route exact path="/film-finder/serialInfo" component={SerialInfo}/>
                     <Route component={NoMatch}/>
                   </Switch>
-                  <nav className="main__nav-bottom">
-                    <ul className="main__nav-bottom__container"  style={{ listStyleType: "none"}}>
-                      <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/form" style={{ textDecoration: 'none'}}>
-                        <li className="main__nav-bottom__el">Find your film</li>
-                      </NavLink>
-                      <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/filmInfo" style={{ textDecoration: 'none'}}>
-                        <li className="main__nav-bottom__el"><p>What is a film?</p></li>
-                      </NavLink>
-                      <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/filmSeriesInfo" style={{ textDecoration: 'none'}}>
-                        <li className="main__nav-bottom__el"><p>What is a film-series?</p></li>
-                      </NavLink>
-                      <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/serialInfo" style={{ textDecoration: 'none'}}>
-                        <li className="main__nav-bottom__el"><p>What is a TV serial?</p></li>
-                      </NavLink>
-                    </ul>
-                  </nav>
+                <NavBottom/>
                 </div>
               </section>
               <Footer/>
