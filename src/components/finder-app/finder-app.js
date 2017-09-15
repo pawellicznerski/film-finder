@@ -23,11 +23,12 @@ export class FinderApp extends Component {
   toggleHeaderLogo(value){
     this.setState({toggleShowLogo:value,})
   }
+
   render() {
     return (
       <Router history={history}>
           <div className="finder-app">
-              {location.pathname==={"/"||"/film-finder"}?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header> }
+              {location.pathname==="/film-finder"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header> }
               <section>
                 <div className="main">
                   <Switch>
