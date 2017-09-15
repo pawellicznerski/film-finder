@@ -1,19 +1,17 @@
-@import "./../_finder-app__base/_finder-app__base_media-query-mixins";
-
+@import "./../../../_finder-app__base/_finder-app__base_media-query-mixins";
 .header{
   display: flex;
   justify-content: center;
   align-items: center;
-  // border:1px solid red;
   background-color: black;
   height:13vh;
   min-height: 80px;
+  width: 100vw;
   &__logo{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 250px;
-    cursor: pointer;
     @include mobile{
       width: 350px;
     };

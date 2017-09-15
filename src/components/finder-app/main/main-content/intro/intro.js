@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { MainContent } from './../main-content';
+import { Header } from './../__header/header';
 
 
 export class Intro extends Component {
-  componentDidMount(){
-      // this.props.route.toggleHeaderLogo(false);
-  }
 
   render() {
     return (
       <MainContent>
+        <Header headerIsShown="false"/>
         <div  className="logo intro-logo">
           <div className="logo__words intro-logo__words">
             <div className="logo__words_first intro-logo__words_first"></div>

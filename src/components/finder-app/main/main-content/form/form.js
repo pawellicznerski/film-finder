@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { MainContent } from './../main-content';
 import { SearchedList } from './__form__searched-list/form__searched-list';
 import _ from "lodash";
+import { Header } from './../__header/header';
 
 export class Form extends Component {
   constructor(props){
@@ -22,7 +23,7 @@ export class Form extends Component {
 // console.log();
   renderError() {
       if (!this.state.error) { return null; }
-      return <div className="main-content__form-container__error">{this.state.error}</div>;
+      return <div className="form__form-container__error">{this.state.error}</div>;
   }
 
   handleSubmit(event){
@@ -43,8 +44,6 @@ export class Form extends Component {
      });
      const apiAddress = this.handleApiAddress();
      this.handleLoadingData(apiAddress)
-    //  console.log(this.state.selectValue);
-
   }
   handleChange(event) {
     const target = event.target;
@@ -112,21 +111,22 @@ export class Form extends Component {
       typeIsSelected:'true'
     });
   }
-for
+
   render() {
     return (
       <MainContent>
-        <div className="main-content">
-          <div className="main-content__form-container">
-            <h2 className="main-content__form-container__text">I'm looking for a...</h2>
+        <Header/>
+        <div className="form">
+          <div className="form__form-container">
+            <h2 className="form__form-container__text">I'm looking for a...</h2>
             <form
               onSubmit={this.handleSubmit.bind(this)}
-              className="main-content__form-container__form">
-              <label className="main-content__form-container__form__label-select">Type:</label>
-              <div className="main-content__form-container__form__select">
-                <label className="main-content__form-container__form__select__text">Film</label>
+              className="form__form-container__form">
+              <label className="form__form-container__form__label-select">Type:</label>
+              <div className="form__form-container__form__select">
+                <label className="form__form-container__form__select__text">Film</label>
                 <input
-                  className="main-content__form-container__form__select__input"
+                  className="form__form-container__form__select__input"
                   type="radio"
                   name="selectType"
                   value="movie"
@@ -134,9 +134,9 @@ for
                   onFocus={this.handleFocus.bind(this)}
                   />
 
-                <label className="main-content__form-container__form__select__text">TV serial</label>
+                <label className="form__form-container__form__select__text">TV serial</label>
                 <input
-                  className="main-content__form-container__form__select__input"
+                  className="form__form-container__form__select__input"
                   type="radio"
                   name="selectType"
                   value="tv"
@@ -145,27 +145,27 @@ for
                   />
               </div>
 
-              <label className="main-content__form-container__form__option-text">
+              <label className="form__form-container__form__option-text">
                 Filter:</label>
               <select
-                className="main-content__form-container__form__option"
+                className="form__form-container__form__option"
                 name="selectValue"
                 value={this.state.selectValue}
                 onChange={this.handleChange.bind(this)}>
 
-                <option value="notSpecified" className="main-content__form-container__form__option__item">no filter</option>
-                <option value="currentlyMostPopular" className="main-content__form-container__form__option__item">Currently most popular</option>
-                <option value="allTimeMostPopular" className="main-content__form-container__form__option__item">All time most popular</option>
+                <option value="notSpecified" className="form__form-container__form__option__item">no filter</option>
+                <option value="currentlyMostPopular" className="form__form-container__form__option__item">Currently most popular</option>
+                <option value="allTimeMostPopular" className="form__form-container__form__option__item">All time most popular</option>
               </select>
 
 
 
-              <label className="main-content__form-container__form__text-type">
+              <label className="form__form-container__form__text-type">
                 Title:</label>
                 <input
                   type="text"
                   name="filmTitle"
-                  className="main-content__form-container__form__text-input"
+                  className="form__form-container__form__text-input"
                   onChange={this.handleChange.bind(this)}
                   value={this.state.filmTitle}
                    />
@@ -173,14 +173,14 @@ for
               <input
                 type="submit"
                 value="Find"
-                className="main-content__form-container__form__button"/>
+                className="form__form-container__form__button"/>
             </form>
             {this.renderError()}
 
             <SearchedList currentListArr={this.state.currentListArr} currentListArrIsFull={this.state.currentListArrIsFull}/>
 
-          </div>{/*main-content*/}
-        </div>{/*main-content__form-container*/}
+          </div>{/*form*/}
+        </div>{/*form__form-container*/}
       </MainContent>
     );
   }

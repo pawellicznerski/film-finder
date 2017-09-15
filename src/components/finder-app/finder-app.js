@@ -11,26 +11,12 @@ import { NavBottom }  from './main/main__nav-bottom/main__nav-bottom.js';
 
 import { Footer }  from './footer/footer.js';
 
-import { Header }  from './header/header.js';
-
 export class FinderApp extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      toggleShowLogo:false,
-    }
-  }
-  // toggleHeaderLogo(value){
-  //   this.setState({toggleShowLogo:value,})
-  // }
-  sth(){
-    console.log(location.pathname);
-  }
   render() {
+
     return (
       <Router history={history}>
           <div className="finder-app">
-              {location.pathname==="/film-finder/filmSeriesInfo"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header>}
               <section>
                 <div className="main">
                   <NavBottom/>
@@ -43,7 +29,6 @@ export class FinderApp extends Component {
                     <Route exact path="/film-finder/serialInfo" component={SerialInfo}/>
                     <Route component={NoMatch}/>
                   </Switch>
-                  <button onClick={this.sth}>deed</button>
                 </div>
               </section>
               <Footer/>
