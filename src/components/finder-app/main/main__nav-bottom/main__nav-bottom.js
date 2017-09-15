@@ -7,16 +7,16 @@ export class NavBottom extends Component {
     return (
         <nav className="main__nav-bottom">
           <ul className="main__nav-bottom__container"  style={{ listStyleType: "none"}}>
-            <NavLink exact activeClassName="main__nav-bottom__el_active" to="/form" style={{ textDecoration: 'none'}}>
+            <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/form" style={{ textDecoration: 'none'}}>
               <li className="main__nav-bottom__el">Find your film</li>
             </NavLink>
-            <NavLink exact activeClassName="main__nav-bottom__el_active" to="/filmInfo" style={{ textDecoration: 'none'}}>
+            <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/filmInfo" style={{ textDecoration: 'none'}}>
               <li className="main__nav-bottom__el"><p>What is a film?</p></li>
             </NavLink>
-            <NavLink exact activeClassName="main__nav-bottom__el_active" to="/filmSeriesInfo" style={{ textDecoration: 'none'}}>
+            <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/filmSeriesInfo" style={{ textDecoration: 'none'}}>
               <li className="main__nav-bottom__el"><p>What is a film-series?</p></li>
             </NavLink>
-            <NavLink exact activeClassName="main__nav-bottom__el_active" to="/serialInfo" style={{ textDecoration: 'none'}}>
+            <NavLink exact activeClassName="main__nav-bottom__el_active" to="/film-finder/serialInfo" style={{ textDecoration: 'none'}}>
               <li className="main__nav-bottom__el"><p>What is a TV serial?</p></li>
             </NavLink>
           </ul>
