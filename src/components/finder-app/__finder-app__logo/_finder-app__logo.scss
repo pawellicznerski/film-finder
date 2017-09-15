@@ -4,14 +4,14 @@
   &__words{
     &_first{
       background-position: center;
-      background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyFirma.svg");
+      background-image: url("./components/finder-app/__finder-app__logo/im/logoOnlyFirma.svg");
       background-size: contain;
       background-repeat: no-repeat;
     }//first-word
     &_second{
       position: relative;
       background-position: center;
-      background-image:url("./components/finder-app/__finder-app__logo/images/logoOnlyPod.svg");
+      background-image:url("./components/finder-app/__finder-app__logo/im/logoOnlyPod.svg");
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -23,7 +23,7 @@
       .logo__magnifying-glass{
         border-radius: 50%;
         background-position: center;
-        background-image:url("./components/finder-app/__finder-app__logo/images/magnifyingGlass.svg");
+        background-image:url("./components/finder-app/__finder-app__logo/im/magnifyingGlass.svg");
         background-repeat: no-repeat;
         display: flex;
         justify-content: flex-end;
