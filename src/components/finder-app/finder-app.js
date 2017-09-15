@@ -23,7 +23,6 @@ export class FinderApp extends Component {
   toggleHeaderLogo(value){
     this.setState({toggleShowLogo:value,})
   }
-
   render() {
     return (
       <Router history={history}>
