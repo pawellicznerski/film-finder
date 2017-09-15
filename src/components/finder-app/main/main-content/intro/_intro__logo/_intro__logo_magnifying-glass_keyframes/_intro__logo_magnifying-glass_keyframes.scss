@@ -4,8 +4,10 @@
 @mixin movingMagnifyingGlass {
   @keyframes movingMagnifyingGlass{
     0%{
-      top:8vh;
-      left:18vw;
+      // top:8vh;
+      // left:18vw;
+      top:20px;
+      left:55px;
       background-position: right;
     }
     20%{
@@ -13,7 +15,7 @@
     }
     21%{
       top:0vh;
-      left:-14vw;
+      left:-45px;
       background-position: right;
       background-size: 27px 27px;
 
@@ -22,15 +24,15 @@
       background-position: center;
       border:23px solid white;
       background-size: 27px 27px;
-      top:0vh;
-      left:0vw;
+      top:0;
+      left:0;
       height:220px;
       width:220px;
     }
     73%{
       border:16px solid white;
       background-size: 220px 220px;
-      top:4vh;
+      top:20px;
       left:0vw;
       height:130px;
       width:130px;
@@ -48,54 +50,54 @@
 }
 
 
-@mixin movingMagnifyingGlassTablet {
-  @include tablet{
-    @keyframes movingMagnifyingGlass{
-      0%{
-        border:25px solid white;
-        height:255px;
-        width:255px;
-        top:8vh;
-        left:18vw;
-        background-position: right;
-      }
-      20%{
-        background-size: 0px 0px;
-      }
-      21%{
-        top:0vh;
-        left:-14vw;
-        background-position: right;
-        background-size: 27px 27px;
-
-      }
-      45%{
-        background-position: center;
-        border:25px solid white;
-        background-size: 27px 27px;
-        top:0vh;
-        left:0vw;
-        height:255px;
-        width:255px;
-      }
-      73%{
-        border:17px solid white;
-        background-size: 220px 220px;
-        top:4vh;
-        left:0vw;
-          // left:98px;
-          // top:79px;
-          height:210px;
-          width:210px;
-      }
-      100%{
-        border:25px solid white;
-        background-size: 215px 215px;
-        top:0vh;
-        left:0vw;
-        height:270px;
-        width:270px;
-      }
-    }
-  };
-}
+// @mixin movingMagnifyingGlassTablet {
+//   @include tablet{
+//     @keyframes movingMagnifyingGlass{
+//       0%{
+//         border:25px solid white;
+//         height:255px;
+//         width:255px;
+//         top:8vh;
+//         left:18vw;
+//         background-position: right;
+//       }
+//       20%{
+//         background-size: 0px 0px;
+//       }
+//       21%{
+//         top:0vh;
+//         left:-14vw;
+//         background-position: right;
+//         background-size: 27px 27px;
+//
+//       }
+//       45%{
+//         background-position: center;
+//         border:25px solid white;
+//         background-size: 27px 27px;
+//         top:0vh;
+//         left:0vw;
+//         height:255px;
+//         width:255px;
+//       }
+//       73%{
+//         border:17px solid white;
+//         background-size: 220px 220px;
+//         top:4vh;
+//         left:0vw;
+//           // left:98px;
+//           // top:79px;
+//           height:210px;
+//           width:210px;
+//       }
+//       100%{
+//         border:25px solid white;
+//         background-size: 215px 215px;
+//         top:0vh;
+//         left:0vw;
+//         height:270px;
+//         width:270px;
+//       }
+//     }
+//   };
+// }
