@@ -27,10 +27,11 @@ export class FinderApp extends Component {
     return (
       <Router history={history}>
           <div className="finder-app">
-              {location.pathname==="/film-finder"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header> }
+              {location.pathname==="/film-finder"||location.pathname==="/"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header> }
               <section>
                 <div className="main">
                   <Switch>
+                    <Route exact path="/" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo.bind(this)}/>
                     <Route exact path="/film-finder" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo.bind(this)}/>
                     <Route exact path="/film-finder/form" component={Form}/>
                     <Route exact path="/film-finder/filmInfo" component={FilmInfo}/>
