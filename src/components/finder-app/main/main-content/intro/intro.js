@@ -4,9 +4,9 @@ import { MainContent } from './../main-content';
 
 export class Intro extends Component {
   componentDidMount(){
-      this.props.route.toggleHeaderLogo(false);
+      // this.props.route.toggleHeaderLogo(false);
   }
-  
+
   render() {
     return (
       <MainContent>

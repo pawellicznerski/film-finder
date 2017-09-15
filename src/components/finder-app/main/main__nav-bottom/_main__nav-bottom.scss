@@ -1,6 +1,7 @@
 @import "./../../_finder-app__base/_finder-app__base_media-query-mixins";
 
 .main__nav-bottom{
+  order: 2;
   .main__nav-bottom__container{
     display: flex;
     justify-content: center;

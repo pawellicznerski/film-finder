@@ -5,4 +5,6 @@
 .main{
   min-height:80vh;
   font-family: 'Saira Extra Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
 }

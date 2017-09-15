@@ -352,48 +352,53 @@
           width: 550px; } }
 
 .main-content {
+  order: 1;
   height: 100%;
   min-height: 60vh;
   width: 100%; }
 
-.main__nav-bottom .main__nav-bottom__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15vh;
-  min-height: 75px;
-  width: 100%;
-  background-color: black;
-  text-decoration: none;
-  font-family: 'Saira Extra Condensed', sans-serif;
-  padding-top: 30px; }
-  @media (min-width: 600px) {
-    .main__nav-bottom .main__nav-bottom__container {
-      width: 600px;
-      margin: 0 auto; } }
-  @media (min-width: 1200px) {
-    .main__nav-bottom .main__nav-bottom__container {
-      width: 800px;
-      padding-top: 30px; } }
-  .main__nav-bottom .main__nav-bottom__container .main__nav-bottom__el {
+.main__nav-bottom {
+  order: 2; }
+  .main__nav-bottom .main__nav-bottom__container {
+    display: flex;
     justify-content: center;
-    text-align: center;
-    font-size: 20px;
-    width: 23vw;
-    color: #fafafa; }
+    align-items: center;
+    height: 15vh;
+    min-height: 75px;
+    width: 100%;
+    background-color: black;
+    text-decoration: none;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    padding-top: 30px; }
     @media (min-width: 600px) {
-      .main__nav-bottom .main__nav-bottom__container .main__nav-bottom__el {
-        width: 150px;
-        font-size: 22px; } }
+      .main__nav-bottom .main__nav-bottom__container {
+        width: 600px;
+        margin: 0 auto; } }
     @media (min-width: 1200px) {
-      .main__nav-bottom .main__nav-bottom__container .main__nav-bottom__el {
-        width: 200px; } }
-  .main__nav-bottom .main__nav-bottom__container .main__nav-bottom__el_active {
-    background-color: #c19f13; }
+      .main__nav-bottom .main__nav-bottom__container {
+        width: 800px;
+        padding-top: 30px; } }
+    .main__nav-bottom .main__nav-bottom__container .main__nav-bottom__el {
+      justify-content: center;
+      text-align: center;
+      font-size: 20px;
+      width: 23vw;
+      color: #fafafa; }
+      @media (min-width: 600px) {
+        .main__nav-bottom .main__nav-bottom__container .main__nav-bottom__el {
+          width: 150px;
+          font-size: 22px; } }
+      @media (min-width: 1200px) {
+        .main__nav-bottom .main__nav-bottom__container .main__nav-bottom__el {
+          width: 200px; } }
+    .main__nav-bottom .main__nav-bottom__container .main__nav-bottom__el_active {
+      background-color: #c19f13; }
 
 .main {
   min-height: 80vh;
-  font-family: 'Saira Extra Condensed', sans-serif; }
+  font-family: 'Saira Extra Condensed', sans-serif;
+  display: flex;
+  flex-direction: column; }
 
 .footer {
   height: 5vh;

@@ -20,27 +20,30 @@ export class FinderApp extends Component {
       toggleShowLogo:false,
     }
   }
-  toggleHeaderLogo(value){
-    this.setState({toggleShowLogo:value,})
+  // toggleHeaderLogo(value){
+  //   this.setState({toggleShowLogo:value,})
+  // }
+  sth(){
+    console.log(location.pathname);
   }
   render() {
     return (
       <Router history={history}>
           <div className="finder-app">
-              {location.pathname==="/film-finder"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header> }
+              {location.pathname==="/film-finder/filmSeriesInfo"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header>}
               <section>
                 <div className="main">
-                                  <NavBottom/>
+                  <NavBottom/>
                   <Switch>
-                    <Route exact path="/" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo.bind(this)}/>
-                    <Route exact path="/film-finder" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo.bind(this)}/>
-                    <Route path="/film-finder/form" component={Form}/>
-                    <Route path="/film-finder/filmInfo" component={FilmInfo}/>
-                    <Route path="/film-finder/filmSeriesInfo" component={FilmSeriesInfo}/>
-                    <Route path="/film-finder/serialInfo" component={SerialInfo}/>
+                    <Route exact path="/" component={Intro} />
+                    <Route exact path="/film-finder" component={Intro} />
+                    <Route exact path="/film-finder/form" component={Form}/>
+                    <Route exact path="/film-finder/filmInfo" component={FilmInfo}/>
+                    <Route exact path="/film-finder/filmSeriesInfo" component={FilmSeriesInfo}/>
+                    <Route exact path="/film-finder/serialInfo" component={SerialInfo}/>
                     <Route component={NoMatch}/>
                   </Switch>
-
+                  <button onClick={this.sth}>deed</button>
                 </div>
               </section>
               <Footer/>
