@@ -1,10 +1,11 @@
 @import "./../../../../_finder-app__base/_finder-app__base_media-query-mixins.scss";
+@import "./../../../../_finder-app__base/_finder-app__base__variables.scss";
 
 .form__searched-list__head{
  width: 100%;
   &__row{
     height: 60px;
-    background-color: rgba(193,159,19,1);
+    background-color: $color__primary_yellow;
     &__el{
       font-size: 22px;
 
@@ -12,20 +13,7 @@
         min-width:100px;
         font-size: 27px;
       }
-      &_release{
-        // width:10px;
-
-      }
-      &_lang{
-        // width:10px;
-
-      }
-      &_vote{
-        // width:10px;
-
-      }
       &_ori-title{
-        // width:10px;
         display: none;
       }
     }

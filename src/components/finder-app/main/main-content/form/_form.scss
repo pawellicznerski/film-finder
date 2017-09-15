@@ -6,9 +6,7 @@
   min-height: 350px;
   height:100%;
   background-image: url("./components/finder-app/main/main-content/form/form_images/_form_images_background.jpg");
-  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,11 +22,9 @@
     &__text{
       font-size: 44px;
       margin: 10px 0;
-      // border: 1px solid green;
     }
     //main container of the form---------------------
     &__form{
-      // border: 1px solid yellow;
       width: 345px;
       color: white;
       min-height: 100px;
@@ -52,20 +48,16 @@
         margin: 8px 12px 8px auto;
         width: 62%;
         height: 30px;
-        // border: 1px solid red;
         &__text{
           padding-top: 15px;
           line-height: 0;
           font-size: 23px;
-          // border: 1px solid red;
-
         }
         &__input{
           margin: 10px;
           width: 20px;
         }
       }//end of first select
-
       //second section with drop down select options--------------------
       &__option-text{
         width:33%;
@@ -78,8 +70,7 @@
         width: 62%;
         height: 30px;
         border: 0;
-        // background-color: rgba(0,0,0,0);
-        background-color: rgba(193,159,19,1);
+        background-color: $color__primary_yellow;
         color: white;
         font-size: 18px;
         &__item{
@@ -106,7 +97,7 @@
         width: 62%;
         font-size: 18px;
         color: rgba(255,255,255,1);
-        background-color: rgba(193,159,19,1);
+        background-color: $color__primary_yellow;
           &:focus{
             color: rgba(0,0,0,1);
             border: 2px solid rgba(0,0,0,1);
@@ -136,6 +127,9 @@
       font-size: 19px;
       text-align: center;
       vertical-align: middle;
+      @include mobile{
+        width: 550px;
+      };
     }
   }//form container
 }//main content

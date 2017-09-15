@@ -149,25 +149,14 @@
 .intro-logo__magnifying-glass-container {
   height: 30vh;
   width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
   margin-bottom: 12vh; }
   .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass {
     color: white;
-    border-radius: 50%;
     border: 23px solid white;
     margin: -4px 0 0 13px;
-    background-position: center;
-    background-image: url("./components/finder-app/__finder-app__logo/images/magnifyingGlass.svg");
     background-size: 0px 0px;
-    background-repeat: no-repeat;
     height: 220px;
     width: 220px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: relative;
     top: 8vh;
     left: 18vw;
     animation: movingMagnifyingGlass 1.4s 1.0s ease-out forwards; }
@@ -179,12 +168,10 @@
         top: 8vh;
         left: 18vw; } }
     .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass__stick {
-      background-color: white;
       left: 51px;
       height: 18px;
       width: 50px;
-      transform: skew(-35deg, 37deg);
-      position: relative; }
+      transform: skew(-35deg, 37deg); }
       @media (min-width: 768px) {
         .intro-logo__magnifying-glass-container .intro-logo__magnifying-glass__stick {
           left: 55px;
@@ -192,10 +179,6 @@
           width: 62px; } }
 
 .intro-logo__words_first {
-  background-position: center;
-  background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyFirma.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
   height: 60px;
   width: 100vw; }
   @media (min-width: 768px) {
@@ -203,11 +186,7 @@
       height: 70px; } }
 
 .intro-logo__words_second {
-  position: relative;
   background-position: -70vw 0;
-  background-image: url("./components/finder-app/__finder-app__logo/images/logoOnlyPod.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
   height: 55px;
   width: 100vw;
   animation: moveSecondWord 0.8s ease forwards; }
@@ -272,9 +251,7 @@
   min-height: 350px;
   height: 100%;
   background-image: url("./components/finder-app/main/main-content/form/form_images/_form_images_background.jpg");
-  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -370,6 +347,9 @@
       font-size: 19px;
       text-align: center;
       vertical-align: middle; }
+      @media (min-width: 600px) {
+        .main-content__form-container__error {
+          width: 550px; } }
 
 .main-content {
   height: 100%;

@@ -3,31 +3,19 @@
 
 @include movingMagnifyingGlass;
 @include movingMagnifyingGlassTablet;
-// @include movingMagnifyingGlassLaptop;
 
+// it is only a modifier. basic code for the logo is in _finder-app__logo.scss
 .intro-logo__magnifying-glass-container{
-  // border: 1px solid orange;
   height:30vh;
   width:100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
   margin-bottom: 12vh;
   .intro-logo__magnifying-glass{
     color: white;
-    border-radius: 50%;
     border:23px solid white;
     margin: -4px 0 0 13px;
-    background-position: center;
-    background-image:url("./components/finder-app/__finder-app__logo/images/magnifyingGlass.svg");
     background-size: 0px 0px;
-    background-repeat: no-repeat;
     height:220px;
     width:220px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;;
-    position: relative;
     top:8vh;
     left:18vw;
     @include tablet{
@@ -37,35 +25,18 @@
       top:8vh;
       left:18vw;
     };
-    // @include laptop{
-    //   border:32px solid white;
-    //   height:310px;
-    //   width:310px;
-    //   top:0vh;
-    //   left:0vw;
-    // };
     animation: movingMagnifyingGlass 1.4s 1.0s ease-out forwards;
     &__stick{
-      background-color: white;
       left:51px;
-      // top:79px;
       height:18px;
       width:50px;
       transform: skew(-35deg,37deg);
-      position: relative;
-      // animation: shrinkingMagnifyingGlass 1.8s 1.2s ease-out forwards;
       @include tablet{
         left:55px;
         // top:79px;
         height:21px;
         width:62px;
       };
-      // @include laptop{
-      //   left:58px;
-      //   transform: skew(-40deg,41deg);
-      //   height:30px;
-      //   width:80px;
-      // };
     }
   }
 }
