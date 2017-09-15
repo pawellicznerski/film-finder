@@ -27,19 +27,20 @@ export class FinderApp extends Component {
     return (
       <Router history={history}>
           <div className="finder-app">
-              {location.pathname==="/"||location.pathname==="/film-finder"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header> }
+              {location.pathname==="/film-finder"?<header className="header"></header>:<Header toggleHeaderLogo={this.toggleHeaderLogo}></Header> }
               <section>
                 <div className="main">
+                                  <NavBottom/>
                   <Switch>
                     <Route exact path="/" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo.bind(this)}/>
                     <Route exact path="/film-finder" component={Intro} toggleHeaderLogo={this.toggleHeaderLogo.bind(this)}/>
-                    <Route  path="/film-finder/form" component={Form}/>
-                    <Route  path="/film-finder/filmInfo" component={FilmInfo}/>
-                    <Route  path="/film-finder/filmSeriesInfo" component={FilmSeriesInfo}/>
-                    <Route  path="/film-finder/serialInfo" component={SerialInfo}/>
+                    <Route path="/film-finder/form" component={Form}/>
+                    <Route path="/film-finder/filmInfo" component={FilmInfo}/>
+                    <Route path="/film-finder/filmSeriesInfo" component={FilmSeriesInfo}/>
+                    <Route path="/film-finder/serialInfo" component={SerialInfo}/>
                     <Route component={NoMatch}/>
                   </Switch>
-                <NavBottom/>
+
                 </div>
               </section>
               <Footer/>
