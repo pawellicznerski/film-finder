@@ -7,8 +7,10 @@ export class Definition extends Component {
     return (
       <MainContent>
         <Header/>
-        <div className="definition">
-          {this.props.children}
+        <div className="definition-container">
+          <div className="definition">
+            {this.props.children}
+          </div>
         </div>
       </MainContent>
     );

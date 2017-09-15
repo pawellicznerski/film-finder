@@ -1,20 +1,26 @@
-.definition {
-  margin: -2px 0;
-  padding: 5px;
-  overflow: scroll;
-  color: #fff0aa;
+.definition-container {
   height: 100%;
-  width: 90vw;
-  text-align: justify;
-  background-color: black; }
-  @media (min-width: 600px) {
-    .definition {
-      overflow: auto;
-      padding: 2px 15px 15px 15px; } }
-  @media (min-width: 1200px) {
-    .definition {
-      overflow: auto;
-      padding: 2px 15px 15px 15px; } }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .definition-container .definition {
+    margin-top: 30px;
+    overflow: scroll;
+    color: #fff0aa;
+    height: 100%;
+    width: 90vw;
+    text-align: justify;
+    background-color: black;
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 600px) {
+      .definition-container .definition {
+        width: 60vw;
+        overflow: auto; } }
+    @media (min-width: 1200px) {
+      .definition-container .definition {
+        width: 50vw; } }
 
 @keyframes movingMagnifyingGlass {
   0% {
@@ -194,7 +200,7 @@
   width: 100%;
   min-height: 350px;
   height: 100%;
-  background-image: url("./components/finder-app/main/main-content/form/form_images/_form_images_background.jpg");
+  background-image: url("./components/finder-app/main/main-content/form/form_images/_form_images_background2.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -360,7 +366,10 @@
   flex-direction: column; }
 
 .main__nav-bottom {
-  order: 3; }
+  order: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .main__nav-bottom .main__nav-bottom__container {
     display: flex;
     justify-content: center;

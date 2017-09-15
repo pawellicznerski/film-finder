@@ -2,6 +2,9 @@
 
 .main__nav-bottom{
   order: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .main__nav-bottom__container{
     display: flex;
     justify-content: center;
@@ -19,7 +22,6 @@
     @include laptop{
       width: 800px;
       padding-top: 30px;
-
     };
     .main__nav-bottom__el{
       justify-content: center;
@@ -31,7 +33,6 @@
       @include mobile{
         width: 150px;
         font-size: 22px;
-
       };
       @include laptop{
         width: 200px;
