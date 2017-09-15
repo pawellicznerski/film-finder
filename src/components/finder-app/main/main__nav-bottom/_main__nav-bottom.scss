@@ -15,7 +15,7 @@
     background-color: rgba(0,0,0,1);
     text-decoration: none;
     font-family: 'Saira Extra Condensed', sans-serif;
-    padding-top: 30px;
+    padding: auto;
     @include mobile{
       width: 600px;
     };
