@@ -3,7 +3,7 @@ import { MainContent } from './../main-content';
 import { SearchedList } from './__form__searched-list/form__searched-list';
 import _ from "lodash";
 import { Header } from './../__header/header';
- 
+
 export class Form extends Component {
   constructor(props){
     super(props);
@@ -90,6 +90,8 @@ export class Form extends Component {
   handleApiAddress(){
     var apiKey = "api_key=d609d4130667346ea048e134c734468c";
     if(this.state.selectValue==="notSpecified"){
+      return `https://api.themoviedb.org/3/search/${this.state.selectType}?${apiKey}&query=${this.state.filmTitle}`;
+    } else if(this.state.filmTitle){
       return `https://api.themoviedb.org/3/search/${this.state.selectType}?${apiKey}&query=${this.state.filmTitle}`;
     } else if(this.state.selectValue==="currentlyMostPopular"){
       return `https://api.themoviedb.org/3/discover/${this.state.selectType}?${apiKey}&sort_by=popularity.desc`;
