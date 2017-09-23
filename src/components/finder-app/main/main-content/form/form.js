@@ -3,7 +3,7 @@ import { MainContent } from './../main-content';
 import { SearchedList } from './__form__searched-list/form__searched-list';
 import _ from "lodash";
 import { Header } from './../__header/header';
-
+ 
 export class Form extends Component {
   constructor(props){
     super(props);
