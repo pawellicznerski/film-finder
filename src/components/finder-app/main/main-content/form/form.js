@@ -153,7 +153,7 @@ export class Form extends Component {
                 value={this.state.selectValue}
                 onChange={this.handleChange.bind(this)}>
 
-                <option value="notSpecified" className="form__form-container__form__option__item">no filter</option>
+                <option value="notSpecified" className="form__form-container__form__option__item">A specific title</option>
                 <option value="currentlyMostPopular" className="form__form-container__form__option__item">Currently most popular</option>
                 <option value="allTimeMostPopular" className="form__form-container__form__option__item">All time most popular</option>
               </select>
