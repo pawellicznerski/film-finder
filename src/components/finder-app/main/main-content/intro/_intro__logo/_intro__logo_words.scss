@@ -4,7 +4,7 @@
 .intro-logo__words{
   &_first{
     height:60px;
-    width:100vw;
+    width:100%;
     @include tablet{
       height:70px;
     };
@@ -12,7 +12,7 @@
   &_second{
     background-position: -70vw 0;
     height:55px;
-    width:100vw;
+    width:100%;
     animation: moveSecondWord 0.8s ease forwards;
     @include tablet{
       height:55px;
