@@ -33,6 +33,9 @@
       background-color: rgba(10,10,10,0.8);
       flex-wrap: wrap;
       align-items: center;
+      @include iphone{
+        width: 320px;
+      };
       @include mobile{
         width: 550px;
       };

@@ -10,17 +10,17 @@
     overflow: scroll;
     color:rgba(255,240,170,1);
     height: 100%;
-    width: 90vw;
+    width: 90%;
     text-align: justify;
     background-color: black;
     display: flex;
     flex-direction: column;
     @include mobile{
-      width: 60vw;
+      width: 60%;
       overflow: auto;
     };
     @include laptop{
-      width: 50vw;
+      width: 50%;
     };
   }
 }
